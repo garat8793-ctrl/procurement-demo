@@ -1,0 +1,79 @@
+{
+  "scheme_id": "dcs_high_value",
+  "name": "DCS Procurement Manual — High-Value Obligations ($250k and above)",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "DCS-specific obligations for procurements of $250,000 and above. Covers Procurement Plans, Evaluation Committee seniority requirements, Contract Management Plans, and major-value obligations including Local Market Testing ($7.5M+), Aboriginal Participation, and SME criteria.",
+  "source": "DCS Procurement Manual v11.82 §7, §9.1, §10.12, §13.6; PBD-2024-02",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"],
+    "value": ["high", "major"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-HV-PC-001",
+      "title": "Procurement Plan required before going to market",
+      "body": "DCS Procurement Plan requirements by value: (a) Below $250k, low risk: no formal plan required. (b) $250k–$1M, low risk: Simple Procurement Plan — endorsed by DCS Procurement Business Partner, Senior Sourcing Manager, or Associate Director. (c) Above $1M or high risk: Complex Procurement Plan — endorsed by Chief Procurement Officer. For medium-risk procurements, contact DCS Procurement for guidance. The plan must be approved before approaching the market.",
+      "link": null
+    },
+    {
+      "id": "DCS-HV-PC-002",
+      "title": "Evaluation Committee must be constituted before sourcing event closes",
+      "body": "An Evaluation Committee must be constituted for procurements above $250,000. All committee members must complete a Code of Ethics and Conduct Agreement before the sourcing event closes. The final delegate approving contract award must NOT be the same person as the Evaluation Committee Chair or Procurement Lead. Aim for an odd number of committee members.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-HV-OBL-001",
+      "title": "Evaluation Committee Chair seniority requirement (\u2265$250k)",
+      "body": "For DCS procurements between $250,000 and $1,000,000: the Evaluation Committee Chair must be at Grade 9/10 minimum, appointed by the business unit. For procurements above $1,000,000: the Chair must be at SEB1 (or above) or from DCS Procurement. This requirement cannot be delegated without Chief Procurement Officer (CPO) approval. The Chair should not be a contractor or anyone without procurement delegations.",
+      "policy": "DCS Procurement Manual §10.12",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-002",
+      "title": "Draft Contract Management Plan required with award briefing note (>\u00a0$250k)",
+      "body": "A draft Contract Management Plan (CMP) must be prepared and included with the award briefing note for all DCS procurements above $250,000 (exclusive of GST). Simple CMP for contracts below $1M; Complex CMP for contracts above $1M. An Aboriginal CMP is also required for contracts that include Aboriginal participation commitments. Annual Supplier Code of Conduct compliance checks are required for contracts above $250k running for more than one year.",
+      "policy": "DCS Procurement Manual §13.6, §13.7",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-003",
+      "title": "CPO endorsement required on all briefing notes above $1M",
+      "body": "The Chief Procurement Officer (CPO) must endorse all DCS briefing notes for procurements above $1,000,000 before going to the approval delegate. For procurements up to $1M, endorsement by the DCS Procurement Business Partner, Senior Sourcing Manager, or Associate Director is required. This endorsement is a mandatory step — the briefing note cannot go to the approval delegate without it.",
+      "policy": "DCS Procurement Manual §10.1",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-004",
+      "title": "SME participation (10%) and sustainability (10%) non-price criteria required in Evaluation Plan (\u2265$3M)",
+      "body": "For DCS procurements of $3,000,000 or more (excluding construction), the Evaluation Plan must include as minimum non-price criteria: 10% weighting for SME participation, and 10% weighting for support for NSW Government economic, ethical, environmental, and social priorities. Refer to buy.NSW for guidance on minimum percentage weightings and acceptable evidence of SME participation.",
+      "policy": "DCS Procurement Manual §7.1d",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-005",
+      "title": "Local Market Testing required in Procurement Plan (\u2265$7.5M) \u2014 PBD-2024-02",
+      "body": "For procurements of $7,500,000 or more, the Procurement Plan must document upfront local market testing confirming whether any local supplier (registered in the relevant LGA or with substantial local operations) has the capacity and capability to supply. This applies to all contract types including panels and standing offers. Reference: PBD-2024-02, effective 9 September 2024.",
+      "policy": "DCS Procurement Manual §9.2; PBD-2024-02 (effective 9 September 2024)",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-006",
+      "title": "Aboriginal Participation Plan — evaluation criteria + portal entry (\u2265$7.5M)",
+      "body": "For contracts of $7,500,000 or more: (1) the Evaluation Plan must include criteria to assess tenderers' Aboriginal Participation Plans; (2) a minimum 1.5% Aboriginal participation must be included in all contracts at this value; (3) commitments from Aboriginal Participation Plans must be entered into the Aboriginal Participation Portal — contact DCS Procurement for portal access. An Aboriginal Contract Management Plan must be prepared for these contracts.",
+      "policy": "DCS Procurement Manual §7.4d, §10.13g",
+      "active": true
+    },
+    {
+      "id": "DCS-HV-OBL-007",
+      "title": "Small Business Shorter Payment Terms for subcontractors (\u2265$7.5M)",
+      "body": "For DCS contracts of $7,500,000 or more, the prime contractor must pay small business subcontractors within 20 days of receiving a valid invoice. This requirement must be included in the contract terms. Monitor compliance with this obligation throughout the contract term as part of contract management activities.",
+      "policy": "DCS Procurement Manual §7.2",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

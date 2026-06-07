@@ -1,0 +1,111 @@
+{
+  "scheme_id": "PBD_2026_02_PROFESSIONAL_SERVICES",
+  "name": "PBD-2026-02 — Engagement of Professional Services Suppliers",
+  "version": "2026-04",
+  "active": true,
+  "description": "Updated Procurement Board Direction on the engagement of professional services suppliers, effective April 2026. Supersedes PBD-2023-06. Requires agencies to check the Performance and Management Services Scheme (SCM0005) and other whole-of-government arrangements before going to open market, justify consultant use over permanent staff, comply with Core Work Policy C2025-05, and report all consultant engagements to the Procurement Board. Updated P&MS Scheme rules apply.",
+  "source": "NSW Procurement Board Direction PBD-2026-02 (April 2026); supersedes PBD-2023-06; Public Works and Procurement Act 1912; Government Sector Finance Act 2018; Core Work Policy Circular C2025-05",
+  "triggers": {
+    "category": [
+      "professional_services",
+      "consulting"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PBD2026-02-PC-001",
+      "title": "Check Performance and Management Services Scheme (SCM0005) first",
+      "body": "Before approaching the open market for professional services or consulting, search the Performance and Management Services Scheme (SCM0005) on buy.NSW. If a prequalified supplier covers the required services, use the scheme. Document the outcome of this check — whether the scheme was used, or why it was not suitable for this engagement.",
+      "link": "https://buy.nsw.gov.au/schemes/performance-and-management-services"
+    },
+    {
+      "id": "PBD2026-02-PC-002",
+      "title": "Apply Core Work Policy — confirm work can be outsourced",
+      "body": "Review the Core NSW Public Service Work Policy (Circular C2025-05) to confirm that the proposed work is not classified as work that must be performed by government employees or restricted from outsourcing to consultants. Check if the Expert Advisory Network (EAN) could provide the required expertise internally.",
+      "link": null
+    },
+    {
+      "id": "PBD2026-02-PC-003",
+      "title": "Classify engagement as consultancy or non-consultancy professional services",
+      "body": "Determine whether the engagement is predominantly consultancy (advice or recommendations) or non-consultancy professional services (implementation or delivery). If mixed, classify by the predominant component by value. This classification must be reflected in the contract.",
+      "link": null
+    },
+    {
+      "id": "PBD2026-02-PC-004",
+      "title": "Identify and document conflicts of interest",
+      "body": "Before engaging any professional services supplier, identify potential, perceived, and actual conflicts of interest. Document all conflicts identified and the management approach. Conflicts must be monitored throughout the engagement.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2026-02-OBL-001",
+      "title": "Use P&MS Scheme (SCM0005) where services are covered",
+      "body": "Where the required professional services are covered by the Performance and Management Services Scheme (SCM0005) or another approved whole-of-government arrangement, the agency must use that arrangement. Open market procurement is only permitted where no suitable arrangement covers the requirement.",
+      "policy": "PBD-2026-02; PBD-2021-04; NSW Procurement Policy Framework"
+    },
+    {
+      "id": "PBD2026-02-OBL-002",
+      "title": "Justify consultant engagement over permanent staff",
+      "body": "The need to use a consultant, rather than other resource types (permanent employees, internal expertise via EAN, or alternative delivery models), must be clearly defined and documented before engagement.",
+      "policy": "PBD-2026-02; Core Work Policy C2025-05"
+    },
+    {
+      "id": "PBD2026-02-OBL-003",
+      "title": "Minimise engagement duration; justify all variations",
+      "body": "The duration of any consultant or professional services engagement must be as short as possible while still enabling the work to be completed. Any variations to the engagement contract must have specific written justification prior to approval.",
+      "policy": "PBD-2026-02"
+    },
+    {
+      "id": "PBD2026-02-OBL-004",
+      "title": "Report all consultant engagements to Procurement Board",
+      "body": "All consultant engagements must be reported to the Procurement Board through the Principal Department of the affiliated agency group. Data must include supplier name, ABN, applicable procurement arrangement, contract reference, estimated value, engagement dates, engagement classification (consultancy/non-consultancy/mix), cost centre, core work assessment, and reason for outsourcing.",
+      "policy": "PBD-2026-02; Government Sector Finance Act 2018; GSF Regulation"
+    },
+    {
+      "id": "PBD2026-02-OBL-005",
+      "title": "Identify consultants in government systems",
+      "body": "Consultants must be clearly identified as external contractors in all government systems — email systems, security passes, staff directories, and physical workspaces — to ensure transparency and prevent confusion with permanent employees.",
+      "policy": "PBD-2026-02"
+    },
+    {
+      "id": "PBD2026-02-OBL-006",
+      "title": "Restrict consultant decision-making in recruitment",
+      "body": "Consultants must not have decision-making authority in recruitment or selection processes for other consultants and contractors. Consultants may only participate in an advisory or supporting capacity.",
+      "policy": "PBD-2026-02"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Use the applicable whole-of-government professional services arrangement (P&MS Scheme SCM0005, ICT Services Scheme, Legal Services Panel, or other). Apply that arrangement's specific rules and contracting templates.",
+    "if_no_arrangement": "Conduct open or selective tender under the NSW Procurement Policy Framework. Apply all PBD-2026-02 obligations throughout including conflict of interest management, Core Work Policy check, duration minimisation, and Procurement Board reporting."
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        {
+          "text": "Search the Performance and Management Services Scheme (SCM0005) on buy.NSW for prequalified suppliers covering the required services. Document whether the scheme is suitable for this engagement.",
+          "citation": "PBD-2026-02; PBD2026-02-PC-001"
+        },
+        {
+          "text": "Review the Core Work Policy (Circular C2025-05). Confirm the proposed work is not restricted from outsourcing and that internal EAN expertise has been considered.",
+          "citation": "PBD-2026-02; Core Work Policy C2025-05"
+        },
+        {
+          "text": "Classify the engagement as consultancy (advice/recommendations), non-consultancy professional services (delivery/implementation), or mixed. Record the classification — it will be required in the contract.",
+          "citation": "PBD-2026-02"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Procurement Board (via Principal Department)",
+      "note": "All consultant engagements must be reported to the Procurement Board through the Principal Department. Required under PBD-2026-02 and Government Sector Finance Act 2018."
+    },
+    {
+      "role": "Core Work Policy Compliance check",
+      "note": "Confirm work is not restricted from outsourcing under Core Work Policy C2025-05 before proceeding with any consultant engagement."
+    }
+  ]
+}

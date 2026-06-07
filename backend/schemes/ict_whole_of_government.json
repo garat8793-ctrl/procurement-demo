@@ -1,0 +1,61 @@
+{
+  "scheme_id": "ICT_WOG",
+  "name": "NSW Whole-of-Government ICT Scheme",
+  "version": "2024-01",
+  "active": true,
+  "description": "Rules for procurements covered by the NSW Whole-of-Government ICT Scheme. Mandatory use of ICT Scheme arrangements where they exist.",
+  "source": "NSW Procurement Board Direction PBD-2019-05; Digital.NSW ICT Procurement",
+  "triggers": {
+    "category": ["ict_saas", "ict_hardware"],
+    "value": ["low", "medium", "high", "major"]
+  },
+  "pre_checks": [
+    {
+      "id": "ICT-PC-001",
+      "title": "Check NSW ICT Scheme arrangements first",
+      "body": "Before proceeding to an open market process, check whether a whole-of-government ICT arrangement covers this requirement. Use of ICT Scheme arrangements is mandatory where an applicable arrangement exists. Search the ICT Scheme catalogue at buy.nsw.gov.au.",
+      "link": "https://buy.nsw.gov.au/buyer-guidance/buying-ict"
+    },
+    {
+      "id": "ICT-PC-002",
+      "title": "Confirm software licensing entitlements",
+      "body": "For software renewals, confirm current licensing entitlements and check whether whole-of-government licensing arrangements (e.g., Microsoft, Adobe, Google Workspace) apply before seeking new quotes.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "ICT-OBL-001",
+      "title": "ICT Scheme mandatory use",
+      "body": "Where a NSW Government ICT Scheme arrangement exists for this category of ICT product or service, use of that arrangement is mandatory. Proceeding to open market when an applicable arrangement exists requires a documented exemption approved by the appropriate delegate.",
+      "policy": "PBD-2019-05 s3.1; NSW Procurement Policy Framework"
+    },
+    {
+      "id": "ICT-OBL-002",
+      "title": "Cyber security requirements apply to ICT procurement",
+      "body": "All ICT procurements must address the NSW Cyber Security Policy requirements. The supplier must demonstrate compliance with applicable security standards. Include cyber security requirements in your specification and evaluation criteria.",
+      "policy": "NSW Cyber Security Policy 2023"
+    },
+    {
+      "id": "ICT-OBL-003",
+      "title": "Data sovereignty and hosting requirements",
+      "body": "For cloud and SaaS procurements, confirm data hosting location aligns with NSW Government data sovereignty requirements. Data classified as PROTECTED or above must be hosted in Australia by an Australian-accredited provider.",
+      "policy": "NSW Government Cloud Policy; Protective Security Policy Framework"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Use ICT Scheme arrangement — this pre-empts the standard pathway selection",
+    "if_no_arrangement": "Proceed with recommended pathway as normal"
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        "Search NSW ICT Scheme catalogue at buy.nsw.gov.au for applicable arrangements",
+        "If arrangement found: use scheme process (obtain quotes from scheme panel, not open market)",
+        "If no arrangement found: proceed with recommended pathway below"
+      ]
+    }
+  ],
+  "approval_additions": []
+}

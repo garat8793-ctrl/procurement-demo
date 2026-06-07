@@ -1,0 +1,78 @@
+{
+  "scheme_id": "PBD_2025_05_MODERN_SLAVERY",
+  "name": "PBD-2025-05 — Modern Slavery Tender Clauses",
+  "version": "2026-02",
+  "active": true,
+  "description": "Procurement Board Direction requiring mandatory modern slavery tender clauses in approach-to-market documents and contracts where the procurement involves overseas supply chains or high modern slavery risk supply categories. Updated February 2026. Triggered by the 'overseas' overlay or high-risk categories (garments, electronics, cleaning, food, construction materials). Requires suppliers to complete a modern slavery risk assessment and cooperate with audits.",
+  "source": "NSW Procurement Board Direction PBD-2025-05 (updated February 2026); Modern Slavery Act 2018 (NSW); NSW Procurement Policy Framework",
+  "triggers": {
+    "overlays": [
+      "overseas"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PBD2025-05-PC-001",
+      "title": "Assess modern slavery risk in the supply chain",
+      "body": "Before publishing approach-to-market documents, assess whether the procurement involves overseas supply chains or high modern slavery risk categories. High-risk categories include: garments and textiles, electronics, cleaning services, food products, construction materials, and agricultural products. Document the risk assessment outcome in the procurement file.",
+      "link": null
+    },
+    {
+      "id": "PBD2025-05-PC-002",
+      "title": "Confirm mandatory clauses are included in tender documents",
+      "body": "Verify that the mandatory modern slavery tender clauses (as specified in PBD-2025-05 and the NSW Procurement Policy Framework Annex) are included in all approach-to-market documents before publication. Do not publish a tender without these clauses where the Direction applies.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2025-05-OBL-001",
+      "title": "Include mandatory modern slavery clauses in tender documents",
+      "body": "Where the procurement involves overseas supply chains, mandatory modern slavery tender clauses must be included in all approach-to-market documents (RFQ, RFT, EOI). Suppliers must be required to complete a modern slavery risk assessment as part of their tender response.",
+      "policy": "PBD-2025-05; Modern Slavery Act 2018 (NSW)"
+    },
+    {
+      "id": "PBD2025-05-OBL-002",
+      "title": "Include modern slavery contract clauses requiring supplier cooperation",
+      "body": "Contracts must include modern slavery clauses requiring the supplier to: (1) cooperate with the agency's modern slavery risk assessments; (2) permit and cooperate with audits of the supply chain; (3) notify the agency of any identified modern slavery risk or instance; and (4) take remediation action where directed.",
+      "policy": "PBD-2025-05; Modern Slavery Act 2018 (NSW)"
+    },
+    {
+      "id": "PBD2025-05-OBL-003",
+      "title": "Document modern slavery risk assessment in procurement file",
+      "body": "A modern slavery risk assessment must be completed and retained in the procurement file for all procurements to which PBD-2025-05 applies. The assessment must identify supply chain risks, the steps taken to address them, and how the mandatory clauses address the identified risks.",
+      "policy": "PBD-2025-05; Modern Slavery Act 2018 (NSW)"
+    },
+    {
+      "id": "PBD2025-05-OBL-004",
+      "title": "Report modern slavery actions in agency Annual Report",
+      "body": "Agencies with annual turnover ≥ $50M must report on actions taken to address modern slavery risks in their supply chains in the Annual Report. Procurement actions under PBD-2025-05 should be captured in this reporting.",
+      "policy": "Modern Slavery Act 2018 (NSW) s.24"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Where an approved WoG arrangement covers the procurement, confirm that the arrangement's standard contract already incorporates modern slavery clauses meeting PBD-2025-05 requirements. If not, add the mandatory clauses via a special conditions schedule.",
+    "if_no_arrangement": "Include mandatory modern slavery tender clauses in all approach-to-market documents before publication. Require suppliers to complete the modern slavery risk assessment template as part of their tender response."
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        {
+          "text": "Complete a modern slavery risk assessment for this procurement. Document whether the supply chain involves overseas sourcing or high-risk categories (garments, electronics, cleaning, food, construction materials).",
+          "citation": "PBD-2025-05; Modern Slavery Act 2018 (NSW)"
+        },
+        {
+          "text": "Confirm that mandatory modern slavery tender clauses (per PBD-2025-05) are included in approach-to-market documents before publication. Include the supplier modern slavery risk assessment template as a required tender response document.",
+          "citation": "PBD-2025-05"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Modern Slavery / Ethical Procurement review",
+      "note": "Confirm modern slavery risk assessment is complete and mandatory PBD-2025-05 clauses are incorporated in tender and contract documents before publication and execution."
+    }
+  ]
+}

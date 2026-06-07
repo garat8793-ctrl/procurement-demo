@@ -1,0 +1,145 @@
+{
+  "pathways": {
+    "emergency_procurement": {
+      "id": "emergency_procurement",
+      "name": "Emergency Procurement",
+      "label": "Emergency / Urgent Procurement",
+      "description": "An expedited process for genuine emergencies or urgent operational needs where normal competitive processes cannot be followed in the available timeframe.",
+      "colour": "#DC2626",
+      "steps": [
+        "Prepare written emergency justification — document why normal procurement cannot be followed",
+        "Obtain emergency approval from the appropriate delegate before committing",
+        "Identify and engage the most appropriate supplier directly",
+        "Negotiate best available price and document the outcome",
+        "Execute contract or purchase order with clear scope, price, and timeframe",
+        "Complete a post-emergency review within 30 days — document lessons learned",
+        "Ensure all approvals and records are complete for audit purposes"
+      ],
+      "exception": true,
+      "requires_justification": true
+    },
+    "major_strategic": {
+      "id": "major_strategic",
+      "name": "Major / Strategic Procurement",
+      "label": "Major / Strategic Procurement",
+      "description": "A structured, high-governance process for major procurements that require executive oversight, formal market engagement, and rigorous evaluation.",
+      "colour": "#7C3AED",
+      "steps": [
+        "Develop a detailed Procurement Strategy and obtain approval before going to market",
+        "Consider Gateway Review requirements — engage Infrastructure NSW",
+        "Undertake market sounding or RFI if the requirement needs further definition",
+        "Develop detailed specification, evaluation criteria, and contract terms",
+        "Publish approach to market on NSW eTendering",
+        "Conduct formal evaluation with a probity advisor",
+        "Prepare detailed evaluation report and seek legal review of contract",
+        "Obtain executive approvals (Deputy Secretary / Secretary level)",
+        "Execute contract and establish governance and performance management arrangements",
+        "Publish contract award on NSW eTendering"
+      ],
+      "exception": false,
+      "requires_justification": false
+    },
+    "limited_direct": {
+      "id": "limited_direct",
+      "name": "Limited / Direct Procurement",
+      "label": "Limited Market / Direct Procurement",
+      "description": "A constrained process used where the market is genuinely limited. Requires documented justification explaining why full competition cannot be achieved.",
+      "colour": "#D97706",
+      "steps": [
+        "Prepare direct procurement justification — document limited market evidence",
+        "Confirm no existing government arrangement covers this requirement",
+        "Obtain approval at one level above standard for this value",
+        "Approach 2–3 suppliers if available, or single supplier with documented rationale",
+        "Negotiate price and scope — document how value for money is being achieved",
+        "Execute contract or purchase order",
+        "Record the justification and approval in your procurement file"
+      ],
+      "exception": true,
+      "requires_justification": true
+    },
+    "simple_purchase": {
+      "id": "simple_purchase",
+      "name": "Simple Purchase",
+      "label": "Simple / Low-Value Purchase",
+      "description": "A straightforward purchase process for low-value, well-defined requirements. Proportionate and low-administrative burden.",
+      "colour": "#059669",
+      "steps": [
+        "Confirm the requirement is clearly defined",
+        "Check whether a government arrangement or standing offer applies",
+        "If an arrangement exists: obtain a quote through the arrangement",
+        "If no arrangement: identify a suitable supplier and confirm price",
+        "Obtain line manager or budget approval as required",
+        "Execute purchase order or use procurement card as appropriate",
+        "Retain records sufficient for audit (quote, approval, purchase record)"
+      ],
+      "exception": false,
+      "requires_justification": false
+    },
+    "quote_based": {
+      "id": "quote_based",
+      "name": "Quote-Based Procurement",
+      "label": "Competitive Quote Process",
+      "description": "A competitive quote process appropriate for low-to-medium value, well-defined requirements with a broad enough market to generate meaningful competition.",
+      "colour": "#0891B2",
+      "steps": [
+        "Confirm no existing arrangement covers this requirement",
+        "Define your requirement — prepare a brief statement of work or specification",
+        "Identify at least 3 suppliers to approach",
+        "Issue Request for Quote (RFQ) with clear scope, evaluation criteria, and deadline",
+        "Evaluate responses against stated criteria — document your assessment",
+        "Select the preferred supplier and document the decision rationale",
+        "Obtain required delegate approval",
+        "Execute contract or purchase order",
+        "Retain evaluation and approval records"
+      ],
+      "exception": false,
+      "requires_justification": false
+    },
+    "structured_market": {
+      "id": "structured_market",
+      "name": "Structured Market Approach",
+      "label": "Structured Market Approach",
+      "description": "A structured process that allows for market engagement and solution development before committing to a specific approach. Suited to complex or partially-defined requirements.",
+      "colour": "#2563EB",
+      "steps": [
+        "Consider a Request for Information (RFI) or market sounding to refine the requirement",
+        "Develop Procurement Strategy with market context — obtain approval",
+        "Define evaluation criteria that accommodate solution variation",
+        "Publish approach to market on NSW eTendering",
+        "Conduct structured evaluation — consider staged or two-envelope process",
+        "Engage with preferred supplier(s) to finalise scope and commercial terms",
+        "Prepare evaluation report and obtain delegate approval",
+        "Execute contract with clear performance and governance arrangements",
+        "Publish contract award on NSW eTendering"
+      ],
+      "exception": false,
+      "requires_justification": false
+    },
+    "open_market": {
+      "id": "open_market",
+      "name": "Open Market Procurement",
+      "label": "Open Market Procurement",
+      "description": "The default competitive process for medium-to-high value procurements. Open advertising ensures fair access and maximises competition.",
+      "colour": "#0284C7",
+      "steps": [
+        "Confirm no existing arrangement covers this requirement",
+        "Develop Procurement Strategy — document approach, market, and evaluation plan",
+        "Obtain Procurement Strategy approval",
+        "Develop specification, evaluation criteria, and contract terms",
+        "Publish Request for Tender (RFT) on NSW eTendering",
+        "Conduct briefing session for potential suppliers if appropriate",
+        "Evaluate responses using documented criteria with an evaluation panel",
+        "Prepare evaluation report — obtain legal review if required",
+        "Obtain delegate approval for contract award",
+        "Notify successful and unsuccessful suppliers",
+        "Execute contract",
+        "Publish contract award on NSW eTendering"
+      ],
+      "exception": false,
+      "requires_justification": false
+    }
+  },
+  "value_order": ["micro", "low", "medium", "high", "major", "unknown"],
+  "impact_order": ["low", "medium", "high", "critical"],
+  "definition_order": ["exploratory", "partial", "mostly_clear", "clear"]
+}

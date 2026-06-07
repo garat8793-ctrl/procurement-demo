@@ -1,0 +1,46 @@
+{
+  "scheme_id": "dcs_register",
+  "name": "DCS Procurement Manual — PRN, Contract Register & Risk Assessment (low+ value, non-ICT/PS)",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "DCS obligations for goods, services, construction and labour hire procurements at low value ($10k–$50k) and above. Covers the Procurement Reference Number (PRN), DCS Central Contracts Register upload, and Combined Risk Assessment template. Note: the exact PRN threshold is $30,000 — this scheme fires at the 'low' tier ($10k+) as a prompt to check the $30k threshold.",
+  "source": "DCS Procurement Manual v11.82 §4, §9.4, §13.4",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"],
+    "category": ["goods", "labour_hire", "construction", "other"],
+    "value": ["low", "medium", "high", "major"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-REG-PC-001",
+      "title": "Check whether $30k (incl. GST) threshold is met for PRN and Contract Register",
+      "body": "The DCS PRN and Central Contracts Register thresholds are both $30,000 inclusive of GST. If your total engagement value equals or exceeds $30,000 incl. GST, the PRN and Contract Register obligations below apply. This value tier fires at $10k+ as a prompt — confirm your actual value against the $30k threshold.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-REG-OBL-001",
+      "title": "Procurement Reference Number (PRN) required (\u2265$30k incl. GST)",
+      "body": "Request a Procurement Reference Number (PRN) from DCS Procurement before any market activity for all goods, services, construction, and labour hire procurements with a total value of $30,000 or more (incl. GST). All procurements above $30k must also be registered in the DCS Central Contracts Register within 21 days of contract execution. Contact the DCS Procurement helpdesk to obtain a PRN.",
+      "policy": "DCS Procurement Manual §4",
+      "active": true
+    },
+    {
+      "id": "DCS-REG-OBL-002",
+      "title": "DCS Combined Risk Assessment template required (\u2265$30k)",
+      "body": "Use the DCS Combined Risk Assessment template (Business Risk tab) for all goods and services procurements with a value of $30,000 or more. The risk assessment must be completed and approved before proceeding to market. Risk assessments below $250k can be approved at Grade 11/12 or above. For procurements involving customer or employee data, or requiring integration with DCS IT infrastructure, obtain Procurement Risk Assessment approval from the Chief Information Officer before proceeding.",
+      "policy": "DCS Procurement Manual §9.4",
+      "active": true
+    },
+    {
+      "id": "DCS-REG-OBL-003",
+      "title": "DCS Central Contracts Register upload within 21 days of execution",
+      "body": "Upload contract details to the DCS Central Contracts Register within 21 days of contract execution. This applies to: all contracts $30,000 or more (incl. GST), all contracts with Aboriginal suppliers (any value), all consultancy engagements (any value), operating leases above $10,000, contracts with heightened modern slavery risk (any value), and standing offer contracts likely to exceed $150,000.",
+      "policy": "DCS Procurement Manual §13.4",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

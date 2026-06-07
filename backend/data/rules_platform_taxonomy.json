@@ -1,0 +1,64 @@
+{
+  "objectives": [
+    {
+      "objective_id": "compliance",
+      "label": "Compliance",
+      "description": "Ensure procurements satisfy mandatory legal, policy, and governance controls."
+    },
+    {
+      "objective_id": "consistency",
+      "label": "Consistency",
+      "description": "Apply procurement policy in a repeatable and traceable way across agencies and categories."
+    },
+    {
+      "objective_id": "value_for_money",
+      "label": "Value for Money",
+      "description": "Shape governance and market decisions toward stronger commercial outcomes rather than rote compliance."
+    },
+    {
+      "objective_id": "risk_reduction",
+      "label": "Risk Reduction",
+      "description": "Reduce legal, delivery, probity, privacy, and assurance risk through targeted controls."
+    },
+    {
+      "objective_id": "process_control",
+      "label": "Process Control",
+      "description": "Modify workflow, evidence, and sequencing where policy requires stronger governance discipline."
+    },
+    {
+      "objective_id": "assurance",
+      "label": "Assurance",
+      "description": "Add approvals, checks, and oversight where the procurement risk profile justifies them."
+    },
+    {
+      "objective_id": "accountability",
+      "label": "Accountability",
+      "description": "Make the reasoning, ownership, and promotion of policy logic reviewable and auditable."
+    },
+    {
+      "objective_id": "readiness",
+      "label": "Readiness",
+      "description": "Ensure prerequisite actions and evidence are completed before a procurement progresses."
+    }
+  ],
+  "signals": [
+    { "field": "category", "values": ["ict_saas", "ict_hardware", "professional_services", "consulting", "goods", "construction", "labour_hire", "other"] },
+    { "field": "value", "values": ["micro", "low", "medium", "high", "major"] },
+    { "field": "purpose", "values": ["new", "renewal", "emergency", "pilot", "replacement"] },
+    { "field": "definition", "values": ["clear", "mostly_clear", "partial", "exploratory"] },
+    { "field": "market", "values": ["sole", "limited", "some", "broad", "unknown"] },
+    { "field": "impact", "values": ["low", "medium", "high", "critical"] },
+    { "field": "overlays", "values": ["ai", "privacy", "critical_ict", "construction", "overseas", "sme", "aboriginal", "covered_epp", "modern_slavery"] },
+    { "field": "interaction", "values": ["minimal", "quotes", "tender", "collaborative"] },
+    { "field": "timing", "values": ["urgent", "compressed", "normal", "extended", "unknown"] },
+    { "field": "org", "values": ["operational", "corporate", "executive", "central"] },
+    { "field": "agency_type", "values": ["department", "agency", "regulator", "state_owned_corporation"] }
+  ],
+  "rule_types": [
+    "obligation",
+    "pre_check",
+    "workflow",
+    "approval",
+    "advisory"
+  ]
+}

@@ -1,0 +1,307 @@
+[
+  {
+    "id": "OBL-001",
+    "title": "Publish on NSW eTendering",
+    "body": "Procurements at or above the applicable threshold must be published on NSW eTendering (tenders.nsw.gov.au). This includes the approach to market, contract award, and where applicable, contract extension notices.",
+    "policy": "NSW Procurement Policy Framework â€” Open Advertising",
+    "priority": 1,
+    "trigger": {
+      "value": [
+        "medium",
+        "high",
+        "major"
+      ]
+    }
+  },
+  {
+    "id": "OBL-002",
+    "title": "Formal probity requirements apply",
+    "body": "At this value, formal probity arrangements are required. This includes documented evaluation processes, conflict of interest declarations from all evaluation panel members, and records of all decisions. Consider whether a probity advisor is required.",
+    "policy": "NSW Procurement Policy Framework â€” Probity",
+    "priority": 2,
+    "trigger": {
+      "value": [
+        "high",
+        "major"
+      ]
+    }
+  },
+  {
+    "id": "OBL-003",
+    "title": "Gateway review recommended",
+    "body": "Major procurements should be considered for Gateway Review to provide independent assurance at key decision points. Engage Infrastructure NSW or your agency's governance team to determine Gateway Review requirements.",
+    "policy": "NSW Government Gateway Review Policy",
+    "priority": 3,
+    "trigger": {
+      "value": [
+        "major"
+      ]
+    }
+  },
+  {
+    "id": "OBL-004",
+    "title": "AI assessment required â€” AIAF",
+    "body": "This procurement involves AI or automated decision-making. An AI Assessment Framework (AIAF) assessment is required before contract execution. Engage your agency's AI Ethics or Digital team. The AI Procurement Policy applies and must be addressed in the briefing.",
+    "policy": "NSW AI Procurement Policy; AIAF Assessment Framework",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "ai"
+      ]
+    },
+    "active": true
+  },
+  {
+    "id": "OBL-005",
+    "title": "Privacy Impact Assessment required",
+    "body": "This procurement involves personal or health information. A Privacy Impact Assessment (PIA) must be completed or commenced before contract execution. Engage your agency's Privacy Officer early. The Privacy and Personal Information Protection Act 1998 and Health Records and Information Privacy Act 2002 apply.",
+    "policy": "Privacy and Personal Information Protection Act 1998; HRIP Act 2002",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "privacy"
+      ]
+    },
+    "active": true
+  },
+  {
+    "id": "OBL-006",
+    "title": "Cyber Security NSW review required",
+    "body": "This procurement involves critical ICT infrastructure. A review against the NSW Cyber Security Policy is required. Engage Cyber Security NSW and your agency's CISO. The NSW Cyber Security Policy and Critical Infrastructure requirements apply.",
+    "policy": "NSW Cyber Security Policy 2023",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "critical_ict"
+      ]
+    }
+  },
+  {
+    "id": "OBL-007",
+    "title": "Building Code and local industry participation obligations",
+    "body": "Construction procurement must comply with the Australian Government Building and Construction Work Health and Safety Accreditation Scheme where applicable, and NSW Local Industry Participation obligations. Engage your agency's property and construction team.",
+    "policy": "Building and Construction Industry Security of Payment Act 1999; NSW Local Industry Participation Policy",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "construction"
+      ]
+    }
+  },
+  {
+    "id": "OBL-008",
+    "title": "Modern Slavery Act supply chain due diligence",
+    "body": "This procurement involves overseas supply chains. Supply chain due diligence is required under the NSW Modern Slavery Act 2018. Document the steps taken to identify and address modern slavery risks in the supply chain.",
+    "policy": "NSW Modern Slavery Act 2018",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "overseas"
+      ]
+    }
+  },
+  {
+    "id": "OBL-009",
+    "title": "Emergency procurement justification required",
+    "body": "Emergency or urgent procurements must be documented with a written justification explaining why the normal procurement process cannot be followed. Approval must be obtained at the appropriate delegate level. A retrospective review should be completed after the emergency has passed.",
+    "policy": "NSW Procurement Policy Framework â€” Emergency Procurement",
+    "priority": 1,
+    "trigger": {
+      "timing": [
+        "urgent"
+      ]
+    }
+  },
+  {
+    "id": "OBL-010",
+    "title": "Emergency procurement justification required",
+    "body": "This procurement is flagged as an emergency need. Written justification is required explaining why normal competitive processes cannot be followed. Retrospective approval or post-event review may be required.",
+    "policy": "NSW Procurement Policy Framework â€” Emergency Procurement",
+    "priority": 1,
+    "trigger": {
+      "purpose": [
+        "emergency"
+      ]
+    }
+  },
+  {
+    "id": "OBL-011",
+    "title": "Direct procurement justification â€” value for money statement required",
+    "body": "Where only one supplier is available or competition is severely limited, a direct procurement justification must document: why the market is limited, what steps were taken to confirm no suitable alternatives exist, and how value for money is being achieved without competition.",
+    "policy": "NSW Procurement Policy Framework â€” Limited Competition",
+    "priority": 1,
+    "trigger": {
+      "market": [
+        "sole"
+      ]
+    }
+  },
+  {
+    "id": "OBL-012",
+    "title": "Consider market sounding or Request for Information first",
+    "body": "Where requirements are not yet defined, a Request for Information (RFI) or market sounding exercise should be considered before committing to a procurement approach. This helps shape the requirement and informs the procurement strategy.",
+    "policy": "NSW Procurement Policy Framework â€” Market Engagement",
+    "priority": 2,
+    "trigger": {
+      "definition": [
+        "exploratory"
+      ]
+    }
+  },
+  {
+    "id": "OBL-013",
+    "title": "Additional probity and executive sign-off required",
+    "body": "Given the critical impact level of this procurement, additional probity measures are required beyond standard requirements. Executive sign-off at Deputy Secretary level or above must be obtained before contract execution.",
+    "policy": "NSW Procurement Policy Framework â€” Probity",
+    "priority": 1,
+    "trigger": {
+      "impact": [
+        "critical"
+      ]
+    }
+  },
+  {
+    "id": "OBL-014",
+    "title": "Confirm renewal terms â€” check for requirement to re-tender",
+    "body": "Before renewing or extending a contract, confirm that the current contract terms allow for extension. Repeated extensions of significant-value contracts may constitute avoidance of competitive requirements. Document the basis for renewal rather than re-tendering.",
+    "policy": "NSW Procurement Policy Framework â€” Contract Management",
+    "priority": 2,
+    "trigger": {
+      "purpose": [
+        "renewal"
+      ]
+    }
+  },
+  {
+    "id": "OBL-015",
+    "title": "Value for money statement required",
+    "body": "Where market competition is limited to 2-3 suppliers and the impact is high, a value for money statement must document how competitive tension has been maintained and how the selected outcome represents best value.",
+    "policy": "NSW Procurement Policy Framework â€” Value for Money",
+    "priority": 2,
+    "trigger": {
+      "market": [
+        "limited"
+      ],
+      "impact": [
+        "high",
+        "critical"
+      ]
+    }
+  },
+  {
+    "id": "OBL-016",
+    "title": "Publish opportunity on buy.NSW eTendering",
+    "body": "Procurements at or above $150,000 incl. GST (medium value band and above) must be published on buy.NSW eTendering (tenders.nsw.gov.au). Following contract award, publish a contract award notice on buy.NSW and disclose contract details on the agency's GIPA Act contracts register within 45 days of execution.",
+    "policy": "NSW Procurement Board Direction PBD-2024-01; Government Information (Public Access) Act 2009; NSW Procurement Policy Framework â€” Open Advertising",
+    "priority": 1,
+    "trigger": {
+      "value": [
+        "medium",
+        "high",
+        "major"
+      ]
+    }
+  },
+  {
+    "id": "OBL-017",
+    "title": "Local supplier market test and quarterly reporting required",
+    "body": "This procurement is at major value (proxy for $7.5M+ excl. GST threshold in PBD-2024-02). A documented local supplier market test must be completed before approaching the market. Assess whether NSW or Australian local suppliers can meet the requirement at comparable value. Document the outcome in the procurement file and include this procurement in the next quarterly report to the Procurement Board.",
+    "policy": "NSW Procurement Board Direction PBD-2024-02 (September 2024); NSW Local Industry Participation Policy",
+    "priority": 1,
+    "trigger": {
+      "value": [
+        "major"
+      ]
+    }
+  },
+  {
+    "id": "OBL-018",
+    "title": "Modern slavery tender clauses mandatory",
+    "body": "This procurement involves overseas supply chains. Mandatory modern slavery tender clauses (per PBD-2025-05) must be included in all approach-to-market documents. Require suppliers to complete a modern slavery risk assessment as part of their tender response. Include modern slavery contract clauses requiring supplier cooperation with audits. Document the modern slavery risk assessment in the procurement file.",
+    "policy": "NSW Procurement Board Direction PBD-2025-05 (updated February 2026); Modern Slavery Act 2018 (NSW)",
+    "priority": 1,
+    "trigger": {
+      "overlays": [
+        "overseas"
+      ]
+    }
+  },
+  {
+    "id": "OBL-019",
+    "title": "Office for AI - TEST PRIORITY",
+    "body": "test - test - test",
+    "policy": "This is a test of a new core rule.",
+    "active": false,
+    "trigger": {
+      "category": [
+        "ict_saas"
+      ],
+      "value": [
+        "low"
+      ],
+      "purpose": [
+        "emergency"
+      ],
+      "definition": [
+        "clear"
+      ],
+      "market": [
+        "sole"
+      ],
+      "impact": [
+        "low"
+      ],
+      "overlays": [
+        "ai"
+      ],
+      "interaction": [
+        "minimal"
+      ],
+      "timing": [
+        "urgent"
+      ],
+      "org": [
+        "operational"
+      ]
+    }
+  },
+  {
+    "id": "OBL-020",
+    "title": "ICT cyber security risk assessment required",
+    "body": "All ICT procurements must include a documented cyber security risk assessment before contract execution, per the NSW Cyber Security Policy. Risk treatment plans must be incorporated into contract deliverables.",
+    "policy": "NSW Cyber Security Policy 2022",
+    "trigger": {
+      "category": [
+        "ict_saas",
+        "ict_hardware",
+        "ict_infrastructure",
+        "ict_development"
+      ]
+    },
+    "active": true
+  },
+  {
+    "id": "OBL-021",
+    "title": "Privacy Impact Assessment — personal information processing",
+    "body": "Where an ICT system processes personal information, a Privacy Impact Assessment endorsed by the agency Privacy Officer is required before approach to market.",
+    "policy": "Privacy and Personal Information Protection Act 1998",
+    "trigger": {
+      "overlays": [
+        "privacy"
+      ]
+    },
+    "active": true
+  },
+  {
+    "id": "OBL-022",
+    "title": "AIAF assessment — AI component in procurement",
+    "body": "Where an AI, ML, or automated decision-making component is present, an AI Assessment Framework (AIAF) assessment must be completed before contract execution. Include explainability and human oversight requirements in the specification.",
+    "policy": "NSW AI Procurement Policy 2024; AIAF v1.2",
+    "trigger": {
+      "overlays": [
+        "ai"
+      ]
+    },
+    "active": true
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "scheme_id": "dcs_professional_services",
+  "name": "DCS Procurement Manual — Professional Services & Consulting Obligations",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "DCS-specific obligations for professional services and consulting procurements. Professional services have stricter rules than general goods and services — PRN at any value, mandatory PSM Pro for new consultancy, ELT endorsement before market, and CFO/Minister as final approver at higher values.",
+  "source": "DCS Procurement Manual v11.82 §3, §4, §9.1, §11.1; PMS Scheme",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"],
+    "category": ["professional_services", "consulting"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-PS-PC-001",
+      "title": "PSM Pro (SAP Fieldglass via KellyOCG) — mandatory for all new consultancy from 30 Sep 2024",
+      "body": "All new DCS consultancy engagements and extensions (non-ICT) must be managed through PSM Pro (SAP Fieldglass) via KellyOCG, effective 30 September 2024. Log in to PSM Pro before starting the engagement. When using PSM Pro, KellyOCG will request the Procurement Reference Number (PRN) on your behalf — you do not need to obtain a PRN separately. Contact the DCS Procurement HelpDesk if you do not have PSM Pro access.",
+      "link": null
+    },
+    {
+      "id": "DCS-PS-PC-002",
+      "title": "ELT endorsement required before approaching market (\u2265$50k ex. GST)",
+      "body": "For all consultancy engagements above $50,000 (exclusive of GST), ELT (Executive Leadership Team) endorsement must be obtained BEFORE approaching the market. For engagements above $100,000 through the Performance and Management Services (PMS) Scheme (except market research), ELT endorsement is also required. Review the DCS Professional Services Circular 2025-01D for current exemptions. Contact your Executive Director to initiate ELT endorsement.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-PS-OBL-001",
+      "title": "PRN required at any value for professional services/consulting — no P-Card permitted",
+      "body": "All DCS professional services and consulting procurements require a Procurement Reference Number (PRN) at any contract value. P-Card must NOT be used for professional services at any value — a contract and purchase order (PO) are mandatory even for engagements under $10,000. When using PSM Pro/KellyOCG, the PRN is obtained on your behalf — you do not need to apply separately.",
+      "policy": "DCS Procurement Manual §4",
+      "active": true
+    },
+    {
+      "id": "DCS-PS-OBL-002",
+      "title": "PSM Pro (SAP Fieldglass) mandatory for all new DCS consultancy engagements",
+      "body": "All new consultancy engagements and extensions (non-ICT professional services) at DCS must be managed through PSM Pro (SAP Fieldglass) via KellyOCG, effective 30 September 2024. This applies regardless of value. When using PSM Pro, KellyOCG will request the PRN and manage supplier onboarding. Direct engagement outside PSM Pro requires written approval from DCS Procurement. Note: SIRA follows SIRA's own Instrument of Delegation for some professional services.",
+      "policy": "DCS Procurement Manual §3, §11.1",
+      "active": true
+    },
+    {
+      "id": "DCS-PS-OBL-003",
+      "title": "DCS Combined Risk Assessment required for professional services (\u2265$30k)",
+      "body": "Use the DCS Combined Risk Assessment template (Business Risk tab) for all professional services and consulting procurements with a value of $30,000 or more. Risk assessments below $250k can be approved at Grade 11/12 or above.",
+      "policy": "DCS Procurement Manual §9.4",
+      "active": true
+    },
+    {
+      "id": "DCS-PS-OBL-004",
+      "title": "Performance Report required at completion for consultancy \u2265$150k",
+      "body": "A formal Performance Report must be completed at the end of all consultancy engagements with a value above $150,000 (exclusive of GST). This report is submitted to DCS Procurement and contributes to the DCS supplier performance record. Contact your DCS Procurement Business Partner to obtain the Performance Report template.",
+      "policy": "DCS Procurement Manual §13",
+      "active": true
+    },
+    {
+      "id": "DCS-PS-OBL-005",
+      "title": "CFO is final approver for professional services $50k–$5M; Minister above $5M",
+      "body": "DCS professional services approval chain differs from standard goods and services. The Chief Financial Officer (CFO) is the mandatory final approver for all professional services briefing notes between $50,000 and $5,000,000. The Chief Procurement Officer (CPO) must endorse the briefing note before it goes to the CFO. For professional services above $5,000,000, the Minister is the final approver. For engagements up to $50,000, the final approver is the Deputy Secretary, SEB3, or Chief People Officer per the DCS Delegations Manual.",
+      "policy": "DCS Procurement Manual §10.1",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

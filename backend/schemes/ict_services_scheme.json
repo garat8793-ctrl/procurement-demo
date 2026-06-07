@@ -1,0 +1,205 @@
+{
+  "scheme_id": "ICT_SERVICES_SCHEME",
+  "name": "NSW Government ICT Services Scheme",
+  "version": "2.3-2026-04",
+  "active": true,
+  "description": "The ICT Services Scheme is a mandatory procurement list established by the NSW Department of Customer Service to simplify procurement of ICT-related goods and services for NSW Government agencies. It applies to all ICT procurements covered under Procurement Board Direction PBD-2026-01 (April 2026; supersedes PBD-2020-04 and PBD-2020-05), and aims to improve opportunities for small-to-medium enterprises. The scheme covers 18 categories of ICT supply ranging from architecture and design through to cloud services, with different supplier listing tiers based on contract value and risk profile.",
+  "source": "NSW Procurement Board Direction PBD-2026-01 (April 2026; supersedes PBD-2020-04 and PBD-2020-05); NSW Government ICT Services Scheme Rules; ICT Purchasing Framework (PBD-2025-03)",
+  "triggers": {
+    "category": [
+      "ict_hardware",
+      "ict_saas",
+      "professional_services",
+      "consulting",
+      "other"
+    ],
+    "value": [
+      "micro",
+      "low",
+      "medium",
+      "high",
+      "major"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "ICT_SERVICES_SCHEME-PC-001",
+      "title": "Confirm ICT procurement coverage",
+      "body": "Verify that the procurement relates to ICT goods or services covered by one of the 18 categories under the ICT Services Scheme (architecture, benchmarking, data centre, end user computing, strategy, network management, other ICT services, risk management, ICT programs, server management, security management, learning services, systems and solutions, software, telecommunications services, telecommunications equipment, ERP services, or cloud services).",
+      "link": "https://buy.nsw.gov.au/schemes/ict-services-scheme"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-PC-002",
+      "title": "Confirm mandatory scheme usage applies",
+      "body": "Confirm that use of the ICT Services Scheme is mandatory under Procurement Board Direction 2020-04 for this procurement. The scheme applies to all NSW Government agencies procuring ICT goods and services.",
+      "link": null
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-PC-003",
+      "title": "Check if existing whole-of-government arrangement covers the requirement",
+      "body": "Determine whether an existing whole-of-government agreement, framework, or panel established through the ICT Services Scheme or another arrangement already covers the goods or services being procured. If yes, use that arrangement. If no, proceed to invite suppliers from the scheme.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-001",
+      "title": "Invite minimum three suppliers from scheme for limited tendering",
+      "body": "For all EPP-covered ICT procurements, agencies must invite a minimum of three (3) prequalified suppliers from the ICT Services Scheme. If inviting fewer than three suppliers, agencies must provide written justification under the circumstances permitted in Part 4, Section 15 of the EPP Direction (Procurement Board Direction 2019-05).",
+      "policy": "Procurement Board Direction 2020-05; ICT Services Scheme Rules Section 13"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-002",
+      "audience": "supplier",
+      "title": "Use ICT Purchasing Framework in all contracts",
+      "body": "All suppliers on the ICT Services Scheme must agree to supply through the ICT Purchasing Framework mandated by Procurement Board Direction 2021-02, unless an existing whole-of-government contract directly applies to the subject matter. The ICT Purchasing Framework comprises the Core & Contracting Framework and the MICTA/ICTA ICT Contracting Framework. Suppliers must execute a customer contract using the mandated template.",
+      "policy": "Procurement Board Direction 2021-02; ICT Services Scheme Rules Section 10",
+      "active": true
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-003",
+      "audience": "supplier",
+      "title": "Require registered suppliers to meet value and risk thresholds",
+      "body": "Suppliers approved to the Registered Supplier List may only supply contracts with a total value up to $150,000 (ex GST) and must be low-risk. Suppliers approved to the Advanced Registered Supplier List may supply contracts over $150,000 (ex GST) or involving high-risk work.",
+      "policy": "ICT Services Scheme Rules Section 8.2; Application Requirements Table"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-004",
+      "audience": "supplier",
+      "title": "Require professional indemnity insurance for all suppliers",
+      "body": "All suppliers on the ICT Services Scheme (both Registered and Advanced) must provide proof of professional indemnity insurance with minimum cover of $1 million. Advanced suppliers must provide public liability insurance with minimum cover of $10 million, whereas Registered suppliers must provide public liability insurance with minimum cover of $5 million. All suppliers must maintain workers compensation insurance. Insurance requirements specified in individual contracts may override these minimums.",
+      "policy": "ICT Services Scheme Rules Section 8.3; Insurance Requirements Table"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-005",
+      "audience": "supplier",
+      "title": "Require quarterly usage data reporting from suppliers",
+      "body": "All suppliers must provide detailed usage data to the Department of Customer Service on a quarterly basis (or as requested). This data must be submitted in the template specified by DCS. Data includes information on tendering, financial capability, compliance with procurement policies, contract performance, and project outcomes. Failure to comply is a breach of the Scheme Rules and may result in suspension or removal.",
+      "policy": "ICT Services Scheme Rules Section 11"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-006",
+      "audience": "supplier",
+      "title": "Update supplier profile information within specified timeframe",
+      "body": "Suppliers must maintain accurate and up-to-date information in their Supplier Hub profile. Any changes to organisational details (including business identifiers such as SME status or Australian ownership), service categories, or other profile information must be updated through a Membership Amendment application. If a supplier's ABN changes, they must submit a new application as the system does not allow manual ABN changes post-approval.",
+      "policy": "ICT Services Scheme Rules Section 12.1"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-007",
+      "audience": "supplier",
+      "title": "Notify DCS immediately of Material Adverse Event or Material Defect",
+      "body": "If a supplier becomes subject to a Material Adverse Event (as defined in Procure IT v3.2) or a Material Defect (as defined in ICTA Schedule 1.1), the supplier must immediately notify the Department of Customer Service by email at ICTServices@customerservice.nsw.gov.au with full details of the event or defect.",
+      "policy": "ICT Services Scheme Rules Section 12.2"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-008",
+      "audience": "supplier",
+      "title": "Comply with all relevant laws and government policies",
+      "body": "All suppliers must comply with all relevant laws and policies, including State Records Act 1998, Government Information (Public Access) Act 2009, Privacy and Personal Information Protection Act 1998, Health Records and Information Privacy Act 2002, Data Sharing (Government Sector) Act 2015, NSW Cyber Security Policy, NSW Code of Practice for Procurement, and any other applicable legislation or policy. Breach of any relevant policies or laws may result in suspension or removal from the scheme.",
+      "policy": "ICT Services Scheme Rules Section 5; Section 9"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-009",
+      "audience": "supplier",
+      "title": "Provide application notification within 15 business days",
+      "body": "The ICT Services team must notify applicants by email within 15 business days of receipt regarding the status of their application to join the ICT Services Scheme or applications to change ICT categories.",
+      "policy": "ICT Services Scheme Rules Section 8.6"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-010",
+      "audience": "supplier",
+      "title": "Provide written notice before suspension with opportunity to respond",
+      "body": "Before suspending a supplier from the ICT Services Scheme, the Department of Customer Service must advise the supplier by email of the matters prompting the proposed suspension and give the supplier opportunity to provide reasons why suspension should not occur. The suspension notice must advise the supplier of the reasons for suspension and any actions required to lift it. Suppliers may be suspended for up to three months for non-compliance with Scheme Rules or unsatisfactory performance.",
+      "policy": "ICT Services Scheme Rules Section 15"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-011",
+      "audience": "supplier",
+      "title": "Provide written notice before removal with opportunity to respond",
+      "body": "Before removing a supplier from the ICT Services Scheme, the Department of Customer Service must advise the supplier by email of the matters prompting the proposed removal and give the supplier opportunity to provide reasons why removal should not occur. Removal may occur for false or misleading information, breach of Scheme Conditions, failure to meet financial requirements, failure to submit data reports, unsatisfactory performance, Material Adverse Event, Material Defect, or failure to meet scheme standards.",
+      "policy": "ICT Services Scheme Rules Section 16"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-012",
+      "audience": "supplier",
+      "title": "Process review requests within specified timeframe",
+      "body": "If a supplier requests review of a removal or suspension decision, the Department of Customer Service must refer the matter to the ICT Services team for review and inform the supplier of the outcome by email. Suppliers have 20 days from the email advising of the original decision to request a review in writing.",
+      "policy": "ICT Services Scheme Rules Section 17"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-013",
+      "audience": "supplier",
+      "title": "Register on Supplier Hub before applying to ICT Services Scheme",
+      "body": "Entities must have a current, approved Supplier Hub profile on the buy.nsw website before they can apply to join the ICT Services Scheme. Profile applications are submitted at https://suppliers.buy.nsw.gov.au/login. Entities may update their profiles at any time as the scheme is open to applications continuously with no deadline.",
+      "policy": "ICT Services Scheme Rules Section 6.2"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-014",
+      "audience": "supplier",
+      "title": "Provide required admission documentation for Registered Supplier listing",
+      "body": "To be admitted to the Registered Supplier List, applicants must provide: (1) organisation details including ABN; (2) company capacity and capability details for each nominated category (excluding detailed referee reports); (3) confirmation of financial solvency and ability to pay debts (excluding certain confirmations); (4) rate card (except consulting-only suppliers); and (5) agreement to use the ICT Purchasing Framework and ICT Consulting Standard Commercial Framework (if applicable).",
+      "policy": "ICT Services Scheme Rules Section 8.1; Application Requirements Table"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-015",
+      "audience": "supplier",
+      "title": "Provide required admission documentation for Advanced Supplier listing",
+      "body": "To be admitted to the Advanced Registered Supplier List, applicants must provide: (1) organisation details including ABN; (2) detailed company capacity and capability details including recent relevant experience, certifications, key personnel qualifications, and two referee reports for each high-level category; (3) confirmation of financial solvency, absence of legal proceedings, and ability to pay debts; (4) agreement to provide independent financial assessment if requested; (5) confirmation not subject to Material Adverse Event or Material Defect; (6) rate card (except consulting-only suppliers); and (7) agreement to use the ICT Purchasing Framework and ICT Consulting Standard Commercial Framework (if applicable).",
+      "policy": "ICT Services Scheme Rules Section 8.1; Application Requirements Table"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-016",
+      "audience": "supplier",
+      "title": "Provide supplier declaration confirming authority and accuracy",
+      "body": "All applicants must provide a Supplier Declaration confirming that: (1) the applicant is authorised to submit the application on behalf of the organisation; (2) the organisation is not subject to a Material Adverse Event or Material Defect; and (3) the information provided in the application is true and correct.",
+      "policy": "ICT Services Scheme Rules Definitions; Section 8.1"
+    },
+    {
+      "id": "ICT_SERVICES_SCHEME-OBL-017",
+      "title": "Apply minimum tender submission timeframes",
+      "body": "When inviting suppliers from the ICT Services Scheme, agencies must comply with applicable minimum tender submission timeframes set out in the Procurement Board Direction 2019-05 (EPP Direction) and other relevant procurement policies. The scheme rules do not exempt agencies from these requirements.",
+      "policy": "ICT Services Scheme Rules Section 13",
+      "active": true
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "If an existing whole-of-government agreement, framework, or panel established through the ICT Services Scheme or another arrangement covers the goods or services, use that existing arrangement. The supplier selection process may still be conducted through the scheme if the arrangement was established via the scheme.",
+    "if_no_arrangement": "If no existing arrangement covers the requirement, agencies must invite a minimum of three prequalified suppliers from the ICT Services Scheme (unless justified under EPP Direction Part 4, Section 15) and conduct the procurement through limited tendering using suppliers from the scheme. All contracts must use the ICT Purchasing Framework mandated by Procurement Board Direction 2021-02."
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        "Verify the procurement is for ICT goods or services within one of the 18 categories covered by the ICT Services Scheme",
+        "Confirm use of the ICT Services Scheme is mandatory under Procurement Board Direction 2020-04 for this procurement",
+        "Check if an existing whole-of-government agreement, framework, or panel (established through the scheme or otherwise) covers the requirement. If yes, use that arrangement. If no, proceed with scheme procurement"
+      ]
+    },
+    {
+      "after_step": 1,
+      "steps": [
+        "Identify which registered or advanced suppliers on the ICT Services Scheme supply in the relevant category/subcategory",
+        "Determine whether to invite a limited number of suppliers (minimum 3) or use a different approach if justified under EPP Direction Part 4, Section 15",
+        "If using limited tendering, select suppliers based on experience/track record, capability/capacity to deliver, compliance to specification, approach and methodology, and ability to contract"
+      ]
+    },
+    {
+      "after_step": 2,
+      "steps": [
+        "Document justification for any limitation on number of suppliers invited (if applicable) covering compliance, financial, commercial, or technical reasons",
+        "Confirm all invitations include minimum tender submission timeframes required under EPP Direction",
+        "Ensure all tender documentation specifies the ICT Purchasing Framework (PBD 2021-02) as the mandatory contracting framework, unless an existing whole-of-government contract directly applies"
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Contract Authority (Chief Executive, NSW Department of Customer Service)",
+      "note": "Responsible for administration of the ICT Services Scheme and has sole discretion to terminate the scheme (with 90 days notice) or make modifications to scheme rules"
+    },
+    {
+      "role": "ICT Services Team (NSW Department of Customer Service)",
+      "note": "Responsible for assessing supplier applications, reviewing decisions on admission/suspension/removal, monitoring scheme performance, and administering the scheme on behalf of the Contract Authority"
+    }
+  ]
+}

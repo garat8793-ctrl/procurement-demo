@@ -1,0 +1,68 @@
+{
+  "scheme_id": "TRANSPORT_SME_ICT",
+  "name": "Transport Cluster SME ICT Procurement Policy",
+  "version": "2024-01",
+  "active": true,
+  "description": "Additional obligations for Transport cluster agencies procuring ICT from SME suppliers at medium value and above. Designed to support the cluster's SME engagement commitments and local industry participation goals.",
+  "source": "Transport for NSW Procurement Policy — SME Participation Strategy 2024",
+  "triggers": {
+    "cluster": ["Transport"],
+    "category": ["ict_saas", "ict_hardware"],
+    "value": ["medium", "high", "major"],
+    "overlays": ["sme"]
+  },
+  "pre_checks": [
+    {
+      "id": "TRANSPORT-SME-PC-001",
+      "title": "Confirm SME eligibility",
+      "body": "Before proceeding, confirm the intended supplier meets the NSW SME definition: fewer than 200 employees and not a subsidiary of a large enterprise. Request a self-declaration from the supplier.",
+      "link": "https://buy.nsw.gov.au/sme"
+    },
+    {
+      "id": "TRANSPORT-SME-PC-002",
+      "title": "Check Transport Digital Supplier Panel",
+      "body": "The Transport cluster maintains a pre-qualified SME digital supplier panel. Check whether the requirement can be sourced from a panel member before approaching the open market.",
+      "link": "https://www.transport.nsw.gov.au/about-us/procurement"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "TRANSPORT-SME-OBL-001",
+      "title": "SME participation plan required",
+      "body": "Procurements with an SME supplier at medium value or above must include a documented SME participation plan, covering: how the supplier will be supported to meet contract requirements, payment terms (no more than 20 business days), and contact escalation arrangements.",
+      "policy": "Transport for NSW Procurement Policy — SME Participation Strategy 2024, s4.1"
+    },
+    {
+      "id": "TRANSPORT-SME-OBL-002",
+      "title": "Accelerated payment terms",
+      "body": "Contracts with SME suppliers within the Transport cluster must include payment terms of no more than 20 business days from invoice receipt. Standard 30-day terms are not acceptable for SME ICT contracts.",
+      "policy": "NSW Government SME and Regional Procurement Policy — Payment Terms"
+    },
+    {
+      "id": "TRANSPORT-SME-OBL-003",
+      "title": "Notify Procurement team of SME ICT contracts",
+      "body": "All ICT contracts with SME suppliers at or above $250,000 must be notified to the Transport Cluster Procurement team within 5 business days of execution. Use the cluster contract register.",
+      "policy": "Transport for NSW Procurement Policy — Cluster Visibility s6.2"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": null,
+    "if_no_arrangement": null
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        "Confirm supplier meets NSW SME definition (fewer than 200 employees)",
+        "Check Transport Digital Supplier Panel for pre-qualified SME providers",
+        "Document SME participation plan before contract execution"
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Transport Cluster Procurement Coordinator",
+      "note": "Must be notified of SME ICT contracts at or above $250,000 within 5 business days of execution"
+    }
+  ]
+}

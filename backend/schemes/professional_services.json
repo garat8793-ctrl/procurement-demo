@@ -1,0 +1,244 @@
+{
+  "scheme_id": "PROFESSIONAL_SERVICES",
+  "name": "Professional Services and Consultancy Procurement",
+  "version": "2026-04",
+  "active": true,
+  "description": "This Direction establishes the framework for procuring professional services, including consultants, by NSW government agencies. It applies to all temporary engagements of external individuals or companies to provide expertise, experience, and specialised knowledge. Consultancy is a subset of professional services where the primary deliverable is advice or recommendations. The scheme requires agencies to justify consultant use, minimise duration, ensure value for money and probity, manage conflicts of interest, assess performance, and comply with Core Work policy restrictions.",
+  "source": "Public Works and Procurement Act 1912 (as amended); NSW Government Procurement Policy Framework; Procurement Board Direction PBD-2026-02 — Engagement of Professional Services Suppliers (April 2026; supersedes PBD-2023-06); Core NSW Public Service Work Policy; Whole of Government Core Work Circular (C2025-05); Government Sector Finance Act 2018",
+  "triggers": {
+    "category": [
+      "professional_services",
+      "consulting"
+    ],
+    "value": [
+      "micro",
+      "low",
+      "medium",
+      "high",
+      "major"
+    ],
+    "purpose": [
+      "new",
+      "renewal"
+    ],
+    "market": [
+      "unknown"
+    ],
+    "impact": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "overlays": null,
+    "timing": [
+      "normal"
+    ],
+    "org": [
+      "operational",
+      "corporate",
+      "executive",
+      "central"
+    ],
+    "interaction": [
+      "quotes",
+      "tender"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PROFESSIONAL_SERVICES-PC-001",
+      "title": "Define the need for consultant versus other resource types",
+      "body": "Before engaging a consultant, clearly define why a consultant (rather than permanent staff, other contractors, or internal expertise) is required for the work. Document the justification for engaging external resources.",
+      "link": null,
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-PC-002",
+      "title": "Classify the engagement as consultancy or non-consultancy",
+      "body": "Determine whether the engagement is predominantly consultancy (advice/recommendations), non-consultancy (implementation/delivery), or a mix. Base classification on the predominant component by value. Indicate the classification in the contract.",
+      "link": null,
+      "citation": "Definitions of Professional Services and Consultancy section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-PC-003",
+      "title": "Check Core Work policy alignment",
+      "body": "Review the Core NSW Public Service Work Policy to determine whether any element of the work must be performed by government employees or must not be outsourced to consultants. Consider sourcing expertise internally via the Expert Advisory Network (EAN) before engaging external consultants.",
+      "link": null,
+      "citation": "Reducing over-reliance on external resources and leveraging government internal expertise section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-PC-004",
+      "title": "Identify and manage conflicts of interest",
+      "body": "Identify potential, perceived, or actual conflicts of interest before and throughout the engagement. Document all conflicts identified and the management approach applied.",
+      "link": null,
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-PC-005",
+      "title": "Check applicable whole-of-government arrangements",
+      "body": "Determine whether a whole-of-government professional services procurement arrangement exists that covers the required services (e.g., Performance and Management Services Scheme SCM0005, ICT Services Scheme, Legal Services Panel, Built Heritage Conservation Consultants Scheme, etc.). Use the arrangement if available. Required under PBD-2026-02 (supersedes PBD-2023-06).",
+      "link": "https://buy.nsw.gov.au/schemes/performance-and-management-services",
+      "citation": "PBD-2026-02; Context section"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-001",
+      "title": "Define need for consultant engagement",
+      "body": "The need to use a consultant, rather than other resource types (such as permanent employees or alternative service delivery models), must be clearly defined before engagement.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-002",
+      "title": "Minimise consultant engagement duration",
+      "body": "The duration of the consultancy engagement must be as short as possible while still enabling the consultant to undertake the required work. Long-term or indefinite engagements must be justified.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-003",
+      "title": "Justify all variations to engagement contracts",
+      "body": "Any variations to an engagement contract must have a clear and specific justification documented prior to approving the variation.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-004",
+      "title": "Apply confidentiality provisions",
+      "body": "The engagement must be subject to appropriate confidentiality provisions that protect sensitive government information and comply with NSW privacy and information management requirements.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-005",
+      "title": "Declare and manage conflicts of interest",
+      "body": "All conflicts of interest (potential, perceived, or actual) must be declared by the consultant prior to and monitored throughout the engagement. A documented conflict management process must be in place.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-006",
+      "title": "Assess consultant work performance",
+      "body": "An assessment of the consultant's work must be performed during or at the conclusion of the engagement to evaluate quality, outcomes, and value for money delivered.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-007",
+      "title": "Maintain appropriate documentation and records",
+      "body": "Comprehensive documentation and record keeping practices must be maintained for all consultant engagements, including contract terms, performance assessments, payments, and variations.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-008",
+      "title": "Clearly identify consultants in government systems",
+      "body": "Consultants must be clearly identified as external contractors in government systems including e-mail systems, security passes, staff directories, and physical workspaces to ensure transparency and prevent confusion with permanent employees.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-009",
+      "title": "Restrict consultant decision-making authority in recruitment",
+      "body": "Consultants must not have decision-making authority in recruitment or selection processes for other consultants and contractors. Consultants may participate in recruitment activities only in a supporting or advisory capacity.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-010",
+      "title": "Classify engagement in contract",
+      "body": "Every professional services engagement contract must clearly indicate the classification of the engagement as consultancy (advice), non-consultancy (delivery/implementation), or a mix thereof, based on the predominant component by value.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Definitions of Professional Services and Consultancy section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-011",
+      "title": "Report consultant engagement data to Procurement Board",
+      "body": "All agencies are required to report 'consultant' engagement data to the Procurement Board through the Principal Department of their affiliated agency group. Data must include supplier name, ABN, applicable procurement arrangement, contract reference, estimated value, engagement dates, classification (consultancy/non-consultancy/mix), cost centre, core work assessment, and reason for outsourcing. Inclusion of non-consultant professional services data is recommended.",
+      "policy": "Government Sector Finance Act 2018; Public Works and Procurement Act 1912",
+      "citation": "Agency reporting requirements section; Table 1: Consultant Data Collection Field Requirements"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-012",
+      "title": "Report annual consultant expenditure",
+      "body": "All agencies are required to report 'consultant' expenditure in accordance with Annual Report requirements under the Government Sector Finance Act 2018. Internal government advice (including EAN sourced advice) and NSW Government Legal Services Panel services are excluded from reporting.",
+      "policy": "Government Sector Finance Act 2018",
+      "citation": "Agency reporting requirements section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-013",
+      "title": "Whole-of-Government scheme owners report annually",
+      "body": "Responsible agencies of whole-of-government professional services schemes must report annually to the Procurement Board and Minister for Domestic Manufacturing and Government Procurement on use of the arrangement, including comparative analysis across agency portfolios on engagement numbers, total spend, compliance with scheme requirements, and trends.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Whole-of-Government procurement arrangement owner reporting requirements section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-014",
+      "title": "Apply Core Work policy requirements",
+      "body": "Agencies must comply with the Core NSW Public Service Work Policy which defines types of work that must be performed by government employees and types that must not be outsourced to consultants. Consider internal capability via the Expert Advisory Network before engaging external consultants.",
+      "policy": "Core NSW Public Service Work Policy; Whole of Government Core Work Circular (C2025-05)",
+      "citation": "Reducing over-reliance on external resources and leveraging government internal expertise section"
+    },
+    {
+      "id": "PROFESSIONAL_SERVICES-OBL-015",
+      "title": "Ensure value for money, probity, and transparency",
+      "body": "All professional services engagements must be procured with value for money, probity, and transparency as key objectives. The engagement process must be transparent and the selection rationale must be clearly documented.",
+      "policy": "Public Works and Procurement Act 1912; NSW Government Procurement Policy Framework",
+      "citation": "Behaviours when engaging consultants section"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Use the applicable whole-of-government professional services procurement arrangement (e.g., Performance and Management Services Scheme SCM0005, ICT Services Scheme SCM0020, Consultants in Construction Scheme SCM1191, Government Architect's Strategy and Design Scheme SCM0801, Legal Services Panel, or Built Heritage Conservation Consultants Scheme SCM3831) in accordance with that arrangement's specific requirements.",
+    "if_no_arrangement": "Conduct open market procurement for the required professional services in accordance with the Public Works and Procurement Act 1912 and NSW Government Procurement Policy Framework, ensuring compliance with all obligations in this Direction including conflict of interest management, Core Work policy review, and data collection requirements."
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        {
+          "text": "Determine whether the engagement is for consultancy (advice/recommendations) or non-consultancy professional services (implementation/delivery) based on the predominant component. If mixed, classify by the predominant value element.",
+          "citation": "Definitions of Professional Services and Consultancy section"
+        },
+        {
+          "text": "Review the Core NSW Public Service Work Policy to confirm that the proposed work is not classified as work that must be performed by government employees or must not be outsourced.",
+          "citation": "Reducing over-reliance on external resources and leveraging government internal expertise section"
+        },
+        {
+          "text": "Check whether the required services are covered by an existing whole-of-government professional services procurement arrangement. If available, proceed via that arrangement.",
+          "citation": "Context section; pre_checks PC-005"
+        },
+        {
+          "text": "Identify and document potential, perceived, and actual conflicts of interest that the consultant may have. Establish a conflict management approach.",
+          "citation": "Behaviours when engaging consultants section"
+        },
+        {
+          "text": "Define and justify the specific need for external consultant engagement rather than using permanent staff or other resource types.",
+          "citation": "Behaviours when engaging consultants section"
+        },
+        {
+          "text": "Establish the minimum engagement duration required to complete the work; longer durations require documented justification.",
+          "citation": "Behaviours when engaging consultants section"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Procurement Board (via Principal Department)",
+      "note": "All consultant engagements must be reported to the Procurement Board through the Principal Department of the affiliated agency group as required by Government Sector Finance Act 2018"
+    },
+    {
+      "role": "Core Work Policy Compliance Officer",
+      "note": "Engagement must be assessed against the Core NSW Public Service Work Policy to confirm the work is not restricted from outsourcing"
+    },
+    {
+      "role": "Conflict of Interest Assessor",
+      "note": "Consultant conflicts of interest (potential, perceived, actual) must be identified and managed prior to engagement commencement"
+    },
+    {
+      "role": "Legal Adviser",
+      "note": "Engagement contract must include appropriate confidentiality provisions and be reviewed for compliance with procurement probity and transparency requirements"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Backend
+
+cd C:\Users\garat\Downloads\000Proc_greenfield\backend
+uvicorn main:app --port 8003 --reload
+
+Frontend
+
+cd C:\Users\garat\Downloads\000Proc_greenfield\frontend
+npm run dev

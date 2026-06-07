@@ -1,0 +1,70 @@
+[
+  {
+    "package_id": "simlab-c4de6cd8b84c",
+    "package_name": "Dan's Test",
+    "created_at": "2026-04-21T05:01:00.951749+00:00",
+    "updated_at": "2026-04-21T05:01:00.951749+00:00",
+    "meta": {
+      "status": "approved",
+      "owner": "DAN",
+      "note": ""
+    },
+    "payload": {
+      "proposal_mode": "deactivate",
+      "selected_rule_id": "core:OBL-001",
+      "draft_rule": {
+        "rule_id": "candidate:1776747458385",
+        "rule_type": "obligation",
+        "source_type": "policy_candidate",
+        "source_id": "simulation_lab",
+        "source_name": "Simulation Lab",
+        "title": "",
+        "summary": "",
+        "active": true,
+        "priority": 50,
+        "precedence": 50,
+        "tags": "",
+        "objectives": "",
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "in",
+            "value": ""
+          }
+        ],
+        "effects": [
+          {
+            "effect_type": "obligation",
+            "title": "",
+            "detail": ""
+          }
+        ],
+        "provenance": {
+          "source_id": "simulation_lab",
+          "source_name": "Simulation Lab",
+          "citation": "",
+          "confidence": 0.75
+        }
+      },
+      "scenarios": [
+        {
+          "id": "scenario-1776747458385-1",
+          "case_id": "scenario-1",
+          "case_name": "Scenario 1",
+          "facts": {
+            "category": "consulting",
+            "value": "medium",
+            "purpose": "new",
+            "market": "unknown",
+            "impact": "medium",
+            "interaction": "tender",
+            "timing": "normal",
+            "org": "corporate",
+            "overlays": []
+          }
+        }
+      ],
+      "proposed_changes": []
+    }
+  }
+]

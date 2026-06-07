@@ -1,0 +1,119 @@
+{
+  "scheme_id": "ICT_PROCUREMENT",
+  "name": "ICT Procurement — NSW Digital and Cyber Obligations",
+  "version": "2025-01",
+  "active": true,
+  "description": "Obligations for any NSW Government procurement with a significant ICT component. Covers Digital NSW assurance, NSW Cyber Security Policy, privacy, AI sub-triggers (AIAF), SME commitments, and whole-of-government ICT contract requirements.",
+  "source": "NSW Procurement Policy Framework; NSW Cyber Security Policy 2022; Privacy and Personal Information Protection Act 1998; NSW Digital Strategy; Treasury Circular TC24/01",
+  "triggers": {
+    "category": ["ict_saas", "ict_hardware", "ict_infrastructure", "ict_development"],
+    "overlays": ["critical_ict"]
+  },
+  "pre_checks": [
+    {
+      "id": "ICT-PC-001",
+      "title": "Check for mandatory whole-of-government ICT arrangements",
+      "body": "Before proceeding to market, confirm whether a mandatory NSW Government ICT arrangement exists on buy.nsw.gov.au that covers this requirement. Categories with mandatory arrangements include: end-user computing, cloud services (some), mobile devices, and certain software categories. Use of a mandatory arrangement is compulsory unless a formal exemption is obtained.",
+      "citation": "NSW Electronic Procurement Policy; buy.nsw.gov.au"
+    },
+    {
+      "id": "ICT-PC-002",
+      "title": "Confirm Digital NSW assurance requirements",
+      "body": "ICT procurements above $1 million (or those classified as significant by your agency's CIO) require engagement with Digital NSW for assurance. Contact your agency's Digital team to confirm whether this procurement requires a Digital Investment Review or Digital Assurance Review before approach to market.",
+      "citation": "NSW Digital Strategy; Treasury Circular TC24/01"
+    },
+    {
+      "id": "ICT-PC-003",
+      "title": "Conduct cyber security risk assessment",
+      "body": "Under the NSW Cyber Security Policy, all ICT procurements must include a cyber security risk assessment before contract execution. The assessment must be documented and risk treatment plans included in contract deliverables. For systems handling protected or sensitive data, engage your agency CISO.",
+      "citation": "NSW Cyber Security Policy 2022 s.4.2"
+    },
+    {
+      "id": "ICT-PC-004",
+      "title": "Determine privacy obligations",
+      "body": "If the ICT system will collect, store, or process personal information, a Privacy Impact Assessment (PIA) is required. The PIA must be completed before approach to market and endorsed by the agency's Privacy Officer. Systems handling health information also require engagement with the NSW Privacy Commissioner's office.",
+      "citation": "Privacy and Personal Information Protection Act 1998; Health Records and Information Privacy Act 2002"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "ICT-OBL-001",
+      "title": "Digital NSW assurance review before contract execution",
+      "body": "ICT procurements above the agency's digital investment threshold require a Digital NSW assurance review (Digital Investment Review or Assurance Review) to be completed before contract execution. The review must be endorsed by the relevant digital governance body. Contact your agency CIO or Digital team for thresholds and process.",
+      "policy": "NSW Digital Strategy; Treasury Circular TC24/01",
+      "active": true
+    },
+    {
+      "id": "ICT-OBL-002",
+      "title": "NSW Cyber Security Policy compliance — risk review and contract provisions",
+      "body": "All ICT procurements must include: (1) a documented cyber security risk assessment completed before contract execution; (2) contract clauses requiring the supplier to comply with the NSW Cyber Security Policy and relevant Australian Cyber Security Centre (ACSC) guidance; (3) incident notification obligations within 24 hours of a suspected breach; (4) penetration testing or security assessment requirements proportionate to risk.",
+      "policy": "NSW Cyber Security Policy 2022; ACSC Essential Eight",
+      "active": true
+    },
+    {
+      "id": "ICT-OBL-003",
+      "title": "Privacy Impact Assessment — required if personal information is processed",
+      "body": "If the ICT system collects, stores, processes, or transmits personal information (including health information), a Privacy Impact Assessment must be completed and endorsed by the agency's Privacy Officer before approach to market. PIA recommendations must be incorporated into contract requirements and evaluated during tender assessment.",
+      "policy": "Privacy and Personal Information Protection Act 1998; HNEIA Act 2002",
+      "active": true
+    },
+    {
+      "id": "ICT-OBL-004",
+      "title": "SME participation commitment — ICT contracts $3M+",
+      "body": "For ICT contracts valued at $3 million or more, the evaluation criteria must include a minimum 10% weighting for SME participation. Tenderers must provide an SME Participation Plan as part of their response. The plan should identify SME sub-contractors, the value of work to be performed by SMEs, and how SME participation will be managed and reported.",
+      "policy": "NSW Procurement Policy Framework — SME Participation; DCS Procurement Manual",
+      "active": true
+    },
+    {
+      "id": "ICT-OBL-005",
+      "title": "NSW Government ICT Contract terms — mandatory clauses",
+      "body": "Where a mandated NSW Government ICT contract template applies, it must be used unless a formal variation is approved. Mandatory clauses include: data sovereignty requirements (data stored in Australia), intellectual property ownership provisions, exit and transition assistance obligations, and audit rights. Seek legal review before varying any mandatory clause.",
+      "policy": "NSW Procurement Policy Framework; NSW ICT Contract Guidelines",
+      "active": true
+    },
+    {
+      "id": "ICT-OBL-006",
+      "title": "AI framework assessment — required if AI component present",
+      "body": "If the ICT procurement includes any AI, machine learning, or automated decision-making component, an AI Assessment Framework (AIAF) assessment must be completed before contract execution. Classify the AI use case (low/medium/high risk), document explainability and human oversight requirements in the specification, and include AIAF compliance as a contract deliverable. Contact your agency's AI Ethics or Digital team.",
+      "policy": "NSW AI Procurement Policy 2024; AI Assessment Framework (AIAF) v1.2; NSW AI Ethics Policy",
+      "active": true
+    }
+  ],
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        {
+          "text": "Check buy.nsw.gov.au for mandatory ICT arrangements covering this requirement. Document the search outcome. If a mandatory arrangement exists, use it or obtain a formal exemption before proceeding.",
+          "citation": "NSW Electronic Procurement Policy"
+        },
+        {
+          "text": "Engage Digital NSW / agency CIO for assurance review requirements. Confirm whether a Digital Investment Review or Assurance Review is required before approach to market.",
+          "citation": "NSW Digital Strategy; TC24/01"
+        },
+        {
+          "text": "Complete cyber security risk assessment (NSW Cyber Security Policy). For sensitive/protected data systems, engage agency CISO before drafting requirements.",
+          "citation": "NSW Cyber Security Policy 2022 s.4.2"
+        },
+        {
+          "text": "If personal information is involved: complete Privacy Impact Assessment with agency Privacy Officer before approach to market. Incorporate PIA recommendations into specification.",
+          "citation": "PPIPA 1998; HRIPA 2002"
+        },
+        {
+          "text": "If AI component: classify under AIAF, include explainability/oversight/data governance requirements in specification. Confirm use case is not prohibited or restricted.",
+          "citation": "NSW AI Procurement Policy 2024; AIAF v1.2"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Agency CIO / Digital Governance — Digital NSW assurance",
+      "note": "ICT procurements above the digital investment threshold require CIO endorsement of Digital NSW assurance review before contract execution."
+    },
+    {
+      "role": "Agency CISO — cyber security risk sign-off",
+      "note": "Cyber security risk assessment must be reviewed and accepted by the CISO (or delegated security officer) before contract execution."
+    }
+  ]
+}

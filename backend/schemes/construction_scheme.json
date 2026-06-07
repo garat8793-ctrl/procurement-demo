@@ -1,0 +1,78 @@
+{
+  "scheme_id": "CONSTRUCTION",
+  "name": "NSW Construction and Infrastructure Scheme",
+  "version": "2024-01",
+  "active": true,
+  "description": "Rules for construction, maintenance, and infrastructure procurements under NSW Government policy frameworks. Includes Building Code, Security of Payment, and Local Industry Participation obligations.",
+  "source": "NSW Construction Procurement Policy; Building and Construction Industry Security of Payment Act 1999; Local Industry Participation Policy",
+  "triggers": {
+    "category": ["construction"],
+    "overlays": ["construction"]
+  },
+  "pre_checks": [
+    {
+      "id": "CON-PC-001",
+      "title": "Check eCentral and agency construction panels",
+      "body": "Check whether your agency has pre-qualified construction contractors or standing panels via eCentral (ecentral.nsw.gov.au) before proceeding to open market. Whole-of-government construction panels may apply depending on the value and type of work.",
+      "link": "https://www.ecentral.nsw.gov.au"
+    },
+    {
+      "id": "CON-PC-002",
+      "title": "Engage your agency's property and construction team",
+      "body": "Construction procurement has specialist requirements. Engage your agency's property, facilities, or construction management team early. Independent cost estimation is recommended for works over $250,000.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "CON-OBL-001",
+      "title": "Security of Payment obligations apply",
+      "body": "The Building and Construction Industry Security of Payment Act 1999 applies to all construction contracts. Ensure contracts comply with progress payment provisions and payment schedules. Payment terms must not exceed 20 business days for subcontractors.",
+      "policy": "Building and Construction Industry Security of Payment Act 1999"
+    },
+    {
+      "id": "CON-OBL-002",
+      "title": "Local Industry Participation Plan required",
+      "body": "Construction procurements above $10 million must include a Local Industry Participation Plan. Procurements above $1 million should document how local industry has been considered in the procurement approach.",
+      "policy": "NSW Local Industry Participation Policy"
+    },
+    {
+      "id": "CON-OBL-003",
+      "title": "Work Health and Safety requirements",
+      "body": "All construction contracts must include WHS obligations consistent with NSW Work Health and Safety Act 2011 and SafeWork NSW guidelines. For major works, a Construction Safety Management Plan should be required.",
+      "policy": "Work Health and Safety Act 2011; SafeWork NSW Guidelines"
+    },
+    {
+      "id": "CON-OBL-004",
+      "title": "Licensing and insurance verification",
+      "body": "Verify that all contractors hold appropriate contractor licences under the Home Building Act 1989 (where applicable) and hold required public liability and professional indemnity insurance before contract execution.",
+      "policy": "Home Building Act 1989; NSW Fair Trading"
+    },
+    {
+      "id": "CON-OBL-005",
+      "title": "Independent cost estimate recommended",
+      "body": "For construction works above $250,000, obtain an independent quantity surveyor or cost estimate to establish a budget benchmark before going to market. This supports value for money assessment and tender evaluation.",
+      "policy": "NSW Construction Procurement Policy"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Use agency construction panel or eCentral arrangement",
+    "if_no_arrangement": "Proceed with recommended pathway — note construction-specific steps below"
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        "Check eCentral and agency construction panels for applicable pre-qualified suppliers",
+        "Obtain independent cost estimate if works exceed $250,000",
+        "Confirm WHS, licensing, and insurance requirements are included in specification"
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Property / Construction team sign-off",
+      "note": "Agency property or construction management team approval required before going to market"
+    }
+  ]
+}

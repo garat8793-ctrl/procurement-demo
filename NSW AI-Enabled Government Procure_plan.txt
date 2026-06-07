@@ -1,0 +1,447 @@
+# NSW AI-Enabled Government Procurement — Local MVP Build Plan
+
+## Context
+
+The user has a detailed architecture document (`procurement_prototype_architecture.md`) describing a policy-constrained AI procurement system. A nearly complete reference implementation exists at `000Proc_poc/` (Python FastAPI + React with rules engine, pathway selection, approval routing, LLM intake/drafting, pluggable JSON schemes).
+
+The MVP must cover the **full 12-step orchestration lifecycle** from the architecture doc — from intake through to supplier selection and award recommendation. The five MVP capabilities from the spec are the minimum; the user wants the prototype to extend into sourcing.
+
+**Lifecycle stages in scope:**
+1. Intake → profile built → pathway determined (planning)
+2. Strategy agreed → docs drafted → approvals → market event (sourcing)
+3. Responses received → evaluation → award recommendation (supplier selection)
+
+*Contract management (step 12) is deferred — flagged for Phase 2.*
+
+**Strategy: Fork + extend `000Proc_poc`, not rebuild.** ~65% of files copy directly. New work is targeted additions covering market intelligence, strategy, evaluation, and the sourcing lifecycle.
+
+---
+
+## Confirmed Decisions
+
+- **Ports**: Backend 8003, Frontend 3001 (POC on 8002/3000 runs simultaneously)
+- **New scheme**: `ict_procurement.json` — ICT-specific obligations (digital assurance, cyber, privacy, AI sub-triggers, SME)
+- **Exception audit**: SQLite only (no email/Slack notification for MVP)
+- **Supplier selection guardrail**: Evaluation agent produces ranked evidence — human makes final award decision (evaluation agent never decides)
+
+---
+
+## Directory Structure
+
+```
+000Proc_greenfield/
+├── backend/
+│   ├── main.py                        # ADAPTED — all new routes wired here
+│   ├── models.py                      # ADAPTED — extended profile + 8 new entity types
+│   │
+│   │  ── Decision layer ──
+│   ├── decision_engine.py             # NEW — orchestrator: rules+pathway+approval → DecisionRecord
+│   ├── audit_logger.py                # NEW — SQLite: DecisionRecord, AgentActionRecord, ExceptionRecord
+│   ├── exception_handler.py           # NEW — ExceptionRecord capture and storage
+│   │
+│   │  ── Agent layer ──
+│   ├── intake_agent.py                # ADAPTED from intake_engine.py — updated system prompt for new fields
+│   ├── policy_agent.py                # NEW — retrieves + explains policy obligations in plain English
+│   ├── strategy_agent.py              # NEW — generates sourcing strategy option set with trade-offs
+│   ├── market_agent.py                # NEW — scans supplier store, produces MarketAssessment
+│   ├── drafting_agent.py              # ADAPTED from llm_assist.py — adds RFx, eval plan, approval summary
+│   ├── evaluation_agent.py            # NEW — ingests supplier responses, scores against criteria
+│   ├── negotiation_agent.py           # NEW — prepares negotiation brief from evaluation outcomes
+│   │
+│   │  ── Existing engines (carried forward) ──
+│   ├── rules_engine.py                # COPY
+│   ├── pathway_engine.py              # ADAPTED — add rule_trace to select_pathway()
+│   ├── approval_engine.py             # COPY
+│   ├── briefing_generator.py          # ADAPTED — add new overlay labels
+│   ├── briefing_template.py           # COPY
+│   ├── scheme_loader.py               # ADAPTED — handle new trigger keys
+│   ├── artifact_ingester.py           # COPY
+│   ├── requirements.txt               # COPY (sqlite3 + uuid are stdlib; no new deps)
+│   ├── .env                           # ANTHROPIC_API_KEY (not committed)
+│   │
+│   ├── data/
+│   │   ├── questions.json             # ADAPTED — 3 new questions (Q11: AI?, Q12: data sensitivity?, Q13: ICT type?)
+│   │   ├── pathways.json              # COPY
+│   │   ├── approval_matrix.json       # COPY
+│   │   ├── obligations.json           # ADAPTED — 3 new ICT/AI/cyber obligations appended
+│   │   ├── NSW_Gov_agencies.json      # COPY
+│   │   ├── suppliers.json             # NEW — mock supplier master (~30 suppliers with classifications)
+│   │   └── evaluation_criteria_templates.json  # NEW — standard criteria templates by category
+│   │
+│   └── schemes/
+│       ├── [all 14+ existing .json]   # COPY — all existing schemes verbatim
+│       └── ict_procurement.json       # NEW — ICT obligations: digital assurance, cyber, privacy, AI, SME
+│
+├── frontend/
+│   ├── package.json                   # ADAPTED — name, port 3001
+│   ├── vite.config.js                 # ADAPTED — proxy to port 8003
+│   ├── index.html                     # COPY
+│   ├── public/                        # COPY
+│   └── src/
+│       ├── App.js                     # ADAPTED — lifecycle state machine; lifecycle nav tabs
+│       ├── api.js                     # ADAPTED — all new API call functions
+│       ├── CitationsContext.js        # COPY
+│       ├── index.css                  # COPY
+│       ├── index.js                   # COPY
+│       └── components/
+│           ├── [all 13 existing]      # COPY — unchanged
+│           ├── ResultsPage.jsx        # ADAPTED — add Trace + Exception tabs
+│           ├── PathwayTrace.jsx       # NEW — rule-by-rule policy trace (pure render)
+│           ├── ExceptionForm.jsx      # NEW — override request form
+│           ├── StrategyPanel.jsx      # NEW — sourcing strategy options + human selection
+│           ├── MarketMap.jsx          # NEW — supplier clusters, depth, SME/Aboriginal signals
+│           ├── RFxWorkspace.jsx       # NEW — RFx document drafting + approval trigger
+│           ├── EvaluationWorkspace.jsx # NEW — upload submissions, score grid, supplier comparison
+│           └── AwardRecommendation.jsx # NEW — ranked suppliers, evidence, human award decision
+│
+└── .env.example
+```
+
+---
+
+## Procurement Lifecycle State Machine
+
+The operational store in SQLite tracks each procurement's current state. The UI adapts to show the correct workspace for the current state.
+
+```
+intake → profile_built → pathway_set → strategy_agreed → docs_drafted
+  → approvals_pending → market_active → responses_received
+  → evaluation_complete → award_recommended → [contract_executed — deferred]
+```
+
+State is stored in the `procurements` table with a `lifecycle_stage` column. Each stage transition is logged as an `AgentActionRecord`.
+
+---
+
+## Key Data Schema — All New Types
+
+### Extended `ProcurementProfile` (6 new optional fields)
+
+```python
+# models.py additions — existing 13 fields untouched
+ai_component: Optional[bool] = None           # True if AI/ML is a procurement component
+data_sensitivity: Optional[str] = None        # "public" | "internal" | "sensitive" | "protected"
+technology_component: Optional[bool] = None   # True if significant ICT in non-ICT category
+market_maturity: Optional[str] = None         # "emerging" | "developing" | "mature" | "commodity"
+outcome_type: Optional[str] = None            # "output" | "outcome" | "hybrid"
+delivery_criticality: Optional[str] = None    # "deferrable" | "important" | "critical" | "non_negotiable"
+```
+
+### New Canonical Entities (from architecture doc §8)
+
+```python
+class RuleTrace(BaseModel):
+    rule_id: str; description: str; matched: bool
+    fields_checked: list[str]; field_values: dict
+    policy_citation: Optional[str]; stop_reason: Optional[str]
+
+class DecisionRecord(BaseModel):
+    decision_id: str                   # UUID4
+    timestamp: str                     # ISO-8601 UTC
+    profile: ProcurementProfile
+    pathway_id: str; pathway_label: str
+    basis: list[RuleTrace]             # Full rule evaluation trace
+    obligation_ids: list[str]; scheme_ids: list[str]
+    human_override: bool = False
+    override_decision_id: Optional[str] = None
+
+class AgentActionRecord(BaseModel):
+    agent_action_id: str               # UUID4 — from architecture §7
+    agent: str                         # "intake_agent" | "strategy_agent" | "market_agent" | etc.
+    input_reference: str               # decision_id or procurement_id
+    output_type: str                   # "market_assessment" | "rfx_draft" | "evaluation_report" | etc.
+    confidence: Optional[float]        # 0.0–1.0
+    review_required: bool = True
+    timestamp: str
+
+class ExceptionRecord(BaseModel):
+    exception_id: str; decision_id: str; timestamp: str
+    submitted_by: str; rationale: str; requested_pathway: str
+    status: str = "pending"            # "pending" | "approved" | "rejected"
+    reviewed_by: Optional[str] = None
+    review_timestamp: Optional[str] = None; review_notes: Optional[str] = None
+
+class MarketAssessment(BaseModel):
+    assessment_id: str; procurement_id: str; timestamp: str
+    supplier_count: int
+    market_depth: str                  # "thin" | "moderate" | "deep"
+    competition_risk: str              # "low" | "medium" | "high"
+    supplier_clusters: list[dict]      # [{"name": ..., "suppliers": [...], "tags": [...]}]
+    sme_opportunity: bool
+    aboriginal_business_present: bool
+    incumbent_identified: bool
+    incumbents: list[str]
+    signals: list[str]                 # Narrative signals from agent
+
+class SourcingStrategy(BaseModel):
+    strategy_id: str; procurement_id: str; timestamp: str
+    options: list[dict]                # [{"label": ..., "pathway": ..., "pros": [...], "cons": [...]}]
+    recommended_option: str
+    rationale: str
+    human_selected_option: Optional[str] = None
+    human_selection_timestamp: Optional[str] = None
+
+class Supplier(BaseModel):
+    supplier_id: str; name: str
+    classifications: list[str]         # "sme" | "aboriginal" | "regional" | "multinational"
+    capabilities: list[str]            # e.g. "ict_development", "ai_ml", "cloud"
+    panel_memberships: list[str]       # scheme IDs
+    state: Optional[str]
+    performance_rating: Optional[float]
+
+class EvaluationCriterion(BaseModel):
+    criterion_id: str; label: str; weighting: float  # 0.0–1.0, sum to 1.0
+    scoring_guidance: str
+    is_mandatory: bool = False         # Mandatory = pass/fail gate
+
+class SupplierEvaluation(BaseModel):
+    evaluation_id: str; procurement_id: str
+    supplier_id: str; supplier_name: str
+    scores: dict                       # {criterion_id: {"score": 0-10, "evidence": "...", "risks": [...]}}
+    total_weighted_score: float
+    mandatory_pass: bool               # False if any mandatory criterion failed
+    agent_summary: str
+    review_required: bool = True
+    timestamp: str
+```
+
+### Updated Response Models
+
+- `EvaluateResponse` gains: `decision_id: str`
+- `PathwayResult` gains: `rule_trace: list[RuleTrace] = []`
+
+---
+
+## New Files — Responsibilities
+
+### `decision_engine.py`
+Orchestrator replacing the inline logic in `main.py`'s evaluate route:
+- Accepts `ProcurementProfile` + optional agency context
+- Calls `select_pathway()` → `evaluate_obligations()` → `derive_approvals()` → `build_briefing_structure()`
+- Constructs and persists `DecisionRecord` via `audit_logger`
+- Returns `(EvaluateResponse, decision_id)`
+
+### `audit_logger.py`
+SQLite persistence using stdlib `sqlite3`:
+- `init_db()` — creates tables: `decision_records`, `agent_action_records`, `exception_records`, `procurements` (lifecycle state)
+- `write_decision()`, `read_decision()`, `list_decisions()`
+- `write_agent_action()`, `list_agent_actions()`
+- `write_exception()`, `list_exceptions()`
+- `write_procurement_state()`, `get_procurement_state()` — lifecycle tracking
+
+### `exception_handler.py`
+- `submit_exception()` — validates decision exists, constructs ExceptionRecord, persists
+- `get_exception()`, `list_exceptions()`
+
+### `policy_agent.py`
+Policy Interpretation Agent (architecture §4.2):
+- `explain_obligations(obligations, profile)` → plain-English explanation of each obligation, cited to source policy
+- `answer_policy_question(question, context)` → one-off policy question answering with mandatory citations
+- **Guardrail**: system prompt explicitly prohibits inventing requirements; must cite `obligation.policy` field
+
+### `strategy_agent.py`
+Procurement Strategy Agent (architecture §4.3):
+- `generate_strategy(profile, pathway, market_assessment)` → `SourcingStrategy`
+- Produces 2-3 options (e.g., "Panel calldown", "Open tender with 2-stage evaluation", "Direct negotiation with justification")
+- Each option includes: pros, cons, timeline estimate, risk level
+- Marks a recommended option with rationale
+- Logs `AgentActionRecord` via `audit_logger`
+
+### `market_agent.py`
+Market Intelligence Agent (architecture §4.4):
+- `assess_market(profile, agency_context)` → `MarketAssessment`
+- Queries `data/suppliers.json` filtered by capability tags matching the procurement profile
+- Claude interprets the supplier set and produces narrative signals (e.g., "Market is thin — only 4 ICT vendors with AI/ML capability on NSW panels")
+- Identifies: incumbents, SMEs, Aboriginal businesses, regional suppliers, panel membership
+- Estimates market depth and competition risk
+- Logs `AgentActionRecord`
+
+### `drafting_agent.py` (adapted from `llm_assist.py`)
+Extends existing prose generation to cover the full RFx lifecycle (architecture §4.5):
+- Existing: `explain_pathway()`, `generate_briefing_prose()`, `extract_intake()`
+- New: `draft_rfx(profile, strategy, obligations)` → RFx document sections (scope, requirements, evaluation criteria, response format)
+- New: `draft_evaluation_plan(profile, strategy)` → weighted evaluation criteria with scoring guidance
+- New: `draft_approval_summary(profile, pathway, obligations, approvals)` → executive approval briefing
+
+### `evaluation_agent.py`
+Evaluation Support Agent (architecture §4.6):
+- `evaluate_submission(submission_text, criteria, profile)` → `SupplierEvaluation`
+- Ingests supplier response text (extracted from uploaded PDF/DOCX via existing `artifact_ingester.py`)
+- For each `EvaluationCriterion`: extracts criterion-aligned evidence, assigns a score (0-10), notes risks/ambiguities, flags non-compliance
+- Produces `agent_summary` with overall assessment
+- **Guardrail**: system prompt states "you are supporting human evaluators — do not make award recommendations or compare suppliers with each other"
+- Logs `AgentActionRecord` with `review_required: true`
+
+### `negotiation_agent.py`
+Negotiation Agent (architecture §4.7):
+- `prepare_negotiation_brief(profile, evaluation_results, preferred_supplier)` → dict
+- Produces: key leverage points, recommended opening positions, BATNA, non-standard clause risks to watch
+- Triggered after evaluation is complete and a preferred supplier is identified by the human evaluator
+- Logs `AgentActionRecord`
+
+### `data/suppliers.json`
+Mock supplier master (~30 suppliers) with fields: `supplier_id`, `name`, `classifications` (sme, aboriginal, regional, multinational), `capabilities` (ict_development, ai_ml, cloud, cybersecurity, professional_services, etc.), `panel_memberships` (scheme_ids they're on), `state`, `performance_rating`. Sufficient to demonstrate market mapping across a realistic ICT procurement scenario.
+
+### `data/evaluation_criteria_templates.json`
+Standard evaluation criteria templates by procurement category. For ICT/AI:
+- Technical capability (35%)
+- Implementation approach (20%)
+- Team experience (15%)
+- Price/value (20%)
+- Risk management (10%)
+Each criterion includes scoring guidance and whether it's a mandatory pass/fail gate.
+
+### `schemes/ict_procurement.json`
+Triggers on `category: ["ict_saas", "ict_infrastructure", "ict_development"]` or `technology_component: true`.
+
+Obligations:
+- Digital NSW assurance review (mandatory for ICT > threshold)
+- NSW Cyber Security Policy — risk review before contract
+- Privacy Impact Assessment if system handles personal information
+- AIAF assessment if `ai_component = true` (sub-trigger)
+- SME participation commitment (10%+ weighting at ICT contracts $3M+)
+- NSW Whole of Government ICT standard contract clauses
+
+---
+
+## New API Routes
+
+| Route | Status | Purpose |
+|---|---|---|
+| `POST /api/profile/evaluate` | ADAPTED | Returns `decision_id`; calls `decision_engine` |
+| `POST /api/profile/evaluate-direct` | ADAPTED | Same |
+| `GET /api/decision/{decision_id}` | NEW | Fetch stored `DecisionRecord` |
+| `POST /api/exception/submit` | NEW | Submit override → `ExceptionRecord` |
+| `GET /api/exceptions` | NEW | List exceptions (admin) |
+| `GET /api/audit/decisions` | NEW | List decision records (admin) |
+| `GET /api/audit/agent-actions` | NEW | List agent action records (admin) |
+| `POST /api/strategy/generate` | NEW | Strategy agent → `SourcingStrategy` |
+| `POST /api/strategy/{id}/select` | NEW | Human confirms selected option |
+| `POST /api/market/assess` | NEW | Market agent → `MarketAssessment` |
+| `POST /api/drafting/rfx` | NEW | Draft RFx document sections |
+| `POST /api/drafting/evaluation-plan` | NEW | Draft evaluation plan + criteria |
+| `POST /api/drafting/approval-summary` | NEW | Draft approval briefing |
+| `POST /api/evaluation/upload` | NEW | Upload supplier response (PDF/DOCX) |
+| `POST /api/evaluation/assess` | NEW | Evaluation agent scores one submission |
+| `GET /api/evaluation/{procurement_id}/report` | NEW | All evaluations for a procurement |
+| `POST /api/negotiation/brief` | NEW | Negotiation brief for preferred supplier |
+| `GET /api/procurement/{id}/state` | NEW | Current lifecycle stage |
+| `POST /api/procurement/{id}/advance` | NEW | Advance to next lifecycle stage (human gate) |
+
+---
+
+## Frontend — New Components
+
+### Planning phase (already in POC, minor adaptations)
+- `PathwayTrace.jsx` — rule-by-rule trace with R1-R8 cards, matched rule highlighted, stop_reason for skipped rules
+- `ExceptionForm.jsx` — override request (dropdown + rationale textarea 100+ chars + submitted_by)
+
+### Sourcing phase (new)
+- `StrategyPanel.jsx` — displays 2-3 strategy options with pros/cons/timeline; human selects via radio buttons; calls `/api/strategy/{id}/select` on confirm
+- `MarketMap.jsx` — shows supplier clusters as grouped cards, market depth indicator, SME/Aboriginal flags, incumbent warning, narrative signals from market agent
+- `RFxWorkspace.jsx` — tabbed view: RFx draft (editable textarea), evaluation plan draft, approval summary; "Generate" buttons call drafting agent endpoints; "Approve & Publish" advances lifecycle to `market_active`
+
+### Evaluation phase (new)
+- `EvaluationWorkspace.jsx` — upload area for supplier responses (one per supplier); triggers evaluation agent per upload; shows progress; when all submissions assessed, shows comparison grid
+- `AwardRecommendation.jsx` — ranked supplier table showing weighted scores per criterion, mandatory pass/fail status, agent evidence extracts; "Confirm Award" button (human decision) advances lifecycle to `award_recommended`; generates final audit record
+
+### Lifecycle navigation
+- `App.js` gains a top-level `LifecycleNav` bar showing the 10 stages as chips; current stage highlighted; stages beyond current are locked
+
+---
+
+## Build Order
+
+### Phase 1 — Running baseline (Day 1)
+Copy all files from `000Proc_poc`, update ports, confirm everything runs at 8003/3001.
+
+### Phase 2 — Schema + audit backbone (Day 2)
+- Extend `models.py` with all new types
+- Write `audit_logger.py` (SQLite with 4 tables including `procurements`)
+- Instrument `pathway_engine.py` to populate `rule_trace`
+- Write `decision_engine.py`, `exception_handler.py`
+- Update `main.py`: `init_db()` at startup; route evaluate through `decision_engine`; add decision/exception/audit routes
+
+### Phase 3 — ICT scheme + intake extensions (Day 3)
+- Write `ict_procurement.json` scheme
+- Update `intake_agent.py` system prompt for new fields
+- Update `scheme_loader.py` for new trigger keys
+- Add 3 new questions to `questions.json`; 3 new obligations to `obligations.json`
+- Create `data/suppliers.json` (30 mock suppliers)
+- Create `data/evaluation_criteria_templates.json`
+
+### Phase 4 — Planning agents (Day 3-4)
+- Write `policy_agent.py` (policy interpretation)
+- Write `strategy_agent.py` (sourcing strategy options)
+- Add strategy routes to `main.py`
+- Frontend: `StrategyPanel.jsx`; `PathwayTrace.jsx`; `ExceptionForm.jsx`; add tabs to `ResultsPage.jsx`
+
+### Phase 5 — Market intelligence (Day 4)
+- Write `market_agent.py` (supplier scan + narrative)
+- Add market route to `main.py`
+- Frontend: `MarketMap.jsx`
+
+### Phase 6 — Drafting agent + RFx (Day 4-5)
+- Extend `drafting_agent.py` with `draft_rfx()`, `draft_evaluation_plan()`, `draft_approval_summary()`
+- Add drafting routes
+- Frontend: `RFxWorkspace.jsx`
+
+### Phase 7 — Evaluation agent (Day 5-6)
+- Write `evaluation_agent.py` (submission scoring with guardrail)
+- Add evaluation routes (upload, assess, report)
+- Frontend: `EvaluationWorkspace.jsx`; `AwardRecommendation.jsx`
+
+### Phase 8 — Negotiation + lifecycle nav (Day 6)
+- Write `negotiation_agent.py`
+- Add lifecycle state routes
+- Frontend: `LifecycleNav` in `App.js`; wire all lifecycle stage transitions
+
+### Phase 9 — Integration smoke test (Day 7)
+Full end-to-end: intake → profile → pathway → strategy → market → RFx → evaluation → award recommendation.
+
+---
+
+## Smoke Tests
+
+1. **Questionnaire → policy trace**: Q11 AI:Yes → evaluate → Trace tab shows R1-R8; ICT_PROCUREMENT scheme fires
+2. **Conversational intake**: "AI triage tool $2.5m" → `ai_component: true`, `market: open`, ICT obligations triggered
+3. **Strategy options**: Call `/api/strategy/generate` → 2-3 options returned with pros/cons
+4. **Market map**: Call `/api/market/assess` → supplier clusters rendered; SME flag set; incumbent identified if applicable
+5. **RFx drafting**: Call `/api/drafting/rfx` → RFx sections returned; evaluation plan with criteria weights
+6. **Evaluation**: Upload 2 mock supplier PDFs → `/api/evaluation/assess` scores each → `/api/evaluation/{id}/report` returns ranked comparison
+7. **Exception**: Submit override → exception_id returned; confirmed in SQLite
+8. **Audit trail**: `sqlite3 procurement.db "SELECT agent, output_type FROM agent_action_records ORDER BY timestamp DESC LIMIT 10;"` shows all agent invocations
+
+---
+
+## Reference Files for Implementation
+
+| File | Purpose |
+|---|---|
+| `000Proc_poc/backend/pathway_engine.py` | Add `rule_trace` instrumentation |
+| `000Proc_poc/backend/models.py` | Base for all schema extensions |
+| `000Proc_poc/backend/main.py` | Where all new routes are added |
+| `000Proc_poc/backend/llm_assist.py` | Base for `drafting_agent.py` and `policy_agent.py` |
+| `000Proc_poc/backend/intake_engine.py` | Base for `intake_agent.py` |
+| `000Proc_poc/backend/artifact_ingester.py` | Reused as-is for PDF/DOCX ingestion in evaluation |
+| `000Proc_poc/backend/schemes/dcs_ict.json` | Structure reference for `ict_procurement.json` |
+| `000Proc_poc/frontend/src/components/ResultsPage.jsx` | Where new tabs are added |
+| `000Proc_poc/frontend/src/App.js` | Where lifecycle nav and `decisionId` threading start |
+
+---
+
+## How to Run Locally
+
+```bash
+# Backend
+cd 000Proc_greenfield/backend
+pip install -r requirements.txt
+# Create .env: ANTHROPIC_API_KEY=sk-ant-...
+uvicorn main:app --reload --port 8003
+# procurement.db auto-created on first run
+
+# Frontend (separate terminal)
+cd 000Proc_greenfield/frontend
+npm install
+npm run dev   # opens http://localhost:3001
+```

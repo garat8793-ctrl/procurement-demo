@@ -1,0 +1,161 @@
+{
+  "templates": {
+    "ict_development": {
+      "label": "ICT Development / Digital Services",
+      "criteria": [
+        {
+          "criterion_id": "EC-ICT-001",
+          "label": "Technical capability and solution quality",
+          "weighting": 0.35,
+          "scoring_guidance": "Score 0-10. Assess: technical architecture quality, proposed technology stack suitability, scalability and performance provisions, security-by-design approach, alignment with NSW Government technology standards. 10 = exemplary solution exceeding all requirements; 5 = meets requirements with some gaps; 0 = fails to address requirements.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-ICT-002",
+          "label": "Implementation approach and project management",
+          "weighting": 0.20,
+          "scoring_guidance": "Score 0-10. Assess: project methodology (preference for agile/iterative), delivery roadmap realism, risk identification and mitigation, change management approach, transition and go-live planning. 10 = highly credible, detailed and risk-aware plan; 5 = adequate plan with gaps; 0 = no credible plan.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-ICT-003",
+          "label": "Team capability and relevant experience",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: key personnel CVs and relevant experience, past delivery of similar NSW Government or equivalent projects, team stability and key-person risk, certifications. 10 = highly experienced team with directly relevant reference projects; 5 = adequate experience with some gaps; 0 = insufficient experience.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-ICT-004",
+          "label": "Value for money — price and cost structure",
+          "weighting": 0.20,
+          "scoring_guidance": "Score 0-10. Assess: total cost of ownership (not just upfront cost), pricing transparency, rate schedules, ongoing support cost structure, value of optional items included. Scoring relative to other tenderers — highest value score goes to best price-quality combination. 10 = best value; 0 = poorest value or pricing not credible.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-ICT-005",
+          "label": "Risk management and resilience",
+          "weighting": 0.10,
+          "scoring_guidance": "Score 0-10. Assess: identification of delivery risks, cyber security provisions, business continuity and disaster recovery, insurance coverage, exit and transition obligations. 10 = comprehensive risk management exceeding requirements; 5 = adequate provisions; 0 = inadequate risk awareness.",
+          "is_mandatory": false
+        }
+      ],
+      "mandatory_gates": []
+    },
+    "ai_ml": {
+      "label": "AI / Machine Learning Systems",
+      "criteria": [
+        {
+          "criterion_id": "EC-AI-001",
+          "label": "AI solution design and technical quality",
+          "weighting": 0.30,
+          "scoring_guidance": "Score 0-10. Assess: AI/ML model design, training data approach, model accuracy and validation methodology, explainability provisions, alignment with NSW AIAF requirements. 10 = exemplary design with strong explainability; 5 = adequate but gaps in explainability or validation; 0 = fails AIAF requirements.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-AI-002",
+          "label": "Human oversight and governance provisions",
+          "weighting": 0.20,
+          "scoring_guidance": "Score 0-10. Assess: human-in-the-loop design, override mechanisms, audit logging of AI decisions, bias monitoring provisions, AIAF compliance documentation. A minimum score of 6/10 is required — failure to provide adequate human oversight provisions is a mandatory disqualifier.",
+          "is_mandatory": true
+        },
+        {
+          "criterion_id": "EC-AI-003",
+          "label": "Data governance and privacy",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: training data documentation (sources, quality, bias testing), data sovereignty provisions, privacy-by-design approach, data retention and deletion policies. 10 = exemplary data governance; 5 = adequate but gaps; 0 = fails privacy requirements.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-AI-004",
+          "label": "Implementation approach and team AI expertise",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: team AI/ML credentials and track record, deployment methodology, change management for AI adoption, training for agency staff. 10 = highly experienced AI team with government delivery track record; 5 = adequate; 0 = insufficient AI expertise.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-AI-005",
+          "label": "Value for money",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: total cost relative to AI capability delivered, pricing transparency, ongoing model maintenance costs, exit costs. Relative scoring against other tenderers.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-AI-006",
+          "label": "Risk and security",
+          "weighting": 0.05,
+          "scoring_guidance": "Score 0-10. Assess: adversarial attack protections, model drift monitoring, cyber security provisions for AI system, incident response for model failures.",
+          "is_mandatory": false
+        }
+      ],
+      "mandatory_gates": ["EC-AI-002"]
+    },
+    "professional_services": {
+      "label": "Professional / Consulting Services",
+      "criteria": [
+        {
+          "criterion_id": "EC-PS-001",
+          "label": "Relevant expertise and methodology",
+          "weighting": 0.35,
+          "scoring_guidance": "Score 0-10. Assess: proposed approach and methodology, domain expertise, understanding of the problem, innovation in approach. 10 = highly tailored, well-reasoned approach; 5 = generic but adequate; 0 = does not address the brief.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-PS-002",
+          "label": "Team capability and past experience",
+          "weighting": 0.25,
+          "scoring_guidance": "Score 0-10. Assess: key personnel experience, equivalent past engagements, client references, team composition. 10 = highly experienced team with directly comparable engagements; 5 = adequate; 0 = insufficient.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-PS-003",
+          "label": "Value for money",
+          "weighting": 0.25,
+          "scoring_guidance": "Score 0-10. Assess: fee structure against scope, day rates vs market, deliverable clarity. Relative scoring.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-PS-004",
+          "label": "Risk and probity",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: conflicts of interest declaration, independence provisions, insurance coverage, sub-contracting arrangements.",
+          "is_mandatory": false
+        }
+      ],
+      "mandatory_gates": []
+    },
+    "goods": {
+      "label": "Goods and Supplies",
+      "criteria": [
+        {
+          "criterion_id": "EC-GD-001",
+          "label": "Product quality and specification compliance",
+          "weighting": 0.40,
+          "scoring_guidance": "Score 0-10. Assess: compliance with technical specification, quality certifications, product samples or evidence, warranty provisions. 10 = fully compliant with exceeding quality; 0 = non-compliant.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-GD-002",
+          "label": "Price and total cost",
+          "weighting": 0.35,
+          "scoring_guidance": "Score 0-10. Assess: unit prices, delivery costs, payment terms, volume discounts. Relative scoring against other tenderers.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-GD-003",
+          "label": "Delivery and logistics",
+          "weighting": 0.15,
+          "scoring_guidance": "Score 0-10. Assess: lead times, delivery reliability, logistics arrangements, flexibility for volume changes.",
+          "is_mandatory": false
+        },
+        {
+          "criterion_id": "EC-GD-004",
+          "label": "Sustainability and social value",
+          "weighting": 0.10,
+          "scoring_guidance": "Score 0-10. Assess: environmental certifications, recycled/sustainable materials, local manufacturing, modern slavery compliance, SME or Aboriginal business participation.",
+          "is_mandatory": false
+        }
+      ],
+      "mandatory_gates": []
+    }
+  }
+}

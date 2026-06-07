@@ -1,0 +1,47 @@
+{
+  "scheme_id": "PBD_2023_04_SUPPLIER_HUB",
+  "name": "PBD-2023-04 — Supplier Hub Registration Mandate",
+  "version": "2023-12",
+  "active": true,
+  "description": "Procurement Board Direction requiring all NSW Government suppliers to be registered on the NSW Supplier Hub (suppliers.buy.nsw.gov.au) before contract execution. Applies to all procurements regardless of value. Supplier Hub registration is a prerequisite for prequalification scheme membership and for receiving government contracts. Agencies must verify Supplier Hub registration before awarding any contract.",
+  "source": "NSW Procurement Board Direction PBD-2023-04 (December 2023); NSW Procurement Policy Framework; buy.NSW Supplier Hub",
+  "triggers": {},
+  "pre_checks": [
+    {
+      "id": "PBD2023-04-PC-001",
+      "title": "Verify supplier Supplier Hub registration before award",
+      "body": "Before executing any contract, verify that the intended supplier has a current, active, and approved profile on NSW Supplier Hub (suppliers.buy.nsw.gov.au). Search by supplier name or ABN. If the supplier is not registered, require them to register before proceeding to contract execution. Do not execute contracts with unregistered suppliers except where a specific exemption applies.",
+      "link": "https://suppliers.buy.nsw.gov.au"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2023-04-OBL-001",
+      "title": "Verify Supplier Hub registration before contract execution",
+      "body": "All intended contract recipients must have a current, active, and approved profile on NSW Supplier Hub before a contract is executed. Agencies must verify registration status and document the verification in the procurement file. Contracts must not be executed with suppliers who are not on Supplier Hub, except where an approved exemption applies (e.g., very low value, sole trader below micro threshold).",
+      "policy": "PBD-2023-04; NSW Procurement Policy Framework"
+    },
+    {
+      "id": "PBD2023-04-OBL-002",
+      "title": "Require Supplier Hub registration for prequalification scheme access",
+      "body": "Supplier Hub registration is a mandatory prerequisite for membership of all NSW Government prequalification schemes including the ICT Services Scheme, P&MS Scheme (SCM0005), and Construction prequalification (SCM0020/SCM0038). Agencies administering or using these schemes must confirm Supplier Hub registration status.",
+      "policy": "PBD-2023-04; ICT Services Scheme Rules; P&MS Scheme Rules"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Even where an approved WoG arrangement is used, verify that the selected supplier has a current Supplier Hub profile before contract execution. Scheme membership should already require this, but agencies must confirm.",
+    "if_no_arrangement": "Verify Supplier Hub registration as a mandatory pre-award step for all contracts. Record verification in the contract award documentation."
+  },
+  "step_injections": [
+    {
+      "after_step": 2,
+      "steps": [
+        {
+          "text": "Verify that the intended supplier (or shortlisted suppliers) have a current, approved profile on NSW Supplier Hub (suppliers.buy.nsw.gov.au). Search by ABN or supplier name. Record the verification outcome in the procurement file.",
+          "citation": "PBD-2023-04 — Supplier Hub registration check"
+        }
+      ]
+    }
+  ],
+  "approval_additions": []
+}

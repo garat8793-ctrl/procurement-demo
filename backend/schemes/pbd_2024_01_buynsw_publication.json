@@ -1,0 +1,65 @@
+{
+  "scheme_id": "PBD_2024_01_BUYNSW_PUBLICATION",
+  "name": "PBD-2024-01 — Publication Mandate — Supply Opportunities on buy.NSW",
+  "version": "2024-01",
+  "active": true,
+  "description": "Procurement Board Direction requiring NSW Government agencies to publish supply opportunities on buy.NSW eTendering and/or comply with GIPA Act proactive release obligations for contracts at or above $150,000 incl. GST. Triggered at medium, high, and major value bands. Agencies must publish the approach-to-market, the contract award notice, and (per GIPA Act) the contract details on the agency's contracts register.",
+  "source": "NSW Procurement Board Direction PBD-2024-01 (2024); Government Information (Public Access) Act 2009; NSW Procurement Policy Framework — Open Advertising",
+  "triggers": {
+    "value": [
+      "medium",
+      "high",
+      "major"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PBD2024-01-PC-001",
+      "title": "Confirm buy.NSW account and publishing access",
+      "body": "Confirm your agency has an active buy.NSW eTendering account and the relevant team member has access to publish tender opportunities. If access is not available, contact your agency's procurement team or Digital NSW before proceeding.",
+      "link": "https://tenders.nsw.gov.au"
+    },
+    {
+      "id": "PBD2024-01-PC-002",
+      "title": "Check GIPA Act contract disclosure threshold",
+      "body": "Confirm whether this contract will be at or above $150,000 incl. GST — the threshold for GIPA Act proactive disclosure. If yes, the contract details (supplier name, value, description, term) must be published on the agency's contracts register within the required timeframe of execution.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2024-01-OBL-001",
+      "title": "Publish supply opportunity on buy.NSW at $150k+",
+      "body": "All procurement opportunities at or above $150,000 incl. GST must be published on buy.NSW eTendering (tenders.nsw.gov.au) or equivalent approved platform. The publication must occur before or at the time the market is approached.",
+      "policy": "PBD-2024-01; NSW Procurement Policy Framework — Open Advertising"
+    },
+    {
+      "id": "PBD2024-01-OBL-002",
+      "title": "Publish contract award notice",
+      "body": "Following contract execution, publish a contract award notice on buy.NSW. The notice must include: contract title, winning supplier name, contract value, and contract term. The notice must be published within the timeframe specified in the Direction.",
+      "policy": "PBD-2024-01; PBD-2025-04"
+    },
+    {
+      "id": "PBD2024-01-OBL-003",
+      "title": "Publish contract details on agency contracts register (GIPA Act)",
+      "body": "Publish the contract details on the agency's proactive release contracts register as required by the Government Information (Public Access) Act 2009. Details must include: contractor/supplier name, ABN, short description of goods/services, contract value, and contract term. Publish within 45 days of contract execution.",
+      "policy": "Government Information (Public Access) Act 2009 s.6; GIPA Regulation"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Where the procurement is via an approved WoG arrangement and does not involve an open approach to market, confirm whether the arrangement's procurement methodology satisfies the PBD-2024-01 publication requirement. Contract award disclosure (GIPA Act) still applies regardless.",
+    "if_no_arrangement": "Publish the open approach-to-market on buy.NSW before commencing market engagement. Include the contract award notice after execution."
+  },
+  "step_injections": [
+    {
+      "after_step": 1,
+      "steps": [
+        {
+          "text": "Publish the supply opportunity on buy.NSW eTendering (tenders.nsw.gov.au) before approaching the market. Confirm the listing is live and accessible to suppliers.",
+          "citation": "PBD-2024-01 — buy.NSW publication obligation"
+        }
+      ]
+    }
+  ],
+  "approval_additions": []
+}

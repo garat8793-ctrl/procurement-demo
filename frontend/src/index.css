@@ -1,0 +1,316 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ── NSW DDS brand tokens (masterbrand) ── */
+  --nsw-brand-dark: #002664;
+  --nsw-brand-light: #cbedfd;
+  --nsw-brand-supplementary: #146cfd;
+  --nsw-brand-accent: #d7153a;
+
+  --navy: #002664;
+  --navy-dark: #001845;
+  --navy-light: #e8edf5;
+  --navy-subtle: #f2f5fb;
+  --teal: #00B2A9;
+  --teal-dark: #007f79;
+  --teal-mid: #009d95;
+  --teal-light: #ddf4f3;
+  --teal-subtle: #f0fafa;
+  --white: #ffffff;
+  --off-white: #f7f9fc;
+  --border: #ced6e8;
+  --border-light: #e4eaf4;
+  --text-primary: #0f1f3d;
+  --text-secondary: #3a4f74;
+  --text-muted: #6b7fa3;
+  --text-placeholder: #9aacc7;
+  --success: #059669;
+  --success-light: #d1fae5;
+  --warning: #D97706;
+  --warning-light: #fef3c7;
+  --danger: #DC2626;
+  --danger-light: #fee2e2;
+  --purple: #7C3AED;
+  --blue: #0284C7;
+  --shadow-xs: 0 1px 2px rgba(0,38,100,0.06);
+  --shadow-sm: 0 2px 6px rgba(0,38,100,0.08);
+  --shadow-md: 0 4px 16px rgba(0,38,100,0.10), 0 1px 4px rgba(0,38,100,0.06);
+  --shadow-lg: 0 12px 32px rgba(0,38,100,0.13), 0 4px 8px rgba(0,38,100,0.06);
+  --shadow-xl: 0 24px 48px rgba(0,38,100,0.18);
+  --shadow-teal: 0 4px 14px rgba(0,178,169,0.28);
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --font: 'Public Sans', system-ui, -apple-system, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font);
+  background: var(--off-white);
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nsw-header__inner {
+  display: flex;
+  align-items: center;
+  min-height: 118px;
+}
+
+.nsw-header__logo,
+.nsw-header__name {
+  display: flex;
+  align-items: center;
+}
+
+.nsw-header__name {
+  min-height: 100%;
+}
+
+.nsw-header__site-name {
+  display: block;
+  font-size: clamp(2rem, 2.2vw, 2.55rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--navy);
+}
+
+a {
+  color: var(--teal-dark);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--teal);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-placeholder); }
+
+/* ── Animations ─────────────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0,178,169,0.4); }
+  60%       { box-shadow: 0 0 0 7px rgba(0,178,169,0); }
+}
+
+@keyframes checkIn {
+  0%   { transform: scale(0) rotate(-15deg); opacity: 0; }
+  60%  { transform: scale(1.2) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+@keyframes progressPulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+/* ── Utility ────────────────────────────────────────────────────────── */
+
+.fade-in  { animation: fadeIn  0.30s ease both; }
+.slide-up { animation: slideUp 0.35s cubic-bezier(0.0,0.0,0.2,1) both; }
+.slide-in { animation: slideIn 0.25s cubic-bezier(0.0,0.0,0.2,1) both; }
+
+.spinner {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--teal-light);
+  border-top-color: var(--teal);
+  animation: spin 0.75s linear infinite;
+}
+
+.pulse-dot {
+  animation: pulseDot 2s ease infinite;
+}
+
+/* ── Answer option ──────────────────────────────────────────────────── */
+
+.answer-option {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  box-shadow: var(--shadow-xs);
+  transition: border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+  font-family: var(--font);
+  position: relative;
+}
+
+.answer-option:hover {
+  border-color: var(--teal);
+  background: var(--teal-subtle);
+  box-shadow: var(--shadow-sm), 0 0 0 3px rgba(0,178,169,0.09);
+  transform: translateY(-1px);
+}
+
+.answer-option.is-selected {
+  border-color: var(--teal);
+  background: var(--teal-light);
+  box-shadow: var(--shadow-sm), 0 0 0 3px rgba(0,178,169,0.16);
+}
+
+.answer-option.is-selected:hover {
+  transform: none;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────────── */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--teal);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+  box-shadow: 0 2px 8px rgba(0,178,169,0.28);
+  white-space: nowrap;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--teal-mid);
+  box-shadow: 0 4px 16px rgba(0,178,169,0.38);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0,178,169,0.2);
+}
+
+.btn-primary:disabled {
+  background: var(--border);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--text-placeholder);
+  color: var(--text-primary);
+  background: var(--navy-subtle);
+}
+
+/* ── Procurement details form ───────────────────────────────────────── */
+
+.details-form-card {
+  padding: 2.25rem 2.5rem;
+}
+
+.details-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .nsw-header__name { display: none; }
+}
+
+@media (max-width: 980px) {
+  .assessment-layout { flex-direction: column; }
+  .assessment-sidebar { width: 100%; position: static; }
+  .results-main-layout { flex-direction: column; }
+  .results-answer-log { width: 100%; position: static; }
+}
+
+@media (max-width: 720px) {
+  .results-actions-bar { flex-wrap: wrap; }
+  .results-tabs { flex-wrap: wrap; overflow-x: visible; }
+  .results-tab-button { padding-left: 0.75rem; padding-right: 0.75rem; }
+  .assessment-main-card { padding: 1.25rem !important; }
+  .agency-selection-card { padding: 1.5rem !important; }
+  .details-form-card { padding: 1.5rem !important; }
+  .details-form-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 640px) {
+  .steps-overview-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)) !important; }
+  .steps-sequence-row { flex-direction: column; gap: 0.65rem; }
+  .steps-sequence-marker { width: 100% !important; flex-direction: row !important; justify-content: flex-start; gap: 0.75rem; }
+  .steps-sequence-line { display: none; }
+  .details-form-card { padding: 1.25rem !important; }
+}

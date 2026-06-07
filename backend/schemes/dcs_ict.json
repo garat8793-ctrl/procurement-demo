@@ -1,0 +1,51 @@
+{
+  "scheme_id": "dcs_ict",
+  "name": "DCS Procurement Manual — ICT-Specific Obligations",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "DCS-specific obligations for ICT Software/SaaS and ICT Hardware procurements. ICT and Professional Services have different rules to general goods and services — notably PRN at any value, no P-Card, mandatory WoG contract check, and earlier risk assessment trigger.",
+  "source": "DCS Procurement Manual v11.82 §4, §9.4, §11.8f; PBD-2021-02",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"],
+    "category": ["ict_saas", "ict_hardware"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-ICT-PC-001",
+      "title": "Check DCS mandatory whole-of-government ICT contracts before approaching market",
+      "body": "Before approaching market for any ICT requirement, confirm whether it is covered by a mandatory DCS whole-of-government contract. If a mandatory contract exists, you cannot procure outside of it without a formal exemption from the Group Chief Information and Digital Officer (GCIDO). Mandatory WoG contracts include: Microsoft Enterprise Agreement (C2318), Telecommunications Purchasing Arrangements (C2210), Cloud Purchasing Arrangements (C864), SAP (C2601), Salesforce (C662), Oracle (C607), SuccessFactors (C1217), IBM (C833), ICT End User Devices (C9826), Imaging Devices (C9827), Record Point (C468). Contact DCS Procurement or the GCIDO office to confirm current mandatory contracts.",
+      "link": null
+    },
+    {
+      "id": "DCS-ICT-PC-002",
+      "title": "Request a PRN before any ICT market activity (required at any value)",
+      "body": "For all DCS ICT procurements, a Procurement Reference Number (PRN) must be obtained from DCS Procurement BEFORE any market activity, regardless of value. A contract and purchase order are mandatory even for ICT purchases under $10,000 — P-Card must NOT be used for ICT at any value.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-ICT-OBL-001",
+      "title": "PRN required at any value for ICT — no P-Card permitted",
+      "body": "All DCS ICT procurements (software, SaaS, hardware, devices, networking) require a Procurement Reference Number (PRN) at any contract value. P-Card must NOT be used for ICT at any value — a contract and purchase order (PO) are mandatory even for purchases under $10,000. Contact the DCS Procurement HelpDesk to obtain a PRN before commencing any market activity.",
+      "policy": "DCS Procurement Manual §4",
+      "active": true
+    },
+    {
+      "id": "DCS-ICT-OBL-002",
+      "title": "DCS Combined Risk Assessment — ICT Business Risk tab (\u2265$10k)",
+      "body": "Use the DCS Combined Risk Assessment template (Business Risk tab) for all ICT procurements with a value of $10,000 or more. This is an earlier trigger than for general goods and services ($30k). For ICT procurements above $250,000, also complete the ICT Risk tab. Risk assessments below $250k can be approved at Grade 11/12 or above. For procurements involving customer or employee data, or requiring integration with DCS IT infrastructure, obtain Procurement Risk Assessment approval from the Chief Information Officer (CIO) before proceeding.",
+      "policy": "DCS Procurement Manual §9.4",
+      "active": true
+    },
+    {
+      "id": "DCS-ICT-OBL-003",
+      "title": "Cyber security / Category K procurements — CISO is mandatory final approver",
+      "body": "All cyber security procurements and procurements under Category K (SCM0020) require the Chief Information Security Officer (CISO) as the mandatory final approver on the briefing note, regardless of contract value. This is in addition to the standard approval chain. If this procurement involves cyber security components, confirm with DCS Procurement that the CISO is included in the approval chain.",
+      "policy": "DCS Procurement Manual §10.1",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

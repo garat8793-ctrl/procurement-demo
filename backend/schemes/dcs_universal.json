@@ -1,0 +1,43 @@
+{
+  "scheme_id": "dcs_universal",
+  "name": "DCS Procurement Manual — Universal Obligations",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "Universal DCS-specific procurement obligations that apply to all Department of Customer Service and Service NSW procurements, regardless of category or value. Source: DCS Procurement Manual (December 2025, v11.82).",
+  "source": "DCS Procurement Manual v11.82, December 2025",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-PC-001",
+      "title": "Confirm DCS Procurement Manual applies",
+      "body": "Your procurement is subject to both the NSW Procurement Policy Framework AND the DCS Procurement Manual (current version). The DCS Manual is the operational layer between NSW Government policy and actual DCS procurement activity. Confirm you have access to the current version via the DCS intranet before proceeding.",
+      "link": null
+    },
+    {
+      "id": "DCS-PC-002",
+      "title": "Engage your DCS Procurement Business Partner early",
+      "body": "DCS has dedicated Procurement Business Partners (BPs) assigned by business unit. Contact your BP at the start of the process — they are required to endorse all briefing notes up to $1M and are a mandatory part of the process for most procurement activities. Do not wait until a briefing note is ready to loop them in.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-OBL-001",
+      "title": "Code of Ethics and Conduct Agreement — mandatory for all DCS procurement participants",
+      "body": "All DCS staff involved in this procurement must complete a Code of Ethics and Conduct Agreement. This is required at four stages: (1) at the start of the process even if no conflicts exist; (2) again when proponents/suppliers are known; (3) as evaluation committee members; and (4) as decision-makers approving the procurement. Declarations must be reviewed continuously throughout the process. This obligation applies regardless of contract value.",
+      "policy": "DCS Procurement Manual §2, §9.1a, §10.1a",
+      "active": true
+    },
+    {
+      "id": "DCS-OBL-002",
+      "title": "Payment method rules — P-Card and PO requirements",
+      "body": "DCS payment rules by value: (a) Under $10,000 — use P-Card wherever practical. EXCEPTION: ICT and Professional Services must NOT use a P-Card at any value — a contract and purchase order are mandatory. (b) Above $10,000 — raise a Purchase Order. Note: for ICT and Professional Services, a contract and PO are required even for purchases under $10,000.",
+      "policy": "DCS Procurement Manual §4",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

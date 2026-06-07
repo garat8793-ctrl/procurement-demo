@@ -1,0 +1,72 @@
+{
+  "scheme_id": "FASTER_PAYMENT_TERMS",
+  "name": "Faster Payment Terms Policy — Small Business (February 2025)",
+  "version": "2025-02",
+  "active": true,
+  "description": "NSW Government policy requiring agencies to pay small businesses (fewer than 20 full-time equivalent employees) within 5 business days of an approved invoice, for contracts valued between $10,000 and $1,000,000. Standard payment terms for all other suppliers remain 20 business days from approved invoice. Agencies must include payment terms in all contracts and report payment performance quarterly. Triggered for all procurements where the SME overlay is selected or where contract value indicates a small business engagement.",
+  "source": "NSW Faster Payment Terms Policy (February 2025); NSW Procurement Policy Framework; NSW Government SMB Procurement Policy; PBD-2023-03",
+  "triggers": {
+    "overlays": [
+      "sme"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "FASTER-PT-PC-001",
+      "title": "Confirm supplier qualifies as a small business (<20 FTE)",
+      "body": "Before applying the 5-business-day payment term, confirm that the supplier has fewer than 20 full-time equivalent employees. This can be confirmed via a supplier declaration or by checking the supplier's Supplier Hub profile. The 5-day term applies to contracts valued $10,000 – $1,000,000 with qualifying small businesses.",
+      "link": null
+    },
+    {
+      "id": "FASTER-PT-PC-002",
+      "title": "Include correct payment terms in contract",
+      "body": "Ensure the contract specifies the correct payment terms: 5 business days from approved invoice for qualifying small businesses ($10k–$1M), or 20 business days for all others. Do not use longer standard payment terms for small business contracts without specific approval.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "FASTER-PT-OBL-001",
+      "title": "Pay small businesses within 5 business days of approved invoice",
+      "body": "For contracts with small businesses (fewer than 20 FTE) valued between $10,000 and $1,000,000, agencies must pay approved invoices within 5 business days. This applies from the date the invoice is approved, not the date of receipt. Agencies must have internal processes in place to ensure invoices are approved and paid within this timeframe.",
+      "policy": "NSW Faster Payment Terms Policy (February 2025); PBD-2023-03"
+    },
+    {
+      "id": "FASTER-PT-OBL-002",
+      "title": "Include payment terms in all contracts",
+      "body": "All contracts must specify the applicable payment terms. For small business suppliers (< 20 FTE, $10k–$1M): 5 business days from approved invoice. For all other suppliers: 20 business days from approved invoice. Do not include payment terms that exceed these requirements without special approval.",
+      "policy": "NSW Faster Payment Terms Policy (February 2025)"
+    },
+    {
+      "id": "FASTER-PT-OBL-003",
+      "title": "Report payment performance quarterly",
+      "body": "Agencies must report payment performance to Treasury on a quarterly basis. Reports must include: total invoices paid, number paid on time, number paid late, and average payment time for small business invoices. Report using the prescribed Treasury template.",
+      "policy": "NSW Faster Payment Terms Policy (February 2025)"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Even where an existing WoG arrangement covers the procurement, confirm that the contract terms within the arrangement comply with the Faster Payment Terms Policy for small business suppliers. If the arrangement template does not include 5-day payment terms, include them as a special condition.",
+    "if_no_arrangement": "Include the correct payment terms in the contract as a mandatory term. Apply 5-business-day payment terms for qualifying small business suppliers."
+  },
+  "step_injections": [
+    {
+      "after_step": 3,
+      "steps": [
+        {
+          "text": "Confirm whether the supplier qualifies as a small business (fewer than 20 FTE). If yes and the contract is $10,000 – $1,000,000, ensure the contract specifies 5 business day payment terms from approved invoice.",
+          "citation": "NSW Faster Payment Terms Policy (February 2025)"
+        },
+        {
+          "text": "Ensure internal invoice approval processes can support 5-business-day payment for small business suppliers. Flag to finance team before contract commencement.",
+          "citation": "NSW Faster Payment Terms Policy (February 2025)"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Finance / Accounts Payable team",
+      "note": "Notify finance team of 5-business-day payment obligation for this small business contract so invoice approval processes can be expedited accordingly."
+    }
+  ]
+}

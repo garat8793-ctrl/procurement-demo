@@ -1,0 +1,89 @@
+{
+  "tiers": [
+    {
+      "id": "T1",
+      "label": "Line Manager",
+      "value_tiers": ["micro"],
+      "impact_max": "medium",
+      "delegate_level": 1,
+      "approver_role": "Line Manager or Budget Manager",
+      "reviews_required": []
+    },
+    {
+      "id": "T2",
+      "label": "Branch / Team Manager",
+      "value_tiers": ["low"],
+      "impact_max": "medium",
+      "delegate_level": 2,
+      "approver_role": "Branch Manager or equivalent (EL1/Grade 11+)",
+      "reviews_required": []
+    },
+    {
+      "id": "T3",
+      "label": "Director",
+      "value_tiers": ["low", "medium"],
+      "impact_max": "high",
+      "delegate_level": 3,
+      "approver_role": "Director or equivalent (EL2/Grade 12+)",
+      "reviews_required": ["Procurement team review recommended"]
+    },
+    {
+      "id": "T4",
+      "label": "Director + Procurement Delegate",
+      "value_tiers": ["medium"],
+      "impact_max": "critical",
+      "delegate_level": 4,
+      "approver_role": "Director + Procurement Delegate",
+      "reviews_required": ["Procurement team review required"]
+    },
+    {
+      "id": "T5",
+      "label": "Deputy Secretary / CFO",
+      "value_tiers": ["high"],
+      "impact_max": "critical",
+      "delegate_level": 5,
+      "approver_role": "Deputy Secretary or CFO + Procurement",
+      "reviews_required": ["Procurement team review required", "Legal review recommended"]
+    },
+    {
+      "id": "T6",
+      "label": "Secretary / Executive",
+      "value_tiers": ["major"],
+      "impact_max": "critical",
+      "delegate_level": 6,
+      "approver_role": "Secretary / CEO level",
+      "reviews_required": ["Procurement team review required", "Legal review required", "Cabinet / Treasury process may apply"]
+    }
+  ],
+  "impact_escalation": {
+    "critical": "Add one delegate level above standard, plus executive sign-off"
+  },
+  "pathway_escalations": {
+    "limited_direct": {
+      "note": "Escalate one approval tier above standard — direct procurement requires higher-level sign-off",
+      "add_justification": true
+    },
+    "emergency_procurement": {
+      "note": "Same tier as standard but approval may be retrospective — written justification required before or immediately after commitment",
+      "add_justification": true
+    },
+    "major_strategic": {
+      "note": "Secretary-level approval minimum; consider whether Minister or Cabinet approval is required"
+    }
+  },
+  "overlay_additions": {
+    "ai": {
+      "review": "AI Ethics / Digital team review required (AIAF assessment)",
+      "approver_note": "Chief Digital Officer or equivalent should be notified"
+    },
+    "privacy": {
+      "review": "Privacy Officer review and Privacy Impact Assessment required"
+    },
+    "critical_ict": {
+      "review": "Cyber Security NSW review required; CISO sign-off"
+    },
+    "construction": {
+      "review": "Property / Construction team review required"
+    }
+  }
+}

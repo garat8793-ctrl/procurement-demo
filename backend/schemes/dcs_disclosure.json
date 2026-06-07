@@ -1,0 +1,38 @@
+{
+  "scheme_id": "dcs_disclosure",
+  "name": "DCS Procurement Manual — Disclosure Obligations (medium+ value)",
+  "version": "December 2025 v11.82",
+  "active": true,
+  "description": "DCS disclosure obligations for procurements at medium value ($50k–$250k) and above. Covers buy.NSW mandatory publication (PBD-2024-01) and GIPA contract disclosure. Note: the exact thresholds are $150,000 incl. GST — these obligations are surfaced at the 'medium' value tier as a prompt to check the $150k threshold.",
+  "source": "DCS Procurement Manual v11.82 §9.3, §12.3; PBD-2024-01; GIPA Act 2009",
+  "triggers": {
+    "agency": ["nsw_dcs", "nsw_service_nsw"],
+    "value": ["medium", "high", "major"]
+  },
+  "pre_checks": [
+    {
+      "id": "DCS-DISC-PC-001",
+      "title": "Check whether $150k (incl. GST) threshold is met for disclosure",
+      "body": "The buy.NSW publication and GIPA disclosure thresholds are both $150,000 inclusive of GST. If your total engagement value equals or exceeds $150,000 incl. GST, both obligations below apply. Note: most other DCS thresholds are exclusive of GST — this threshold is the exception.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "DCS-DISC-OBL-001",
+      "title": "Mandatory buy.NSW publication before going to market (\u2265$150k incl. GST) \u2014 PBD-2024-01",
+      "body": "From 31 December 2024, all open and selective DCS procurements where the total engagement value equals or exceeds $150,000 (incl. GST) must be published on buy.NSW before going to market (PBD-2024-01). This applies to RFTs, RFIs, RFQs, EOIs, direct negotiations, and strategic commissioning. Suppliers must be registered on buy.NSW. Contact DCS Procurement for buy.NSW access and setup if not already established.",
+      "policy": "DCS Procurement Manual §9.3; PBD-2024-01 (effective 31 December 2024)",
+      "active": true
+    },
+    {
+      "id": "DCS-DISC-OBL-002",
+      "title": "GIPA contract disclosure on Tenders NSW within 21 days (\u2265$150k incl. GST)",
+      "body": "Upload the executed contract to the DCS Central Contracts Register AND disclose it on Tenders NSW within 21 days of contract execution. This threshold is $150,000 inclusive of GST — different from most other DCS thresholds which are exclusive of GST. Failure to disclose within 21 days is a breach of the Government Information (Public Access) Act 2009.",
+      "policy": "DCS Procurement Manual §12.3; GIPA Act 2009 s6",
+      "active": true
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

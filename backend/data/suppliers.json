@@ -1,0 +1,272 @@
+[
+  {
+    "supplier_id": "SUP-001",
+    "name": "Accenture Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_development", "ai_ml", "cloud", "professional_services", "digital_transformation"],
+    "panel_memberships": ["ICT_SERVICES_PANEL", "DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.2
+  },
+  {
+    "supplier_id": "SUP-002",
+    "name": "Deloitte Consulting",
+    "classifications": ["multinational"],
+    "capabilities": ["consulting", "professional_services", "ai_ml", "cybersecurity", "digital_transformation"],
+    "panel_memberships": ["CONSULTING_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.1
+  },
+  {
+    "supplier_id": "SUP-003",
+    "name": "KPMG Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["consulting", "professional_services", "risk_management", "ai_ml"],
+    "panel_memberships": ["CONSULTING_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.9
+  },
+  {
+    "supplier_id": "SUP-004",
+    "name": "AWS Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["cloud", "ict_infrastructure", "ai_ml", "cybersecurity"],
+    "panel_memberships": ["CLOUD_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.5
+  },
+  {
+    "supplier_id": "SUP-005",
+    "name": "Microsoft Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["cloud", "ict_saas", "ai_ml", "ict_development", "cybersecurity"],
+    "panel_memberships": ["CLOUD_PANEL", "ICT_SERVICES_PANEL", "SOFTWARE_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.3
+  },
+  {
+    "supplier_id": "SUP-006",
+    "name": "DXC Technology",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_development", "ict_infrastructure", "cloud", "digital_transformation"],
+    "panel_memberships": ["ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.7
+  },
+  {
+    "supplier_id": "SUP-007",
+    "name": "Kinetic IT",
+    "classifications": ["sme"],
+    "capabilities": ["ict_infrastructure", "cybersecurity", "cloud", "managed_services"],
+    "panel_memberships": ["ICT_SERVICES_PANEL"],
+    "state": "WA",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-008",
+    "name": "Datacom",
+    "classifications": ["sme"],
+    "capabilities": ["ict_development", "cloud", "managed_services", "digital_transformation"],
+    "panel_memberships": ["ICT_SERVICES_PANEL", "DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.1
+  },
+  {
+    "supplier_id": "SUP-009",
+    "name": "Versent",
+    "classifications": ["sme"],
+    "capabilities": ["cloud", "ict_development", "ai_ml", "digital_transformation"],
+    "panel_memberships": ["CLOUD_PANEL", "DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.4
+  },
+  {
+    "supplier_id": "SUP-010",
+    "name": "Hivery",
+    "classifications": ["sme"],
+    "capabilities": ["ai_ml", "data_analytics", "ict_development"],
+    "panel_memberships": ["DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.2
+  },
+  {
+    "supplier_id": "SUP-011",
+    "name": "Gradient Institute",
+    "classifications": ["sme"],
+    "capabilities": ["ai_ml", "research", "ethics_ai", "data_analytics"],
+    "panel_memberships": [],
+    "state": "NSW",
+    "performance_rating": 4.3
+  },
+  {
+    "supplier_id": "SUP-012",
+    "name": "Digital61",
+    "classifications": ["sme"],
+    "capabilities": ["ict_development", "digital_transformation", "agile_delivery"],
+    "panel_memberships": ["DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-013",
+    "name": "Squiz",
+    "classifications": ["sme"],
+    "capabilities": ["ict_saas", "ict_development", "digital_transformation", "web_platforms"],
+    "panel_memberships": ["ICT_SERVICES_PANEL", "DIGITAL_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.8
+  },
+  {
+    "supplier_id": "SUP-014",
+    "name": "Telstra Purple",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_infrastructure", "cybersecurity", "cloud", "managed_services"],
+    "panel_memberships": ["ICT_SERVICES_PANEL", "TELCO_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.9
+  },
+  {
+    "supplier_id": "SUP-015",
+    "name": "Optus Enterprise",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_infrastructure", "cloud", "managed_services", "telco"],
+    "panel_memberships": ["TELCO_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.8
+  },
+  {
+    "supplier_id": "SUP-016",
+    "name": "Yumbah Consulting",
+    "classifications": ["aboriginal", "sme"],
+    "capabilities": ["consulting", "professional_services", "digital_transformation", "community_engagement"],
+    "panel_memberships": ["CONSULTING_PANEL", "ABORIGINAL_PROCUREMENT_REGISTER"],
+    "state": "NSW",
+    "performance_rating": 4.1
+  },
+  {
+    "supplier_id": "SUP-017",
+    "name": "Saltbush Social Enterprises",
+    "classifications": ["aboriginal", "sme"],
+    "capabilities": ["professional_services", "community_engagement", "training"],
+    "panel_memberships": ["ABORIGINAL_PROCUREMENT_REGISTER"],
+    "state": "NSW",
+    "performance_rating": 3.9
+  },
+  {
+    "supplier_id": "SUP-018",
+    "name": "Murra Warra Digital",
+    "classifications": ["aboriginal", "sme"],
+    "capabilities": ["ict_development", "digital_transformation", "web_platforms"],
+    "panel_memberships": ["DIGITAL_SERVICES_PANEL", "ABORIGINAL_PROCUREMENT_REGISTER"],
+    "state": "NSW",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-019",
+    "name": "Thoughtworks Australia",
+    "classifications": ["sme"],
+    "capabilities": ["ict_development", "ai_ml", "agile_delivery", "digital_transformation"],
+    "panel_memberships": ["DIGITAL_SERVICES_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.5
+  },
+  {
+    "supplier_id": "SUP-020",
+    "name": "Macquarie Government",
+    "classifications": ["sme"],
+    "capabilities": ["cloud", "cybersecurity", "ict_infrastructure", "managed_services"],
+    "panel_memberships": ["CLOUD_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.2
+  },
+  {
+    "supplier_id": "SUP-021",
+    "name": "Palantir Technologies",
+    "classifications": ["multinational"],
+    "capabilities": ["ai_ml", "data_analytics", "ict_development", "defence_intelligence"],
+    "panel_memberships": [],
+    "state": "NSW",
+    "performance_rating": 3.8
+  },
+  {
+    "supplier_id": "SUP-022",
+    "name": "SAS Institute",
+    "classifications": ["multinational"],
+    "capabilities": ["ai_ml", "data_analytics", "ict_saas", "risk_management"],
+    "panel_memberships": ["SOFTWARE_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-023",
+    "name": "Appian Corporation",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_saas", "ict_development", "ai_ml", "workflow_automation"],
+    "panel_memberships": ["SOFTWARE_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.9
+  },
+  {
+    "supplier_id": "SUP-024",
+    "name": "Salesforce Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["ict_saas", "ai_ml", "ict_development", "crm"],
+    "panel_memberships": ["SOFTWARE_PANEL", "CLOUD_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.1
+  },
+  {
+    "supplier_id": "SUP-025",
+    "name": "Pricewise Consulting",
+    "classifications": ["sme", "regional"],
+    "capabilities": ["consulting", "professional_services", "financial_management"],
+    "panel_memberships": ["CONSULTING_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.7
+  },
+  {
+    "supplier_id": "SUP-026",
+    "name": "Cybermerc",
+    "classifications": ["sme"],
+    "capabilities": ["cybersecurity", "penetration_testing", "risk_management"],
+    "panel_memberships": ["ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.3
+  },
+  {
+    "supplier_id": "SUP-027",
+    "name": "Data#3",
+    "classifications": ["sme"],
+    "capabilities": ["ict_infrastructure", "cloud", "ict_saas", "managed_services"],
+    "panel_memberships": ["ICT_SERVICES_PANEL", "CLOUD_PANEL"],
+    "state": "QLD",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-028",
+    "name": "Nous Group",
+    "classifications": ["sme"],
+    "capabilities": ["consulting", "professional_services", "digital_transformation", "research"],
+    "panel_memberships": ["CONSULTING_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.2
+  },
+  {
+    "supplier_id": "SUP-029",
+    "name": "EY Consulting",
+    "classifications": ["multinational"],
+    "capabilities": ["consulting", "professional_services", "ai_ml", "cybersecurity", "risk_management"],
+    "panel_memberships": ["CONSULTING_PANEL", "ICT_SERVICES_PANEL"],
+    "state": "NSW",
+    "performance_rating": 4.0
+  },
+  {
+    "supplier_id": "SUP-030",
+    "name": "PwC Australia",
+    "classifications": ["multinational"],
+    "capabilities": ["consulting", "professional_services", "risk_management", "digital_transformation"],
+    "panel_memberships": ["CONSULTING_PANEL"],
+    "state": "NSW",
+    "performance_rating": 3.8
+  }
+]

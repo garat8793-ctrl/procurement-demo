@@ -1,0 +1,619 @@
+[
+  {
+    "id": "Q1",
+    "text": "What are you looking to buy?",
+    "hint": null,
+    "type": "single",
+    "options": [
+      {
+        "id": "Q1A",
+        "label": "ICT Software or SaaS",
+        "description": "Cloud software, subscriptions, platforms, apps",
+        "tags": {
+          "category": "ict_saas"
+        }
+      },
+      {
+        "id": "Q1B",
+        "label": "ICT Hardware or devices",
+        "description": "Computers, servers, networking equipment, peripherals",
+        "tags": {
+          "category": "ict_hardware"
+        }
+      },
+      {
+        "id": "Q1C",
+        "label": "Professional services",
+        "description": "Specialist delivery — legal, engineering, accounting, IT delivery",
+        "tags": {
+          "category": "professional_services"
+        }
+      },
+      {
+        "id": "Q1D",
+        "label": "Consulting or advisory",
+        "description": "Strategic advice, research, policy, strategy",
+        "tags": {
+          "category": "consulting"
+        }
+      },
+      {
+        "id": "Q1E",
+        "label": "Goods or supplies",
+        "description": "Physical products, equipment, consumables, stationery",
+        "tags": {
+          "category": "goods"
+        }
+      },
+      {
+        "id": "Q1F",
+        "label": "Construction or built environment",
+        "description": "Building works, fit-out, maintenance, infrastructure",
+        "tags": {
+          "category": "construction"
+        }
+      },
+      {
+        "id": "Q1G",
+        "label": "Labour or contingent workforce",
+        "description": "Temporary staff, contractors, labour hire",
+        "tags": {
+          "category": "labour_hire"
+        }
+      },
+      {
+        "id": "Q1H",
+        "label": "Something else",
+        "description": "Not sure, or doesn't fit the categories above",
+        "tags": {
+          "category": "other"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q2",
+    "text": "What is the main purpose of this purchase?",
+    "hint": null,
+    "type": "single",
+    "options": [
+      {
+        "id": "Q2A",
+        "label": "New capability or service",
+        "description": "Something we don't currently have",
+        "tags": {
+          "purpose": "new"
+        }
+      },
+      {
+        "id": "Q2B",
+        "label": "Renewing or extending an existing contract",
+        "description": "Continuing what we already have in place",
+        "tags": {
+          "purpose": "renewal"
+        }
+      },
+      {
+        "id": "Q2C",
+        "label": "Replacing something that's ending or failed",
+        "description": "An existing system, contract, or arrangement is expiring or no longer working",
+        "tags": {
+          "purpose": "replacement"
+        }
+      },
+      {
+        "id": "Q2D",
+        "label": "Pilot or proof of concept",
+        "description": "Testing an idea before committing to full delivery",
+        "tags": {
+          "purpose": "pilot"
+        }
+      },
+      {
+        "id": "Q2E",
+        "label": "Emergency or urgent operational need",
+        "description": "Something has gone wrong and we need to act quickly",
+        "tags": {
+          "purpose": "emergency"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q3",
+    "text": "How clearly do you know what you need?",
+    "hint": "Think about whether you could hand someone a spec or statement of work today.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q3A",
+        "label": "Very clear — I have a detailed spec or SOW ready",
+        "description": "Requirements are defined and documented",
+        "tags": {
+          "definition": "clear"
+        }
+      },
+      {
+        "id": "Q3B",
+        "label": "Mostly clear — I know what I need but some detail is missing",
+        "description": "Core requirement is understood; some gaps to fill",
+        "tags": {
+          "definition": "mostly_clear"
+        }
+      },
+      {
+        "id": "Q3C",
+        "label": "Partially defined — I need market input to refine it",
+        "description": "I have a broad idea but need to understand what's possible",
+        "tags": {
+          "definition": "partial"
+        }
+      },
+      {
+        "id": "Q3D",
+        "label": "Early stage — I'm exploring options and don't have a firm requirement yet",
+        "description": "The problem is understood but the solution isn't defined",
+        "tags": {
+          "definition": "exploratory"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q4",
+    "text": "Do you have a budget or estimate for this?",
+    "hint": "This helps identify the right process and approvals. Give your best estimate — it doesn't need to be exact.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q4A",
+        "label": "Under $10,000",
+        "description": "Petty cash / low-value purchase",
+        "tags": {
+          "value": "micro"
+        }
+      },
+      {
+        "id": "Q4B",
+        "label": "$10,000 – $50,000",
+        "description": "Low-value procurement",
+        "tags": {
+          "value": "low"
+        }
+      },
+      {
+        "id": "Q4C",
+        "label": "$50,000 – $250,000",
+        "description": "Medium-value procurement",
+        "tags": {
+          "value": "medium"
+        }
+      },
+      {
+        "id": "Q4D",
+        "label": "$250,000 – $1,000,000",
+        "description": "High-value procurement",
+        "tags": {
+          "value": "high"
+        }
+      },
+      {
+        "id": "Q4E",
+        "label": "Over $1,000,000",
+        "description": "Major procurement",
+        "tags": {
+          "value": "major"
+        }
+      },
+      {
+        "id": "Q4F",
+        "label": "Not sure yet",
+        "description": "Budget hasn't been confirmed",
+        "tags": {
+          "value": "unknown"
+        },
+        "not_sure": true
+      }
+    ]
+  },
+  {
+    "id": "Q5",
+    "text": "Where do you sit in the organisation?",
+    "hint": "This helps with delegation and approval routing.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q5A",
+        "label": "Frontline or operational team",
+        "description": "Delivering services, programs, or operations directly",
+        "tags": {
+          "org": "operational"
+        }
+      },
+      {
+        "id": "Q5B",
+        "label": "Corporate or enabling function",
+        "description": "Finance, HR, legal, IT, communications, etc.",
+        "tags": {
+          "org": "corporate"
+        }
+      },
+      {
+        "id": "Q5C",
+        "label": "Executive or senior leadership",
+        "description": "Deputy Secretary level and above",
+        "tags": {
+          "org": "executive"
+        }
+      },
+      {
+        "id": "Q5D",
+        "label": "Central or shared services agency",
+        "description": "Agency that provides services to other agencies",
+        "tags": {
+          "org": "central"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q6",
+    "text": "How many suppliers do you think could realistically provide this?",
+    "hint": "Think about who you'd find if you searched the market today.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q6A",
+        "label": "Only one that I know of",
+        "description": "Sole supplier or highly specialised capability",
+        "tags": {
+          "market": "sole"
+        }
+      },
+      {
+        "id": "Q6B",
+        "label": "2 to 3 specialist providers",
+        "description": "Very limited market, niche capability",
+        "tags": {
+          "market": "limited"
+        }
+      },
+      {
+        "id": "Q6C",
+        "label": "Several suppliers — maybe 4 to 10",
+        "description": "Some competition but not a commodity market",
+        "tags": {
+          "market": "some"
+        }
+      },
+      {
+        "id": "Q6D",
+        "label": "Many suppliers available",
+        "description": "Competitive market, multiple credible options",
+        "tags": {
+          "market": "broad"
+        }
+      },
+      {
+        "id": "Q6E",
+        "label": "Not sure",
+        "description": "Haven't assessed the market yet",
+        "tags": {
+          "market": "unknown"
+        },
+        "not_sure": true
+      }
+    ]
+  },
+  {
+    "id": "Q7",
+    "text": "If this goes wrong, what is the likely impact?",
+    "hint": "Think about the worst realistic outcome — not the absolute worst case.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q7A",
+        "label": "Minor inconvenience — easily managed",
+        "description": "Low disruption, no significant consequence",
+        "tags": {
+          "impact": "low"
+        }
+      },
+      {
+        "id": "Q7B",
+        "label": "Operational disruption — noticeable but recoverable",
+        "description": "Some service disruption or cost to the agency",
+        "tags": {
+          "impact": "medium"
+        }
+      },
+      {
+        "id": "Q7C",
+        "label": "Significant service impact — affects many people or programs",
+        "description": "Major disruption, reputational or financial consequences",
+        "tags": {
+          "impact": "high"
+        }
+      },
+      {
+        "id": "Q7D",
+        "label": "Critical failure — safety risk, major legal exposure, or catastrophic disruption",
+        "description": "Could cause serious harm, critical system failure, or major public consequences",
+        "tags": {
+          "impact": "critical"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q8",
+    "text": "Does this procurement involve any of the following?",
+    "hint": "Select all that apply. These trigger additional obligations and review requirements.",
+    "type": "multi",
+    "options": [
+      {
+        "id": "Q8A",
+        "label": "AI or automated decision-making",
+        "description": "Systems that use AI, machine learning, or automated decisions affecting people",
+        "tags": {
+          "overlays": "ai"
+        }
+      },
+      {
+        "id": "Q8B",
+        "label": "Personal or health information",
+        "description": "Data about individuals, health records, or sensitive personal data",
+        "tags": {
+          "overlays": "privacy"
+        }
+      },
+      {
+        "id": "Q8C",
+        "label": "Critical ICT infrastructure",
+        "description": "Core systems, networks, or platforms that government depends on",
+        "tags": {
+          "overlays": "critical_ict"
+        }
+      },
+      {
+        "id": "Q8D",
+        "label": "Construction or built environment work",
+        "description": "Physical building, infrastructure, or fit-out",
+        "tags": {
+          "overlays": "construction"
+        }
+      },
+      {
+        "id": "Q8E",
+        "label": "Overseas supply chains",
+        "description": "Products or services sourced or manufactured overseas",
+        "tags": {
+          "overlays": "overseas"
+        }
+      },
+      {
+        "id": "Q8G",
+        "label": "Small or medium enterprise (SME) supplier",
+        "description": "The intended or likely supplier is an SME — fewer than 200 employees",
+        "tags": {
+          "overlays": "sme"
+        }
+      },
+      {
+        "id": "Q8F",
+        "label": "None of the above",
+        "description": "No special overlays apply",
+        "tags": {
+          "overlays": "none"
+        },
+        "exclusive": true
+      }
+    ]
+  },
+  {
+    "id": "Q9",
+    "text": "What level of supplier interaction will this require?",
+    "hint": "Think about how you'll need to engage suppliers — this helps shape the process.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q9A",
+        "label": "Buy off-the-shelf — no negotiation needed",
+        "description": "Standard product or service, just purchase it",
+        "tags": {
+          "interaction": "minimal"
+        }
+      },
+      {
+        "id": "Q9B",
+        "label": "Get a few quotes and compare",
+        "description": "Request pricing from a small number of suppliers",
+        "tags": {
+          "interaction": "quotes"
+        }
+      },
+      {
+        "id": "Q9C",
+        "label": "Run a formal tender or competitive process",
+        "description": "Invite and evaluate formal submissions",
+        "tags": {
+          "interaction": "tender"
+        }
+      },
+      {
+        "id": "Q9D",
+        "label": "Collaborate with suppliers to define or co-design the solution",
+        "description": "The requirement will evolve through supplier engagement",
+        "tags": {
+          "interaction": "collaborative"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q10",
+    "text": "What is your timeframe for this procurement?",
+    "hint": null,
+    "type": "single",
+    "options": [
+      {
+        "id": "Q10A",
+        "label": "I need it within 2 weeks",
+        "description": "Urgent — very compressed timeline",
+        "tags": {
+          "timing": "urgent"
+        }
+      },
+      {
+        "id": "Q10B",
+        "label": "2 to 8 weeks",
+        "description": "Compressed but workable with the right process",
+        "tags": {
+          "timing": "compressed"
+        }
+      },
+      {
+        "id": "Q10C",
+        "label": "2 to 6 months",
+        "description": "Normal procurement timeline",
+        "tags": {
+          "timing": "normal"
+        }
+      },
+      {
+        "id": "Q10D",
+        "label": "6 months or more",
+        "description": "Extended — time to do this thoroughly",
+        "tags": {
+          "timing": "extended"
+        }
+      },
+      {
+        "id": "Q10E",
+        "label": "Not yet determined",
+        "description": "Timeline hasn't been set",
+        "tags": {
+          "timing": "unknown"
+        },
+        "not_sure": true
+      }
+    ]
+  },
+  {
+    "id": "Q11",
+    "text": "Does this procurement involve AI, machine learning, or automated decision-making?",
+    "hint": "Includes AI-embedded products, predictive analytics, chatbots, or algorithmic decision tools.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q11A",
+        "label": "Yes",
+        "description": "AI, ML, or automated decision-making is a component",
+        "tags": {
+          "overlays": "ai",
+          "ai_component": true
+        }
+      },
+      {
+        "id": "Q11B",
+        "label": "No",
+        "description": "No AI or automated decision-making component",
+        "tags": {
+          "ai_component": false
+        }
+      },
+      {
+        "id": "Q11C",
+        "label": "Not sure",
+        "description": "Unsure if AI is involved",
+        "tags": {},
+        "not_sure": true
+      }
+    ]
+  },
+  {
+    "id": "Q12",
+    "text": "How sensitive is the data this system will handle?",
+    "hint": "Consider what personal, commercial, or government information the system will access or store.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q12A",
+        "label": "Public data only",
+        "description": "No personal or sensitive information",
+        "tags": {
+          "data_sensitivity": "public"
+        }
+      },
+      {
+        "id": "Q12B",
+        "label": "Internal / business information",
+        "description": "Internal govt documents, commercial data, not personal",
+        "tags": {
+          "data_sensitivity": "internal"
+        }
+      },
+      {
+        "id": "Q12C",
+        "label": "Personal information",
+        "description": "Names, contacts, identifiers, or personal details of individuals",
+        "tags": {
+          "data_sensitivity": "sensitive",
+          "overlays": "privacy"
+        }
+      },
+      {
+        "id": "Q12D",
+        "label": "Sensitive or protected data",
+        "description": "Health, financial, law enforcement, or classified information",
+        "tags": {
+          "data_sensitivity": "protected",
+          "overlays": "privacy"
+        }
+      }
+    ]
+  },
+  {
+    "id": "Q13",
+    "text": "How critical is this system or service to service delivery?",
+    "hint": "Consider the impact if the system failed or was unavailable for more than 48 hours.",
+    "type": "single",
+    "options": [
+      {
+        "id": "Q13A",
+        "label": "Can be deferred or has workarounds",
+        "description": "Operations can continue if this is unavailable",
+        "tags": {
+          "delivery_criticality": "deferrable"
+        }
+      },
+      {
+        "id": "Q13B",
+        "label": "Important but not mission-critical",
+        "description": "Disruption would be felt but manageable",
+        "tags": {
+          "delivery_criticality": "important"
+        }
+      },
+      {
+        "id": "Q13C",
+        "label": "Critical to service delivery",
+        "description": "Failure would significantly impact frontline services",
+        "tags": {
+          "delivery_criticality": "critical",
+          "impact": "high"
+        }
+      },
+      {
+        "id": "Q13D",
+        "label": "Mission-critical / non-negotiable",
+        "description": "Failure would halt essential government services",
+        "tags": {
+          "delivery_criticality": "non_negotiable",
+          "impact": "critical",
+          "overlays": "critical_ict"
+        }
+      }
+    ]
+  }
+]

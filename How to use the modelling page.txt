@@ -1,0 +1,190 @@
+Open the app and go to Rules Explorer, then switch from Explorer to Model. The Model tab is the rules-engine workspace. It is separate from the procurement pathway demo.
+
+At the top of the page you will see:
+
+rules findings such as gaps, duplicates, contradictions, and workflow impacts
+filters for source, scheme, active state, and finding type
+a simulation package area
+the simulation lab itself
+What the modelling area does
+It lets you:
+
+inspect weaknesses or overlap in the current rules
+create test scenarios
+propose rule changes
+compare the current ruleset against a proposed future ruleset
+save and reload modelling packages
+How to review the current rules
+Use the filters near the top of the Model tab.
+
+Source lets you narrow to core rules or scheme rules.
+Scheme lets you focus on one scheme.
+State lets you view active or inactive records.
+Finding type lets you focus on one kind of issue.
+Read the finding cards below:
+
+Coverage / Gaps shows where trigger dimensions are missing or thinly covered.
+Potential Duplicates shows rules that may overlap too much.
+Potential Contradictions shows rules that may pull in different directions.
+Process / Workflow Impact shows where rules add workflow burden such as extra steps or approvals.
+How to build a modelling package
+Use the package section above the simulation lab.
+
+Enter a package name.
+Optionally set:
+Status
+Owner
+Working note
+Save the package if you want to keep your work.
+You can also:
+
+load a saved package from the dropdown
+create a fresh package with New package
+delete the selected package
+export a package to JSON
+import a package from JSON
+How to create test scenarios
+In the Scenario set area:
+
+Click + scenario to add one or more scenarios.
+Give each scenario a name.
+Set the procurement facts:
+category
+value
+purpose
+market
+impact
+interaction
+timing
+org
+overlays
+Add multiple scenarios if you want to test how the same rule change behaves across different procurement types.
+A scenario is just a hypothetical procurement profile the engine can evaluate.
+
+How to propose a rule change
+In the Rule workbench area choose one of three modes:
+
+Deactivate: switch off an existing canonical rule for modelling purposes
+Replace: modify an existing canonical rule
+Add rule: create a new candidate rule
+Deactivate a rule
+
+Choose Deactivate.
+Select the target canonical rule.
+Click Add change.
+Replace a rule
+
+Choose Replace.
+Select the target canonical rule.
+The rule draft will load.
+Edit the fields you want to change.
+Click Add change.
+Add a new rule
+
+Choose Add rule.
+Fill in the draft rule fields.
+Add conditions.
+Add effects.
+Click Add change.
+How cloning works
+If you want to create a new candidate based on an existing rule:
+
+Select a canonical rule.
+Click Clone selected rule into candidate.
+The draft will switch to a new candidate version.
+Edit it and add it as a change.
+This is usually the fastest way to model alternatives.
+
+What the draft rule fields mean
+
+Rule ID: the unique identifier for the candidate rule
+Source ID / Source name: where the proposed rule package is coming from
+Title: short rule label
+Summary: plain-English rule statement
+Rule type: obligation, pre-check, workflow, approval, or advisory
+Source type: core, scheme, or policy candidate
+Priority / Precedence: ordering signals for the engine
+Tags / Objectives: descriptive metadata
+How conditions work
+Conditions are the facts that must match for the rule to apply.
+For each condition:
+
+choose the field
+choose the operator
+enter the value
+Operators:
+
+eq: exact single value
+in: one of several values
+contains_any: used for list-like facts such as overlays
+For multiple values, type them as comma-separated text.
+
+How effects work
+Effects describe what the rule does when it matches.
+You can add one or more effects such as:
+
+obligation
+pre_check
+workflow_step
+approval
+advisory
+Each effect needs:
+
+a title
+a detail statement
+How to run the comparison
+Once you have:
+
+at least one scenario
+at least one proposed change
+Click Run comparison.
+
+The system compares:
+
+the current live canonical rules snapshot
+against
+your proposed package
+How to read the comparison results
+The results show:
+
+matched rules delta
+obligation delta
+workflow delta
+approval delta
+For each scenario, you also see:
+
+what counts changed
+which matched rules were added
+which matched rules were removed
+Interpretation:
+
+a positive workflow or approval delta means more process burden
+a negative workflow or approval delta means less process burden
+changes in matched rules and obligations show how policy behaviour changes
+Good way to use it
+A practical workflow is:
+
+Find a problem in the findings area.
+Create 2 to 4 scenarios that represent realistic procurements.
+Model one rule change at a time.
+Run the comparison.
+Check whether the change:
+fixes the issue
+reduces burden
+creates new contradictions
+overfires or underfires across scenarios
+Save the package with a clear name and note.
+Recommended package naming
+Use names like:
+
+Reduce AI overlay duplication
+Narrow professional services triggers
+Test removal of low-yield approval step
+Important limitation
+This is a modelling and comparison workspace. It does not automatically activate rule changes in the live engine. It is for analysis, design, and review.
+
+If you want, I can also write:
+
+a short user guide for policy officers
+a separate guide for technical rule engineers
+a one-page “best practice workflow” for modelling changes safely.

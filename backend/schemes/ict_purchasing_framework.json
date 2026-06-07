@@ -1,0 +1,229 @@
+{
+  "scheme_id": "ICT_PURCHASING_FRAMEWORK",
+  "name": "Digital NSW ICT Purchasing Framework - ICT Agreement (ICTA)",
+  "version": "August 2025",
+  "active": true,
+  "audience": "supplier",
+  "description": "The ICT Purchasing Framework is a suite of template documents setting out standard terms and conditions for NSW Government Eligible Customers procuring ICT-related goods and services. The Master ICT Agreement (MICTA) provides a standing offer arrangement under which suppliers can provide deliverables, services and activities at specified rates and prices. Individual ICT Agreements (ICTA) are executed between customers and suppliers, incorporating the core terms, module terms, order forms, and any additional conditions. This framework applies to all ICT procurement by NSW Government agencies subject to NSW Procurement Board directions.",
+  "source": "NSW Procurement Board Direction PBD-2025-03 (updated February 2026; supersedes PBD-2021-02); Digital NSW ICT Purchasing Framework; ICT Agreement (ICTA) dated August 2025",
+  "triggers": {
+    "category": [
+      "ict_saas",
+      "ict_hardware",
+      "professional_services",
+      "consulting",
+      "goods"
+    ],
+    "value": [],
+    "purpose": [
+      "new",
+      "renewal",
+      "replacement",
+      "pilot"
+    ],
+    "market": [
+      "sole",
+      "limited",
+      "some",
+      "broad"
+    ],
+    "impact": [
+      "low",
+      "medium",
+      "high",
+      "critical"
+    ],
+    "overlays": [
+      "ai",
+      "privacy",
+      "critical_ict"
+    ],
+    "timing": [
+      "normal",
+      "compressed"
+    ],
+    "org": [
+      "operational",
+      "corporate"
+    ],
+    "interaction": [
+      "quotes",
+      "tender",
+      "collaborative"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "ICTA-PC-001",
+      "title": "Establish governance framework",
+      "body": "If specified in the Order Form, the Supplier must prepare and submit a Governance Framework to the Customer's Representative for approval within the timeframe specified or within a reasonably required timeframe. The framework must contain details specified in the Order Form.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-002",
+      "title": "Prepare project plan",
+      "body": "Where specified in the Order Form, the Supplier must prepare and submit a Project Plan to the Customer's Representative for approval. The Project Plan must be submitted by the date specified in the Order Documents or, if no date is specified, within 20 Business Days following the Commencement Date.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-003",
+      "title": "Confirm Nominated Personnel availability",
+      "body": "The Supplier must ensure each Nominated Personnel identified in Item 19 of the Order Form is made available to perform their assigned role and responsibilities. The Supplier must immediately notify the Customer's Representative if unable or unwilling to comply.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-004",
+      "title": "Conduct background checks on personnel",
+      "body": "Prior to involving any Personnel in the Supplier's Activities, the Supplier must undertake all necessary background checks to ensure they are fit and proper. If specified in Item 23 of the Order Form or reasonably required by the Customer, specific background checks (including criminal record and Working with Children checks) must be conducted and results provided to the Customer's Representative within the specified timeframe or within 5 Business Days if no timeframe is specified.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-005",
+      "title": "Execute deed of confidentiality and privacy",
+      "body": "If specified in Item 20 of the Order Form or requested by the Customer's Representative, Supplier Personnel involved in providing the Supplier's Activities or who may receive or have access to Customer Confidential Information or Personal Information must sign a Deed of Confidentiality and Privacy in substantially the same form as Schedule 6 or such other deed as required by the Customer. The deed must be signed and returned to the Customer's Representative prior to Supplier Personnel commencing the Supplier's Activities or being provided with access to Confidential Information.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-006",
+      "title": "Confirm subcontractor permissions and compliance",
+      "body": "The Supplier must not subcontract any obligations unless specified in Item 21 of the Order Form or pre-approved by the Customer in writing. Approved subcontracting may be conditional or limited to specific classes of subcontractors or types of activities. The Supplier must ensure subcontractors comply with all relevant agreement terms.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-007",
+      "title": "Assess transition-in requirements",
+      "body": "If the Order Form specifies that Transition-In Services are required, the Supplier must prepare and submit a Transition-In Plan to the Customer's Representative for approval by the date specified in the Order Documents. The Transition-In Plan is a Document Deliverable subject to approval under clause 8.",
+      "link": null
+    },
+    {
+      "id": "ICTA-PC-008",
+      "title": "Verify AI System disclosure and approval requirements",
+      "body": "The Supplier must identify any AI Systems intended to be used or deployed in performing the Supplier's Activities. Except for AI Systems set out in the Order Form, the Supplier must provide written notice to the Customer, comply with any Customer requests for information, allow 3 months to pass (or other specified period), and obtain prior written approval (which may be conditional) before using or deploying any AI System.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "ICTA-OBL-001",
+      "title": "Provide all services and deliverables as specified",
+      "body": "The Supplier must provide all Services and/or Deliverables specified in the Order Form and carry out all other Supplier's Activities on the terms of this Agreement, within the timeframes, Specifications and requirements specified in the Order Documents.",
+      "policy": "Clause 3.1, Clause 6.1"
+    },
+    {
+      "id": "ICTA-OBL-002",
+      "title": "Maintain supplier expertise and conduct due diligence",
+      "body": "The Supplier warrants it has the expertise to carry out the Supplier's Activities, has satisfied itself about the Customer's requirements, has obtained all necessary information to understand those requirements, has assessed the suitability of Materials, labour and resources necessary to perform its obligations, and has satisfied itself as to the nature and extent of the Supplier's Activities and its obligations under this Agreement.",
+      "policy": "Clause 2(a)",
+      "active": true
+    },
+    {
+      "id": "ICTA-OBL-003",
+      "title": "Manage and prevent delays",
+      "body": "The Supplier must manage the Supplier's Activities to anticipate and identify potential failures to meet Dates for Delivery, Key Milestones or other timeframes, and take all necessary steps within its reasonable control to avoid or mitigate potential Delays. Both parties must keep each other informed of anything likely to cause a Delay.",
+      "policy": "Clause 6.7"
+    },
+    {
+      "id": "ICTA-OBL-004",
+      "title": "Request extensions of time with notice",
+      "body": "If a Delay occurs that is beyond the Supplier's reasonable control, the Supplier may request an extension of time by providing written notice to the Customer's Representative within 5 Business Days of the Delay commencing, setting out particulars of the Delay and the extension claimed with its basis for calculation.",
+      "policy": "Clause 6.8(a)(b)"
+    },
+    {
+      "id": "ICTA-OBL-005",
+      "title": "Deliver services at specified sites on time",
+      "body": "Where physical delivery of Deliverables to a Site is required, the Supplier must deliver any Deliverables to the delivery area at the Site specified in the Order Form, on the Date for Delivery and between the hours stated in the Order Form, or as otherwise agreed in writing. The Supplier warrants it has done everything expected of a prudent, competent and experienced supplier in assessing the risks of carrying out the Supplier's Activities at the Site, including visiting and inspecting the Site and making its own assessment of Site conditions and associated risks.",
+      "policy": "Clause 6.10"
+    },
+    {
+      "id": "ICTA-OBL-006",
+      "title": "Comply with ICT accessibility standards",
+      "body": "The Supplier must ensure that, to the extent reasonably practicable, all Services and Deliverables are available to Customer Users on a non-discriminatory accessible basis and do not infringe anti-discrimination Laws. All Services and Deliverables must meet the Accessibility Standard AS EN 301 549 and any other accessibility requirements specified in the Order Documents.",
+      "policy": "Clause 6.3"
+    },
+    {
+      "id": "ICTA-OBL-007",
+      "title": "Cooperate with other suppliers",
+      "body": "Where stated in the Order Documents or at the reasonable request of the Customer, the Supplier must permit Other Suppliers to carry out their work, reasonably cooperate with Other Suppliers, carefully coordinate and interface the Supplier's Activities with services and work being carried out by Other Suppliers in an efficient and non-disruptive manner that minimises disruption and the need for Customer involvement, and comply with any additional requirements regarding Other Suppliers or interfacing arrangements specified in the Order Documents.",
+      "policy": "Clause 6.4"
+    },
+    {
+      "id": "ICTA-OBL-008",
+      "title": "Update project plan as required",
+      "body": "The Supplier must update the Project Plan at the times or intervals set out in the Order Documents or at such other times as reasonably required by the Customer's Representative, including to reflect any Change Requests. The Project Plan is a Document Deliverable subject to the approval process in clause 8.",
+      "policy": "Clause 6.5"
+    },
+    {
+      "id": "ICTA-OBL-009",
+      "title": "Execute staged implementation in proper order",
+      "body": "Where the Order Documents specify that the Supplier's Activities will be carried out in different Stages, the Supplier must carry out each Stage in accordance with the requirements and staging specified, and must not commence work on a Stage until receiving written notice from the Customer to proceed. The Supplier may not proceed with future Stages for which approval to commence has not been given by the Customer.",
+      "policy": "Clause 6.6"
+    },
+    {
+      "id": "ICTA-OBL-010",
+      "title": "Provide transition-in services as specified",
+      "body": "The Supplier must supply any Transition-In Services specified in the Order Documents or in any Transition-In Plan developed pursuant to clause 7.2. Transition-In Services must be provided for the period specified in the Order Documents, or if no period is specified, in a prompt and timely manner ensuring the Supplier can meet all Dates for Delivery, Key Milestones and other timeframes under this Agreement.",
+      "policy": "Clause 7.3"
+    },
+    {
+      "id": "ICTA-OBL-011",
+      "title": "Submit document deliverables for approval",
+      "body": "The Supplier must submit all Document Deliverables (written, printed, digital or electronic Materials comprising text or symbols) to the Customer's Representative for approval in accordance with clause 8 and by the dates specified in the Agreement or Order Documents. Document Deliverables must be in English, fit for their intended purpose, free of Defects, and comply with applicable Specifications and Order Document requirements.",
+      "policy": "Clause 8.1(b)(c)(d)"
+    },
+    {
+      "id": "ICTA-OBL-012",
+      "title": "Respond to document deliverable rejections",
+      "body": "If the Customer rejects a Document Deliverable, the Supplier must within 5 Business Days (or alternative timeframe agreed or specified in Order Documents) prepare a revised version addressing all amendments and issues required by the Customer. This process repeats until the Customer approves the Document Deliverable or terminates the Agreement.",
+      "policy": "Clause 8.2(c)(d)"
+    },
+    {
+      "id": "ICTA-OBL-013",
+      "title": "Provide user documentation",
+      "body": "The Supplier must, at its sole cost, provide User Documentation to the Customer's Representative in electronic format by the time specified in the Order Documents or where no timeframe is specified, when reasonably required by the Customer. User Documentation must provide adequate instructions enabling the Customer and Customer Users to utilize the Services and Deliverables without reference to the Supplier, and must comply with all requirements for Document Deliverables. The Supplier must update User Documentation as needed for efficient and effective use of the Services and Deliverables.",
+      "policy": "Clause 8.4"
+    },
+    {
+      "id": "ICTA-OBL-014",
+      "title": "Correct defects within warranty period",
+      "body": "If a Defect is discovered prior to expiry of the Warranty Period, the Supplier must correct it at no cost to the Customer in accordance with applicable Service Levels or within 15 Business Days after notification (or other agreed timeframe), in a manner causing as little inconvenience to the Customer and Customer Users as reasonably possible. If multiple Defects are identified, the Supplier must prioritise rectification as requested by the Customer while remaining consistent with applicable Service Levels.",
+      "policy": "Clause 9"
+    },
+    {
+      "id": "ICTA-OBL-015",
+      "title": "Self-identify defects to customer",
+      "body": "If the Supplier identifies a Defect prior to expiry of the Warranty Period, the Supplier must notify the Customer in writing within one Business Day of identifying the Defect.",
+      "policy": "Clause 9(b)"
+    },
+    {
+      "id": "ICTA-OBL-016",
+      "title": "Process change requests according to change control procedure",
+      "body": "Either party may request a variation to the Supplier's Activities by submitting a Change Request Form substantially similar to Schedule 5. Each Change Request must contain details specified in the Change Request Form or other details reasonably required by the Customer. The receiving party must notify the other within 7 Business Days (or other reasonably agreed timeframe) whether it approves, rejects, or requires further information regarding the Change Request. All parties must act reasonably in preparing, submitting, reviewing and assessing Change Requests. No Change Request is binding until the relevant Change Request Form is executed by both parties.",
+      "policy": "Clause 10"
+    },
+    {
+      "id": "ICTA-OBL-017",
+      "title": "Ensure nominated personnel availability and performance",
+      "body": "The Supplier must ensure that each of its Nominated Personnel identified in Item 19 of the Order Form is made available to perform their assigned role and responsibilities as specified. The Supplier must immediately notify the Customer's Representative if it becomes unable or unwilling to comply with this obligation.",
+      "policy": "Clause 11.1"
+    },
+    {
+      "id": "ICTA-OBL-018",
+      "title": "Replace nominated personnel with customer approval",
+      "body": "The Supplier must not remove or replace Nominated Personnel unless the Customer requests replacement or the personnel are no longer available due to substantial changes in personal circumstances (including compassionate leave, carers' leave, extended leave, serious illness, injury, death, employment termination, or resignation). Any replacement must be approved by the Customer (acting reasonably) and must be of equal or superior ability with required experience and must meet Personnel requirements specified in the Agreement.",
+      "policy": "Clause 11.2"
+    },
+    {
+      "id": "ICTA-OBL-019",
+      "title": "Ensure supplier personnel are properly trained and qualified",
+      "body": "The Supplier must ensure all Personnel engaged or employed in carrying out the Supplier's Activities are aware of and comply with the Supplier's obligations under the Agreement; prior to carrying out any part of the Supplier's Activities, are properly trained and qualified with requisite competencies, skills, qualifications and experience to perform duties and understand Supplier obligations including regarding privacy, security, confidentiality and safety; and are provided with regular training to maintain skills and qualifications in accordance with Best Industry Practice.",
+      "policy": "Clause 11.3(a)(b)(c)"
+    },
+    {
+      "id": "ICTA-OBL-020",
+      "title": "Ensure personnel comply with customer safety and security requirements",
+      "body": "The"
+    }
+  ],
+  "step_injections": [],
+  "approval_additions": []
+}

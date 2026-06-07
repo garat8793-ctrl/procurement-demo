@@ -1,0 +1,81 @@
+{
+  "scheme_id": "PBD_2024_02_LOCAL_SUPPLIERS",
+  "name": "PBD-2024-02 — Local Supplier Opportunities",
+  "version": "2024-09",
+  "active": true,
+  "description": "Procurement Board Direction requiring NSW Government agencies to test whether local suppliers can meet the requirement for contracts at or above $7.5M excl. GST. Triggered at 'major' value band (>$1M incl. GST in this system, as proxy for the $7.5M formal threshold). Agencies must document the local supplier market test outcome, preference local suppliers where they can meet requirements at comparable value, and submit quarterly reports to the Procurement Board.",
+  "source": "NSW Procurement Board Direction PBD-2024-02 (September 2024); NSW Procurement Policy Framework; NSW Local Industry Participation Policy",
+  "triggers": {
+    "value": [
+      "major"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PBD2024-02-PC-001",
+      "title": "Conduct local supplier market test",
+      "body": "Before approaching the market, conduct a documented assessment of whether NSW or Australian local suppliers can meet the requirements of this procurement. The test must be documented in the procurement file and must assess: whether local suppliers exist in the market, whether they have the capability and capacity to deliver, and whether they can deliver at comparable value to non-local alternatives.",
+      "link": null
+    },
+    {
+      "id": "PBD2024-02-PC-002",
+      "title": "Structure approach-to-market to enable local supplier participation",
+      "body": "Where local suppliers exist and could participate, structure the approach to market — including lot size, evaluation criteria, and response requirements — to give local suppliers a genuine opportunity to compete. Avoid requirements that unnecessarily disadvantage local suppliers (e.g., mandatory international certifications where Australian equivalents exist).",
+      "link": null
+    },
+    {
+      "id": "PBD_2024_02_LOCAL_SUPPLIERS-PC-003",
+      "title": "b vb",
+      "body": "vcbcvb",
+      "active": true,
+      "link": "cvbhcgbfgh"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2024-02-OBL-001",
+      "title": "Local supplier market test — document outcome",
+      "body": "For procurements at or above $7.5M excl. GST (major value band), agencies must conduct and document a local supplier market test. The documentation must record: whether local suppliers exist, their capability and capacity assessment, and the outcome — whether local suppliers were included in the market engagement.",
+      "policy": "PBD-2024-02; NSW Local Industry Participation Policy",
+      "active": true
+    },
+    {
+      "id": "PBD2024-02-OBL-002",
+      "title": "Preference local suppliers where requirements can be met at comparable value",
+      "body": "Where a local supplier can meet the requirements of the procurement at comparable value to non-local alternatives, the agency must preference the local supplier. 'Comparable value' includes total cost of ownership, not only price — consider local economic benefit, risk reduction, and service continuity.",
+      "policy": "PBD-2024-02",
+      "active": true
+    },
+    {
+      "id": "PBD2024-02-OBL-003",
+      "title": "Submit quarterly reports on local supplier test outcomes",
+      "body": "Agencies must submit quarterly reports to the Procurement Board on local supplier test outcomes for procurements at or above the PBD-2024-02 threshold. Reports must include: contract reference, value, category, whether a local supplier test was conducted, test outcome, and whether a local supplier was engaged.",
+      "policy": "PBD-2024-02"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Where an existing WoG arrangement covers the requirement, confirm that local suppliers are represented on the panel or scheme. If not, document this and consider whether the arrangement can be supplemented with a local market approach.",
+    "if_no_arrangement": "Conduct the local supplier market test before issuing approach-to-market documents. Include local supplier consideration in evaluation criteria where appropriate."
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        {
+          "text": "Complete local supplier market test. Assess whether NSW or Australian local suppliers exist, have capability, and can deliver at comparable value. Document the outcome in the procurement file.",
+          "citation": "PBD-2024-02 — local supplier test obligation"
+        },
+        {
+          "text": "Record local supplier test outcome in the quarterly reporting template for submission to the Procurement Board.",
+          "citation": "PBD-2024-02 — quarterly reporting obligation"
+        }
+      ]
+    }
+  ],
+  "approval_additions": [
+    {
+      "role": "Procurement Board (quarterly reporting)",
+      "note": "Quarterly report on local supplier test outcomes must be submitted to the Procurement Board. Ensure this procurement is captured in the next quarterly submission."
+    }
+  ]
+}

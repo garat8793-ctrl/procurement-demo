@@ -1,0 +1,303 @@
+{
+  "schema_version": "nsw_agency_directory.v1",
+  "agencies": [
+    {
+      "agency_id": "nsw_dpc",
+      "name": "Department of Premier and Cabinet",
+      "cluster": "Premier and Cabinet",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_cabinet_office",
+      "name": "The Cabinet Office",
+      "cluster": "Premier and Cabinet",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_multicultural",
+      "name": "Multicultural NSW",
+      "cluster": "Premier and Cabinet",
+      "type": "statutory_authority"
+    },
+    {
+      "agency_id": "nsw_create",
+      "name": "Create NSW",
+      "cluster": "Premier and Cabinet",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_greater_cities_commission",
+      "name": "Greater Cities Commission",
+      "cluster": "Premier and Cabinet",
+      "type": "statutory_authority"
+    },
+    {
+      "agency_id": "nsw_infrastructure",
+      "name": "Infrastructure NSW",
+      "cluster": "Premier and Cabinet",
+      "type": "statutory_authority"
+    },
+
+    {
+      "agency_id": "nsw_dcs",
+      "name": "Department of Customer Service",
+      "cluster": "Customer Service",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_service_nsw",
+      "name": "Service NSW",
+      "cluster": "Customer Service",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_revenue",
+      "name": "Revenue NSW",
+      "cluster": "Customer Service",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_safework",
+      "name": "SafeWork NSW",
+      "cluster": "Customer Service",
+      "type": "regulator"
+    },
+    {
+      "agency_id": "nsw_spatial_services",
+      "name": "Spatial Services",
+      "cluster": "Customer Service",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_fair_trading",
+      "name": "NSW Fair Trading",
+      "cluster": "Customer Service",
+      "type": "regulator"
+    },
+    {
+      "agency_id": "nsw_digital",
+      "name": "Digital NSW",
+      "cluster": "Customer Service",
+      "type": "agency"
+    },
+
+    {
+      "agency_id": "nsw_treasury",
+      "name": "NSW Treasury",
+      "cluster": "Treasury",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_audit_office",
+      "name": "Audit Office of NSW",
+      "cluster": "Treasury",
+      "type": "independent"
+    },
+    {
+      "agency_id": "nsw_ipart",
+      "name": "Independent Pricing and Regulatory Tribunal",
+      "cluster": "Treasury",
+      "type": "regulator"
+    },
+    {
+      "agency_id": "nsw_tcorp",
+      "name": "NSW Treasury Corporation",
+      "cluster": "Treasury",
+      "type": "state_owned_corporation"
+    },
+
+    {
+      "agency_id": "nsw_transport",
+      "name": "Transport for NSW",
+      "cluster": "Transport",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_sydney_trains",
+      "name": "Sydney Trains",
+      "cluster": "Transport",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_trainlink",
+      "name": "NSW TrainLink",
+      "cluster": "Transport",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_sydney_metro",
+      "name": "Sydney Metro",
+      "cluster": "Transport",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_point_to_point",
+      "name": "Point to Point Transport Commission",
+      "cluster": "Transport",
+      "type": "regulator"
+    },
+
+    {
+      "agency_id": "nsw_health",
+      "name": "NSW Health",
+      "cluster": "Health",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_ambulance",
+      "name": "NSW Ambulance",
+      "cluster": "Health",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_ehealth",
+      "name": "eHealth NSW",
+      "cluster": "Health",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_healthshare",
+      "name": "HealthShare NSW",
+      "cluster": "Health",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_health_pathology",
+      "name": "NSW Health Pathology",
+      "cluster": "Health",
+      "type": "agency"
+    },
+
+    {
+      "agency_id": "nsw_education",
+      "name": "Department of Education",
+      "cluster": "Education",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_nesa",
+      "name": "NSW Education Standards Authority",
+      "cluster": "Education",
+      "type": "regulator"
+    },
+    {
+      "agency_id": "nsw_tafe",
+      "name": "TAFE NSW",
+      "cluster": "Education",
+      "type": "public_provider"
+    },
+
+    {
+      "agency_id": "nsw_dcj",
+      "name": "Department of Communities and Justice",
+      "cluster": "Communities and Justice",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_corrective",
+      "name": "Corrective Services NSW",
+      "cluster": "Communities and Justice",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_youth_justice",
+      "name": "Youth Justice NSW",
+      "cluster": "Communities and Justice",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_legal_aid",
+      "name": "Legal Aid NSW",
+      "cluster": "Communities and Justice",
+      "type": "statutory_authority"
+    },
+
+    {
+      "agency_id": "nsw_planning",
+      "name": "Department of Planning, Housing and Infrastructure",
+      "cluster": "Planning",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_landcom",
+      "name": "Landcom",
+      "cluster": "Planning",
+      "type": "state_owned_corporation"
+    },
+
+    {
+      "agency_id": "nsw_dccwe",
+      "name": "Department of Climate Change, Energy, the Environment and Water",
+      "cluster": "Environment",
+      "type": "department"
+    },
+    {
+      "agency_id": "nsw_epa",
+      "name": "Environment Protection Authority",
+      "cluster": "Environment",
+      "type": "regulator"
+    },
+    {
+      "agency_id": "nsw_npws",
+      "name": "National Parks and Wildlife Service",
+      "cluster": "Environment",
+      "type": "agency"
+    },
+
+    {
+      "agency_id": "nsw_police",
+      "name": "NSW Police Force",
+      "cluster": "Police and Emergency Services",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_ses",
+      "name": "NSW State Emergency Service",
+      "cluster": "Police and Emergency Services",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_rfs",
+      "name": "NSW Rural Fire Service",
+      "cluster": "Police and Emergency Services",
+      "type": "agency"
+    },
+    {
+      "agency_id": "nsw_fire_rescue",
+      "name": "Fire and Rescue NSW",
+      "cluster": "Police and Emergency Services",
+      "type": "agency"
+    },
+
+    {
+      "agency_id": "nsw_icac",
+      "name": "Independent Commission Against Corruption",
+      "cluster": "Oversight",
+      "type": "independent"
+    },
+    {
+      "agency_id": "nsw_ombudsman",
+      "name": "NSW Ombudsman",
+      "cluster": "Oversight",
+      "type": "independent"
+    },
+    {
+      "agency_id": "nsw_electoral",
+      "name": "NSW Electoral Commission",
+      "cluster": "Oversight",
+      "type": "independent"
+    },
+    {
+      "agency_id": "nsw_lecc",
+      "name": "Law Enforcement Conduct Commission",
+      "cluster": "Oversight",
+      "type": "independent"
+    },
+    {
+      "agency_id": "nsw_ipc",
+      "name": "Information and Privacy Commission NSW",
+      "cluster": "Oversight",
+      "type": "independent"
+    }
+  ]
+}

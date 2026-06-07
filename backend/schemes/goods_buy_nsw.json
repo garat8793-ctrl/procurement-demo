@@ -1,0 +1,56 @@
+{
+  "scheme_id": "GOODS_BUYNSW",
+  "name": "Buy.NSW Goods and Supplies Marketplace",
+  "version": "2024-01",
+  "active": true,
+  "description": "Rules for goods and supply procurements available through the Buy.NSW marketplace and whole-of-government standing offers.",
+  "source": "NSW Procurement Policy Framework; Buy.NSW Platform Policy",
+  "triggers": {
+    "category": ["goods"],
+    "value": ["micro", "low", "medium"]
+  },
+  "pre_checks": [
+    {
+      "id": "GOODS-PC-001",
+      "title": "Check Buy.NSW marketplace first",
+      "body": "The Buy.NSW online marketplace (buy.nsw.gov.au) provides access to pre-approved suppliers with pre-negotiated pricing across many goods categories including office supplies, furniture, equipment, and more. Check the marketplace before approaching suppliers directly.",
+      "link": "https://buy.nsw.gov.au"
+    },
+    {
+      "id": "GOODS-PC-002",
+      "title": "Check whole-of-government standing offers",
+      "body": "A range of whole-of-government standing offers and common use contracts exist for frequently purchased goods categories. Contact your agency's procurement team to check what standing offers apply to your category.",
+      "link": "https://buy.nsw.gov.au/contracts-and-schemes"
+    }
+  ],
+  "obligations": [
+    {
+      "id": "GOODS-OBL-001",
+      "title": "Use Buy.NSW marketplace where available",
+      "body": "For goods available on the Buy.NSW marketplace, use of the marketplace is the preferred approach. Direct procurement from other suppliers when marketplace options exist requires documented justification.",
+      "policy": "NSW Procurement Policy Framework; Buy.NSW Platform Policy"
+    },
+    {
+      "id": "GOODS-OBL-002",
+      "title": "Consider sustainability and ethical sourcing",
+      "body": "NSW Government procurement should consider environmental sustainability (energy efficiency, recyclability, packaging) and ethical sourcing (labour standards, supply chain integrity) when purchasing goods. Document consideration of sustainable options.",
+      "policy": "NSW Government Sustainability Policy; Sustainable Procurement"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Use Buy.NSW marketplace or standing offer",
+    "if_no_arrangement": "Proceed with recommended pathway"
+  },
+  "step_injections": [
+    {
+      "after_step": 0,
+      "steps": [
+        "Search Buy.NSW marketplace for available products and pre-approved suppliers",
+        "Check for whole-of-government standing offers in this goods category",
+        "If marketplace option available: purchase through marketplace process",
+        "If no marketplace option: proceed with recommended pathway below"
+      ]
+    }
+  ],
+  "approval_additions": []
+}

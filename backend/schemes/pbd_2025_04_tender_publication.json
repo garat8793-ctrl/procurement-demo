@@ -1,0 +1,73 @@
+{
+  "scheme_id": "PBD_2025_04_TENDER_PUBLICATION",
+  "name": "PBD-2025-04 — Publication Mandate — Open Tender on buy.NSW",
+  "version": "2026-02",
+  "active": true,
+  "description": "Procurement Board Direction requiring all open tender processes to be published on the buy.NSW eTendering platform (tenders.nsw.gov.au). Updated February 2026. Triggered when the procurement interaction type is 'tender'. Requires publication of approach-to-market documents, contract award notices, and (where applicable) GIPA Act proactive disclosure of contract details. Applies to all NSW Government agencies subject to the PWP Act.",
+  "source": "NSW Procurement Board Direction PBD-2025-04 (updated February 2026); NSW Procurement Policy Framework; Government Information (Public Access) Act 2009",
+  "triggers": {
+    "interaction": [
+      "tender"
+    ]
+  },
+  "pre_checks": [
+    {
+      "id": "PBD2025-04-PC-001",
+      "title": "Confirm tender opportunity is ready for buy.NSW publication",
+      "body": "Before publishing, ensure all tender documents are finalised and approved — including the Statement of Requirements, evaluation criteria, and contract terms. The tender must not be published on buy.NSW until all documents are ready for release to the market.",
+      "link": "https://tenders.nsw.gov.au"
+    },
+    {
+      "id": "PBD2025-04-PC-002",
+      "title": "Set the correct minimum tender response period",
+      "body": "Confirm the tender response period meets the minimum required under PBD-2019-05 (EPP Direction) where applicable: 25 business days for open tender above EPP thresholds. For below-EPP procurements, allow a reasonable response period based on the complexity of the requirement.",
+      "link": null
+    }
+  ],
+  "obligations": [
+    {
+      "id": "PBD2025-04-OBL-001",
+      "title": "Publish all open tenders on buy.NSW eTendering",
+      "body": "All open tender approach-to-market documents must be published on the NSW eTendering platform (tenders.nsw.gov.au) on or before the tender period opens. Tenders must not be published exclusively through other channels — buy.NSW is the mandatory publication platform.",
+      "policy": "PBD-2025-04; NSW Procurement Policy Framework — Open Advertising"
+    },
+    {
+      "id": "PBD2025-04-OBL-002",
+      "title": "Maintain live tender listing for the full tender period",
+      "body": "The tender opportunity must remain live and accessible on buy.NSW for the entire tender response period. Do not close or remove the listing early without a documented reason and appropriate approval.",
+      "policy": "PBD-2025-04"
+    },
+    {
+      "id": "PBD2025-04-OBL-003",
+      "title": "Publish contract award notice on buy.NSW",
+      "body": "Following contract award, publish a contract award notice on buy.NSW within the required timeframe. The notice must include: contract title, awarded supplier name, contract value, and contract term.",
+      "policy": "PBD-2025-04; PBD-2024-01; GIPA Act 2009"
+    },
+    {
+      "id": "PBD2025-04-OBL-004",
+      "title": "Apply addenda and clarifications through buy.NSW",
+      "body": "Any addenda, clarifications, or amendments to the tender documents during the response period must be published through buy.NSW so that all potential respondents receive the same information simultaneously.",
+      "policy": "PBD-2025-04; NSW Procurement Policy Framework — Probity"
+    }
+  ],
+  "pathway_overrides": {
+    "if_arrangement_exists": "Even where an existing WoG arrangement is being used via a limited tender or scheme process, any open approach-to-market documentation must still be published on buy.NSW if the interaction type is open tender.",
+    "if_no_arrangement": "Proceed to open tender process with full buy.NSW publication as required by PBD-2025-04."
+  },
+  "step_injections": [
+    {
+      "after_step": 1,
+      "steps": [
+        {
+          "text": "Publish the tender opportunity on buy.NSW eTendering (tenders.nsw.gov.au) before or on the day the tender period opens. Confirm all tender documents are attached and the listing is live.",
+          "citation": "PBD-2025-04"
+        },
+        {
+          "text": "Confirm the minimum tender response period is set correctly — at least 25 business days for open tenders above EPP thresholds; reasonable period for others.",
+          "citation": "PBD-2025-04; PBD-2019-05"
+        }
+      ]
+    }
+  ],
+  "approval_additions": []
+}
